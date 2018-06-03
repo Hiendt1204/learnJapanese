@@ -1,0 +1,3863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="aquiz_sets">
+        <item>"10 Hiragana
+ ひらがな 1"</item>
+        <item>"20 Hiragana
+ ひらがな 1"</item>
+        <item>"40 Hiragana
+ ひらがな 1"</item>
+        <item>"60 Hiragana
+ ひらがな 1"</item>
+        <item>"80 Hiragana
+ ひらがな 1"</item>
+        <item>"100 Hiragana
+ ひらがな 1"</item>
+        <item>"10 Hiragana
+ ひらがな 2"</item>
+        <item>"20 Hiragana
+ ひらがな 2"</item>
+        <item>"40 Hiragana
+ ひらがな 2"</item>
+        <item>"60 Hiragana
+ ひらがな 2"</item>
+        <item>"80 Hiragana
+ ひらがな 2"</item>
+        <item>"100 Hiragana
+ ひらがな 2"</item>
+        <item>"10 Hiragana
+ ひらがな 3"</item>
+        <item>"20 Hiragana
+ ひらがな 3"</item>
+        <item>"40 Hiragana
+ ひらがな 3"</item>
+        <item>"60 Hiragana
+ ひらがな 3"</item>
+        <item>"80 Hiragana
+ ひらがな 3"</item>
+        <item>"100 Hiragana
+ ひらがな 3"</item>
+        <item>"10 Katakana
+ カタカナ 1"</item>
+        <item>"20 Katakana
+ カタカナ 1"</item>
+        <item>"40 Katakana
+ カタカナ 1"</item>
+        <item>"60 Katakana
+ カタカナ 1"</item>
+        <item>"80 Katakana
+ カタカナ 1"</item>
+        <item>"100 Katakana
+ カタカナ 1"</item>
+        <item>"10 Katakana
+ カタカナ 2"</item>
+        <item>"20 Katakana
+ カタカナ 2"</item>
+        <item>"40 Katakana
+ カタカナ 2"</item>
+        <item>"60 Katakana
+ カタカナ 2"</item>
+        <item>"80 Katakana
+ カタカナ 2"</item>
+        <item>"100 Katakana
+ カタカナ 2"</item>
+        <item>"10 Katakana
+ カタカナ 3"</item>
+        <item>"20 Katakana
+ カタカナ 3"</item>
+        <item>"40 Katakana
+ カタカナ 3"</item>
+        <item>"60 Katakana
+ カタカナ 3"</item>
+        <item>"80 Katakana
+ カタカナ 3"</item>
+        <item>"100 Katakana
+ カタカナ 3"</item>
+    </string-array>
+    <string-array name="batwords">
+        <item>food</item>
+        <item>music</item>
+        <item>socks</item>
+        <item>bank</item>
+        <item>movie</item>
+        <item>bird</item>
+        <item>body</item>
+        <item>busstop</item>
+        <item>sport</item>
+        <item>arm</item>
+        <item>passport</item>
+        <item>restaurant</item>
+        <item>dog</item>
+        <item>six</item>
+        <item>eye</item>
+        <item>hand</item>
+        <item>hair</item>
+        <item>monkey</item>
+        <item>fresh</item>
+        <item>three</item>
+        <item>bear</item>
+        <item>tiger</item>
+        <item>thailand</item>
+        <item>shirt</item>
+        <item>expensive</item>
+        <item>hiking</item>
+        <item>water</item>
+        <item>five</item>
+        <item>nine</item>
+        <item>ten</item>
+        <item>trousers</item>
+        <item>taiwan</item>
+        <item>bag</item>
+        <item>glasses</item>
+        <item>gardening</item>
+        <item>big</item>
+        <item>trainstation</item>
+        <item>vegetable</item>
+        <item>pig</item>
+        <item>hospital</item>
+        <item>cheap</item>
+        <item>japan</item>
+        <item>horse</item>
+        <item>brazil</item>
+        <item>market</item>
+        <item>hotel</item>
+        <item>fish</item>
+        <item>head</item>
+        <item>small</item>
+        <item>china</item>
+        <item>fruit</item>
+        <item>vietnam</item>
+        <item>unitedstates</item>
+        <item>stockings</item>
+        <item>nose</item>
+        <item>pharmacy</item>
+        <item>philippines</item>
+        <item>skirt</item>
+        <item>toilet</item>
+        <item>malaysia</item>
+        <item>travelling</item>
+        <item>dancing</item>
+        <item>one</item>
+        <item>bread</item>
+        <item>spicy</item>
+        <item>shorts</item>
+        <item>cellphone</item>
+        <item>two</item>
+        <item>shoes</item>
+        <item>battery</item>
+        <item>postoffice</item>
+        <item>sweet</item>
+        <item>beef</item>
+        <item>cat</item>
+        <item>sweater</item>
+        <item>chicken</item>
+        <item>rice</item>
+        <item>ear</item>
+        <item>four</item>
+        <item>reading</item>
+        <item>turkey</item>
+        <item>drink</item>
+        <item>saudiarabia</item>
+        <item>cooking</item>
+        <item>fish</item>
+        <item>mouth</item>
+        <item>clothes</item>
+        <item>salt</item>
+        <item>luggage</item>
+        <item>key</item>
+        <item>seven</item>
+        <item>unitedkingdom</item>
+        <item>mexico</item>
+        <item>russia</item>
+        <item>southkorea</item>
+        <item>shopping</item>
+        <item>dirty</item>
+        <item>germany</item>
+        <item>clean</item>
+        <item>teeth</item>
+        <item>peru</item>
+        <item>indonesia</item>
+        <item>photography</item>
+        <item>france</item>
+        <item>elephant</item>
+        <item>eight</item>
+        <item>watch</item>
+        <item>egypt</item>
+        <item>jewellery</item>
+        <item>money</item>
+    </string-array>
+    <string-array name="batwords_a">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="batwords_f">
+        <item>TABEMONO</item>
+        <item>ONGAKU</item>
+        <item>KUTSUSHITA</item>
+        <item>GINKOU</item>
+        <item>EIGA</item>
+        <item>TORI</item>
+        <item>KARADA</item>
+        <item>BASUTEI</item>
+        <item>SUPOOTSU</item>
+        <item>UDE</item>
+        <item>PASUPOOTO</item>
+        <item>RESUTORAN</item>
+        <item>INU</item>
+        <item>ROKU</item>
+        <item>ME</item>
+        <item>TE</item>
+        <item>KAMINOKE</item>
+        <item>SARU</item>
+        <item>SHINSENNA</item>
+        <item>SAN</item>
+        <item>KUMA</item>
+        <item>TORA</item>
+        <item>TAI</item>
+        <item>SHATSU</item>
+        <item>TAKAI</item>
+        <item>HAIKINGU</item>
+        <item>MIZU</item>
+        <item>GO</item>
+        <item>KYUU</item>
+        <item>JUU</item>
+        <item>ZUBON</item>
+        <item>TAIWAN</item>
+        <item>KABAN</item>
+        <item>MEGANE</item>
+        <item>GAADENINGU</item>
+        <item>OOKII</item>
+        <item>EKI</item>
+        <item>YASAI</item>
+        <item>BUTA</item>
+        <item>BYOUIN</item>
+        <item>YASUI</item>
+        <item>NIHON</item>
+        <item>UMA</item>
+        <item>BURAJIRU</item>
+        <item>ICHIBA</item>
+        <item>HOTERU</item>
+        <item>SAKANA</item>
+        <item>ATAMA</item>
+        <item>CHIISAI</item>
+        <item>CHUUGOKU</item>
+        <item>KUDAMONO</item>
+        <item>BETONAMU</item>
+        <item>AMERIKA</item>
+        <item>SUTOKINGU</item>
+        <item>HANA</item>
+        <item>YAKKYOKU</item>
+        <item>FIRIPIN</item>
+        <item>SUKAATO</item>
+        <item>TOIRE</item>
+        <item>MAREESHIA</item>
+        <item>RYOKOU</item>
+        <item>DANSU</item>
+        <item>ICHI</item>
+        <item>PAN</item>
+        <item>KARAI</item>
+        <item>HANZUBON</item>
+        <item>KEITAIDENWA</item>
+        <item>NI</item>
+        <item>KUTSU</item>
+        <item>DENCHI</item>
+        <item>YUUBINKYOKU</item>
+        <item>AMAI</item>
+        <item>GYUUNIKU</item>
+        <item>NEKO</item>
+        <item>SEETAA</item>
+        <item>TORINIKU</item>
+        <item>GOHAN</item>
+        <item>MIMI</item>
+        <item>YON</item>
+        <item>DOKUSHO</item>
+        <item>TORUKO</item>
+        <item>NOMIMONO</item>
+        <item>SAUJIARABIA</item>
+        <item>RYOURI</item>
+        <item>SAKANA</item>
+        <item>KUCHI</item>
+        <item>FUKU</item>
+        <item>SHIOKARAI</item>
+        <item>NIMOTSU</item>
+        <item>KAGI</item>
+        <item>NANA</item>
+        <item>IGIRISU</item>
+        <item>MEKISHIKO</item>
+        <item>ROSHIA</item>
+        <item>KANKOKU</item>
+        <item>KAIMONO</item>
+        <item>KITANAI</item>
+        <item>DOITSU</item>
+        <item>KIREI</item>
+        <item>HA</item>
+        <item>PERUU</item>
+        <item>INDONESHIA</item>
+        <item>KAMERA</item>
+        <item>FURANSU</item>
+        <item>ZOU</item>
+        <item>HACHI</item>
+        <item>UDEDOKEI</item>
+        <item>EJIPUTO</item>
+        <item>JUERII</item>
+        <item>OKANE</item>
+    </string-array>
+    <string-array name="batwords_l">
+        <item>lettera</item>
+        <item>letterb</item>
+        <item>letterc</item>
+        <item>letterd</item>
+        <item>lettere</item>
+        <item>letterf</item>
+        <item>letterg</item>
+        <item>letterh</item>
+        <item>letteri</item>
+        <item>letterj</item>
+        <item>letterk</item>
+        <item>letterm</item>
+        <item>lettern</item>
+        <item>lettero</item>
+        <item>letterp</item>
+        <item>letterr</item>
+        <item>letters</item>
+        <item>lettert</item>
+        <item>letteru</item>
+        <item>letterv</item>
+        <item>letterw</item>
+        <item>lettery</item>
+        <item>letterz</item>
+    </string-array>
+    <string-array name="begsets_x">
+        <item>places1</item>
+        <item>places2</item>
+        <item>food1</item>
+        <item>food2</item>
+        <item>animals1</item>
+        <item>animals2</item>
+        <item>interests1</item>
+        <item>interests2</item>
+        <item>numbers1</item>
+        <item>numbers2</item>
+        <item>numbers3</item>
+        <item>countries1</item>
+        <item>countries2</item>
+        <item>body1</item>
+        <item>body2</item>
+        <item>clothing1</item>
+        <item>clothing2</item>
+        <item>numbers4</item>
+        <item>numbers5</item>
+        <item>numbers6</item>
+        <item>countries3</item>
+        <item>countries4</item>
+        <item>essentials1</item>
+        <item>essentials2</item>
+        <item>indoors1</item>
+        <item>indoors2</item>
+        <item>language1</item>
+        <item>language2</item>
+        <item>language3</item>
+        <item>food3</item>
+        <item>food4</item>
+    </string-array>
+    <string-array name="culture_info">
+        <item>"Japanese 'Nihongo/ 日本語' is spoken by over 130 million people.
+
+Japanese has 4 writing systems.  These are Kanji 漢字, Hiragana ひらがな, Katakana カタカナ, and Roomaji.
+
+There are 46 Hiragana characters, 46 Katakana characters and thousands of Kanji characters.
+
+Hiragana are usually used to write native words and grammar particles, eg. apple -りんご/ ringo.
+
+Katakana are usually used to write foreign words adopted into Japanese, eg. coffee - コーヒー/ koohii.
+
+Kanji characters are Chinese characters that were adopted into Japanese and can be used to represent many Japanese words, eg. Japanese - 日本語/ にほんご/ nihongo.
+
+Roomaji is the standard romanisation of the Japanese language.
+
+It is easier to start learning Hiragana and Katakana before you attempt Kanji.  It takes a knowledge of about 1800 kanji to be able to read a newspaper."</item>
+        <item>"This is said before starting a meal or when receiving something.
+
+Meaning: I humbly receive"</item>
+        <item>"Meaning: Long time no see
+
+Informal: Hisashiburi"</item>
+        <item>"This is said after a meal as a sign of appreciation.  It can be said to the cook/restaurant owner or person who paid for the meal.
+
+Informal: gochisousama"</item>
+        <item>"This is said when answering the phone.
+
+Meaning: hello"</item>
+        <item>"This is said when a person returns home.
+
+Tadaima is said by the returning person.
+
+Meaning: I'm home
+
+Okaeri nasai is said by the person who is already at home.
+
+Informal: okaeri
+
+Meaning: Welcome home"</item>
+        <item>"This is said when a person leaves home/goes out.
+
+Itte kimasu is said by the person leaving.
+
+Meaning: I'm going (and coming back)
+
+Itterasshai is said by the person who is staying.
+
+Meaning: Have a good time/See you later"</item>
+        <item>"This is a polite expression said when a person finishes work or leaves the office before other colleagues.  It is usually said by a subordinate to a superior.
+
+Meaning: I'm leaving first
+
+Informal: osaki ni"</item>
+        <item>"This is used to express appreciation for a person's hard work when they leave.  It doesn't readily translate into English as there is no exact equivalent.  It is a polite expression said when a person leaves or finishes work or a task.  It is said by the other people who witness the person leaving or finishing.
+
+Informal: otsukare"</item>
+        <item>"This is a polite expression said when someone is entering someone else's home or is interrupting someone else.
+
+Meaning: I'm interrupting you"</item>
+        <item>"Used as a greeting in Osaka and the Kansai area.
+
+Meaning: How is business going?"</item>
+        <item>"This is a polite expression used by a shop clerk/restaurant worker to welcome a customer.  It is usually said when the customer enters the shop/restaurant."</item>
+        <item>"Common adjective expressions you may hear said quite often, particularly by young woman or girls:
+
+Sugoi! - that's great
+
+Saikou! - that's the best
+
+Saitei - that's the worst
+
+Kawaii! - that's cute
+
+Kakkoii - he's/that's cool"</item>
+        <item>"One of the 'sankei' or three views of Japan, Amanohashidate is a picturesque pine covered sandbar in the northern part of Kyoto Prefecture."</item>
+        <item>Beppu is a city well known for its hotsprings (温泉 onsen). Located in Oita Prefecture on Kyuushuu island it is home to the eight hells of Beppu which are eight famous hotsprings.</item>
+        <item>Himeji castle , located in Himeji City, Hyogo Prefecture is the largest castle in Japan. It was first built in 1346 and castle and fort comprises of 83 buildings with advanced defenses.</item>
+        <item>Ishigaki Jima is a beautiful island at the bottom of the Okinawa island chain.</item>
+        <item>"Kinkakuji or the 'Golden Pavillion Temple' is a temple in Kyoto city. It covered in a layer of Japanese lacquer and gold leaf."</item>
+        <item>"One of the 'sankei' or three views of Japan, Matsuyama is a group of 260 islands (島 shima) covered in pine (松 matsu) in Miyagi Prefecture."</item>
+        <item>"One of the 'sankei' or three views of Japan, Miyajima is a shrine (神社 jinja) on an island in Hiroshima Prefecture. It is famous for its floating torii gate which becomes half submerged when the tide comes in. Miyajima is a short ferry ride from Hiroshima."</item>
+        <item>Nara Park (公園 kouen) is home to several temples and shrines along with over 1000 wild deer (シカ shika). There are numerous stalls that sell senbei crackers for people to feed the deer with. Todaiji is one the main temples in Nara Park and houses a giant 15 meter high bronze buddha statue.</item>
+        <item>Nikko shrine is a shinto shrine located in Tochigi Prefecture near Tokyo. It was first built in 1617 during the Edo period.</item>
+        <item>The Shikoku Pilgrimage (遍路道 henromichi) is a series of 88 temples on Shikoku the smallest of the 4 major islands of Japan.</item>
+        <item>Tsukiji Fish Market is the biggest fish and seafood market in the world. Go early in the morning to try some very fresh sushi.</item>
+        <item>Katsudon is a bowl of steaming rice with deep fried pork cutlet (tonkatsu), egg, sliced scallions and sauce.</item>
+        <item>"Katsuo Tataki is raw bonito fillets seared on the outside and served with onions, spring onions, garlic, perilla and covered with a ponzu, sauce containing soy sauce, vinegar and citrus juice.  Katsuo Tataki is a dish originally from the Tosa region of Shikoku."</item>
+        <item>Okonomiyaki is a savoury pancake filled with different kinds of meat, seafood and vegetables. It is usually covered in a sauce, mayonnaise, katsuobushi and aonori.</item>
+        <item>"Oyakodon is a bowl of steaming rice topped with chicken, egg, sliced shallots, onions  and sauce. Oyako means 'parent and child' and don means 'bowl of rice'."</item>
+        <item>"Famous the world over. These are some of the types of sushi you will find in Japan.
+Inarizushi - sushi encased in a fried tofu pouch.
+Makizushi - Means rolled sushi and is wrapped in a sheet of dried seaweed. Futomaki 'thick roll' is a thick type of makizushi. Hosomaki 'thin roll' is a a thin type. Temaki 'hand roll' is sushi wrapped in a small hand size sheet of dried seaweed and can be filled with whatever ingredients you wish.
+Nigiri zushi  'hand pressed' sushi is an rice shaped into an egg shaped mould and then covered with or without a dollop of wasabi and then strips of fish or seafood."</item>
+        <item>Takoyaki is a grilled ball shaped snack filled with a mixture of minced octopus, ginger and batter and then covered with sauce, Japanese mayonaise, dried fish flakes (katsuo bushi). This snack originally comes from Osaka.</item>
+        <item>Unadon is fresh water eel (鰻 unagi) grilled in a sweet soy sauce based sauce and served on a bed of steaming rice. The Day of the Ox is a special day in summer when unagi is usually eaten.</item>
+        <item>"Yakitori is grilled chicken on a sticked. 'yaki' means grilled, and 'tori' means bird . There are many varieties of yakitori including toriniku(white chicken flesh), negima(chicken and spring onions), nankotsu(chicken cartiledge, and tsukune cheezu (minced chicken balls with melted cheese in the middle)."</item>
+        <item>Zaru soba is cold soba (buckwheat) noodles that are dipped in a mixture of tsuyu sauce, spring onions and wasabi.</item>
+    </string-array>
+    <string-array name="culture_titles">
+        <item>About Japanese 日本語</item>
+        <item>"Itadakimasu
+いただきます"</item>
+        <item>"Ohisashiburi desu ne
+おひさしぶりですね"</item>
+        <item>"Gochisousama deshita
+ごちそうさまでした"</item>
+        <item>"Moshi moshi
+もしもし"</item>
+        <item>"Okaeri nasai
+おかえりなさい
+Tadaima
+ただいま"</item>
+        <item>"Ittekimasu
+いってきます
+Itterasshai
+いってらっしゃい"</item>
+        <item>"Osaki ni shitsurei shimasu
+おさきにしつれいします"</item>
+        <item>"Otsukaresama deshita
+おつかれさまでした"</item>
+        <item>"Ojama shimasu
+おじゃまします"</item>
+        <item>"Mokari makka
+もうかりまっか"</item>
+        <item>"Irasshaimase
+いらっしゃいませ"</item>
+        <item>Common Adjective Expressions</item>
+        <item>"Amanohashidate
+天橋立"</item>
+        <item>"Beppu
+別府"</item>
+        <item>"Himeji Castle
+姫路城"</item>
+        <item>"Ishigakijima
+石垣島"</item>
+        <item>"Kinkakuji
+金閣寺"</item>
+        <item>"Matsushima
+松島"</item>
+        <item>"Miyajima
+宮島"</item>
+        <item>"Nara Park
+奈良公園"</item>
+        <item>"Nikko Shrine
+日光"</item>
+        <item>"Shikoku Pilgrimage
+四国遍路道"</item>
+        <item>"Tsukiji Fish Market
+築地市場"</item>
+        <item>"Katsudon
+カツ丼"</item>
+        <item>"Katsuo Tataki
+鰹のタタキ"</item>
+        <item>"Okonomiyaki
+お好み焼き"</item>
+        <item>"Oyakodon
+親子丼"</item>
+        <item>"Sushi
+寿司"</item>
+        <item>"Takoyaki
+たこ焼き"</item>
+        <item>"Unadon
+鰻丼"</item>
+        <item>"Yakitori
+焼き鳥"</item>
+        <item>"Zarusoba
+ざるそば"</item>
+    </string-array>
+    <string-array name="ethints">
+        <item>Type English Here</item>
+        <item>这里输入</item>
+        <item>這裡輸入</item>
+        <item>英語を記入して下さい</item>
+        <item>여기에 쓰기</item>
+        <item>Escribir la Respuesta</item>
+        <item>Ecrivez Ici</item>
+        <item>Вводите здесь</item>
+        <item>Escreva em Inglês aqui</item>
+        <item>اكتب الانجليزيه هنا</item>
+        <item>พิมพ์ภาษาอังกฤษที่นี่</item>
+        <item>Đánh chữ Tiếng Anh ở đây</item>
+        <item>Ketik Bahasa Inggris here</item>
+        <item>Buraya yaz</item>
+        <item>Type Here</item>
+        <item>Schreibe hier</item>
+        <item>Tapere qui</item>
+        <item>اینجا بنویس</item>
+        <item>Skriv här</item>
+        <item>Piš zde</item>
+        <item>Type hier</item>
+        <item>Pisz tutaj</item>
+    </string-array>
+    <integer-array name="free_set_lengths">
+        <item>6</item>
+        <item>5</item>
+        <item>3</item>
+        <item>5</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+    <string-array name="grammar_titles_de">
+        <item>Das erste Treffen</item>
+        <item>Ich mag (....)</item>
+        <item>Ich mag nicht (....)</item>
+        <item>Magst du (....)?</item>
+        <item>Nummern 1</item>
+        <item>Nummern 2</item>
+        <item>Fragen</item>
+        <item>Wo ist (....)?</item>
+        <item>Hier/Dort/Dort drüben</item>
+        <item>Dies/Das da/Jenes dort</item>
+        <item>A ist B</item>
+        <item>Was ist (dies/das da/jenes dort)?</item>
+        <item>Dieses/Jenes/Jenes dort</item>
+        <item>Eine Person ansprechen</item>
+        <item>Allgemeiner Satzaufbau</item>
+        <item>Pronomen</item>
+        <item>Höflichkeit</item>
+        <item>Ich habe (....)</item>
+        <item>Ich habe nicht (....)</item>
+        <item>Hast du (....)?</item>
+        <item>Es gibt (....)</item>
+        <item>Es gibt nicht (....)</item>
+        <item>Gibt es (....)?</item>
+        <item>Japanisch</item>
+        <item>Schriftsystem</item>
+        <item>Grammatikalische Partikel 1</item>
+        <item>Grammatikalische Partikel 2</item>
+        <item>Grammatikalische Partikel 3</item>
+        <item>Besitzanzeigender Partikel [の no]</item>
+        <item>Wo ist mein (....)?</item>
+        <item>Adjektive</item>
+        <item>Adjektive [i い] 1</item>
+        <item>Adjektive [i い] 2</item>
+        <item>Negative Adjektive [i い]</item>
+        <item>Adjektive [na な]</item>
+        <item>Adjektive [na な] 2</item>
+        <item>Negative Adjektive [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Kannst du (....)?</item>
+        <item>Ich möchte (....) gerne</item>
+        <item>Ich möchte (....)</item>
+        <item>I want to (....)</item>
+        <item>Möchtest du (....)?</item>
+        <item>Lass uns (....)</item>
+        <item>Sollen wir (....)?</item>
+        <item>Wo - [どこ doko]</item>
+        <item>Was - [何 - なに/なん - nani/nan]</item>
+        <item>Wer? Wann Warum?</item>
+        <item>Verben - Präsens</item>
+        <item>Verben - Höflichkeitsform => Gewöhnliche Form</item>
+        <item>[て TE] Form</item>
+        <item>Bitte + VERB</item>
+        <item>Verben - Verlaufsform der Gegenwart</item>
+        <item>Verben - Vergangenheitsform</item>
+        <item>Verbs - Future Tense</item>
+        <item>Verben - Negativ</item>
+        <item>Verben - Negative Vergangenheitsform</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_en">
+        <item>Meeting for the first time</item>
+        <item>I like (....)</item>
+        <item>"I don't like (....)"</item>
+        <item>Do you like (....)?</item>
+        <item>Numbers 1</item>
+        <item>Numbers 2</item>
+        <item>Questions</item>
+        <item>Where is the (....)?</item>
+        <item>Here/There/Over There</item>
+        <item>This/That/That over there</item>
+        <item>A is B</item>
+        <item>What is (this/that/that over there)?</item>
+        <item>This/That/That over there (....)</item>
+        <item>Addressing a person</item>
+        <item>Basic Sentence Structure</item>
+        <item>Pronouns</item>
+        <item>Politeness</item>
+        <item>I have (....)</item>
+        <item>"I don't have (....)"</item>
+        <item>Do you have (....)?</item>
+        <item>There is (....)</item>
+        <item>"There isn't (....)"</item>
+        <item>Is there (....)?</item>
+        <item>Japanese</item>
+        <item>Writing System</item>
+        <item>Grammar Particles 1</item>
+        <item>Grammar Particles 2</item>
+        <item>Grammar Particles 3</item>
+        <item>Possession</item>
+        <item>Where is my (....)?</item>
+        <item>Adjective Types</item>
+        <item>Adjectives [i い] 1</item>
+        <item>Adjectives [i い] 2</item>
+        <item>Adjectives Negative [i い]</item>
+        <item>Adjectives [na な]</item>
+        <item>Adjectives [na な] 2</item>
+        <item>Adjectives Negative [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Can you (....)?</item>
+        <item>"I'd like (....) please"</item>
+        <item>I want (....)</item>
+        <item>I want to (....)</item>
+        <item>Would you like to (....)?</item>
+        <item>"Let's (....)"</item>
+        <item>Shall we (....)?</item>
+        <item>Where?</item>
+        <item>What?</item>
+        <item>Who? When? Why?</item>
+        <item>Verbs - Present Tense</item>
+        <item>Verbs - Polite Form => Plain Form</item>
+        <item>[て TE] Form</item>
+        <item>Please + VERB</item>
+        <item>Verbs - Present Progressive Tense</item>
+        <item>Verbs - Past Tense</item>
+        <item>Verbs - Future Tense</item>
+        <item>Verbs - Negative</item>
+        <item>Verbs - Negative Past Tense</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_es">
+        <item>Conocer a alguien por primera vez</item>
+        <item>Como (....)</item>
+        <item>No me gusta (....)</item>
+        <item>Te gusta (....)?</item>
+        <item>Numeros 1</item>
+        <item>Numeros 2</item>
+        <item>Preguntas</item>
+        <item>¿Dónde esta el (....)?</item>
+        <item>Aquí / allá / allá</item>
+        <item>Esta / Ese / Eso que está allá</item>
+        <item>A es B</item>
+        <item>¿Qué es (esto / eso / eso de allí)?</item>
+        <item>This / That / That allí (....)</item>
+        <item>Dirigiéndose a una persona</item>
+        <item>Estructura básica de oraciones</item>
+        <item>Pronombres</item>
+        <item>Cortesía</item>
+        <item>Yo tengo (....)</item>
+        <item>Yo no tengo (....)</item>
+        <item>¿Tienes (....)?</item>
+        <item>Ahi esta (....)</item>
+        <item>No hay (....)</item>
+        <item>¿Esta ahí (....)?</item>
+        <item>Japonés</item>
+        <item>Sistema de escritura</item>
+        <item>Partículas gramaticales 1</item>
+        <item>Grammar Particles 2</item>
+        <item>Grammar Particles 3</item>
+        <item>Posesión Partícula [の no]</item>
+        <item>¿Dónde está mi (....)?</item>
+        <item>Adjetivos</item>
+        <item>Adjetivos [i い] 1</item>
+        <item>Adjetivos [i い] 2</item>
+        <item>Adjetivos Negativos [i い]</item>
+        <item>Adjetivos [na な]</item>
+        <item>Adjetivos [na な] 2</item>
+        <item>Adjetivos Negativos [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Puedes (....)?</item>
+        <item>Me gustaría (....) por favor</item>
+        <item>Yo quiero (....)</item>
+        <item>I want to (....)</item>
+        <item>¿Te gustaria (....)?</item>
+        <item>Vamos (....)</item>
+        <item>¿Deberiamos (....)?</item>
+        <item>Donde - [どこ doko]</item>
+        <item>Qué - [何 - なに / なん - nani / nan]</item>
+        <item>¿Quien? ¿Cuando? ¿Por qué?</item>
+        <item>Verbos - Tiempo presente</item>
+        <item>Verbos - Forma educada => Forma simple</item>
+        <item>La forma [て TE]</item>
+        <item>Por favor + VERBO</item>
+        <item>Verbos - Tiempo presente progresivo</item>
+        <item>Verbos - Tiempo pasado</item>
+        <item>Verbs - Future Tense</item>
+        <item>Verbos - Negativo</item>
+        <item>Verbos - Tiempo pasado negativo</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_fr">
+        <item>Une rencontre pour la première fois</item>
+        <item>J’aime (....)</item>
+        <item>Je n’aime pas (....)</item>
+        <item>Aimez-vous (....) ?</item>
+        <item>Nombres 1</item>
+        <item>Nombres 2</item>
+        <item>Questions</item>
+        <item>Où se trouvent-le (....) ?</item>
+        <item>Ici/là/ là-bas</item>
+        <item>Ce/Cela/ Cette or ce (nom d’une chose), là-bas</item>
+        <item>A est B</item>
+        <item>"Qu'est-ce que  (c'est) ?"</item>
+        <item>Ceci/ça/ (....)</item>
+        <item>"Parler avec  une personne"</item>
+        <item>Structure de la phrase de base</item>
+        <item>Pronoms</item>
+        <item>Politesse</item>
+        <item>J’ai (....)</item>
+        <item>Je n’ai pas (....)</item>
+        <item>Avez-vous (....) ?</item>
+        <item>Il n’y a (....)</item>
+        <item>"Il n'y a pas (....)"</item>
+        <item>Y a-t-il (....) ?</item>
+        <item>Japonais</item>
+        <item>Système d’écriture</item>
+        <item>Particules de grammaire 1</item>
+        <item>Particules de grammaire 2</item>
+        <item>Grammaire de particules 3</item>
+        <item>Particule de possession [の no]</item>
+        <item>Où est mon (....) ?</item>
+        <item>Adjectifs</item>
+        <item>Adjectifs [i い] 1</item>
+        <item>Adjectifs [i い] 2</item>
+        <item>Adjectifs négatifs [i い]</item>
+        <item>Adjectifs [na な]</item>
+        <item>Adjectifs [na な] 2</item>
+        <item>Adjectifs négatifs [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Pouvez-vous (....) ?</item>
+        <item>"s’il vous plaît, Je voudrais (....) "</item>
+        <item>"Je veux (....) "</item>
+        <item>I want to (....)</item>
+        <item>Voulez-vous (....) ?</item>
+        <item>Nous allons (....)</item>
+        <item>Allons-nous (....) ?</item>
+        <item>-[どこ doko]</item>
+        <item>-[何 - なに/なん -nes/nan]</item>
+        <item>Qui ? Quand ? Pourquoi ?</item>
+        <item>Verbes - présent de l’indicatif</item>
+        <item>Verbes - forme formelle = > forme continu</item>
+        <item>La forme [て TE]</item>
+        <item>S’il vous plaît + verbe</item>
+        <item>"Verbes - indicatif présent Progressive "</item>
+        <item>Verbes – le passé</item>
+        <item>Verbs - Future Tense</item>
+        <item>Verbes - négatif</item>
+        <item>Verbes - passé négatif</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_in">
+        <item>Pertemuan pertama kali</item>
+        <item>Saya suka (....)</item>
+        <item>Saya tidak suka (....)</item>
+        <item>Apakah kamu suka (....)?</item>
+        <item>Angka 1</item>
+        <item>Angka 2</item>
+        <item>Pertanyaan</item>
+        <item>Dimana (....)?</item>
+        <item>Di Sini/Di Sana/Di Sebelah Sana</item>
+        <item>Ini/Itu/Itu di Sana</item>
+        <item>A adalah B</item>
+        <item>Apa (ini/itu/itu di sana)?</item>
+        <item>Ini/Itu/Itu di sana (....)</item>
+        <item>Menyapa seseorang</item>
+        <item>Struktur Dasar Kalimat</item>
+        <item>Kata ganti</item>
+        <item>Kesopanan</item>
+        <item>Saya punya (....)</item>
+        <item>Saya tidak punya (....)</item>
+        <item>Apa kamu punya (....)?</item>
+        <item>Ada (....)</item>
+        <item>Tidak ada (....)</item>
+        <item>Apakah ada (....)?</item>
+        <item>Bahasa Japanese</item>
+        <item>Sistematika penulisan</item>
+        <item>Partikel Tata Bahasa 1</item>
+        <item>Partikel Tata Bahasa 2</item>
+        <item>Partikel Tata Bahasa 3</item>
+        <item>Partikel Kepemilikan [の no]</item>
+        <item>Dimana (....) saya?</item>
+        <item>Kata sifat</item>
+        <item>Kata sifat [i い] 1</item>
+        <item>Kata sifat [i い] 2</item>
+        <item>Kata sifat negatif [i い]</item>
+        <item>Kata sifat [na な]</item>
+        <item>Kata sifat [na な] 2</item>
+        <item>Kata sifat negatif [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Bisakah kamu (....)?</item>
+        <item>Tolong, saya mau (....)</item>
+        <item>Saya ingin (....)</item>
+        <item>I want to (....)</item>
+        <item>Apakah Anda mau (....)?</item>
+        <item>Ayo (....)</item>
+        <item>Bisakah kita (....)?</item>
+        <item>Dimana - [ど こ doko]</item>
+        <item>Apa - [何 - なに/なん - nani/nan]</item>
+        <item>Siapa? Kapan? Mengapa?</item>
+        <item>Kata kerja - Bentuk Sekarang</item>
+        <item>Kata Kerja - Bentuk Sopan => Bentuk Biasa</item>
+        <item>Bentuk [て TE]</item>
+        <item>silakan + KATA KERJA</item>
+        <item>Kata Kerja - Bentuk sekarang dan masih berlangsung</item>
+        <item>Kata Kerja - Bentuk lampau</item>
+        <item>Verbs - Future Tense</item>
+        <item>Kata kerja - negatif</item>
+        <item>Kata Kerja - Bentuk Negatif Lampau</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_ko">
+        <item>처음 만나는 경우</item>
+        <item>저는 (....)을 좋아합니다</item>
+        <item>저는 (....)를 좋아하지 않습니다</item>
+        <item>(....)을 좋아하시나요?</item>
+        <item>번호 1</item>
+        <item>번호 2</item>
+        <item>질문</item>
+        <item>(....)가 어디에 있나요?</item>
+        <item>여기/저기/저기에</item>
+        <item>이것/그것/저기에 저것</item>
+        <item>A는 B이다</item>
+        <item>(이것/저것/저기에 저것)은 무엇인가요?</item>
+        <item>이것/저것/저기 저것은 (....)</item>
+        <item>한 사람에게 말걸기</item>
+        <item>기본 문장 구조</item>
+        <item>대명사</item>
+        <item>예의</item>
+        <item>저는 (....)을 가지고 있습니다</item>
+        <item>저는 (....)이 없습니다</item>
+        <item>(....) 있나요?</item>
+        <item>(....)이 있습니다</item>
+        <item>(....)이 없습니다</item>
+        <item>(....)이 있나요?</item>
+        <item>일본어</item>
+        <item>작문 시스템</item>
+        <item>문법 접미사 1</item>
+        <item>문법 접미사 2</item>
+        <item>문법 접미사 3</item>
+        <item>소유물 접미사 [の no]</item>
+        <item>제 (....)는 어디에 있나요?</item>
+        <item>형용사</item>
+        <item>형용사 [i い] 1</item>
+        <item>형용사 [i い] 2</item>
+        <item>형용사 부정어 [i い]</item>
+        <item>형용사 [na な]</item>
+        <item>형용사 [na な] 2</item>
+        <item>형용사 부정어 [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>(....)을 할 수 있나요?</item>
+        <item>저는 (....)을 하고 싶습니다</item>
+        <item>저는 (....)을 원합니다</item>
+        <item>I want to (....)</item>
+        <item>(....) 하시겠습니까?</item>
+        <item>(....)을 합시다</item>
+        <item>(....) 할까요?</item>
+        <item>어디 - [どこ doko]</item>
+        <item>무엇 - [何 - なに/なん - nani/nan]</item>
+        <item>누가? 언제? 왜?</item>
+        <item>동사 - 현재 시제</item>
+        <item>동사 - 정중한 형식 => 일반 형식</item>
+        <item>[て TE] 형식은</item>
+        <item>~요 + 동사</item>
+        <item>동사 - 현재 진행형 시제</item>
+        <item>동사 - 과거 시제</item>
+        <item>Verbs - Future Tense</item>
+        <item>동사 - 부정어</item>
+        <item>동사 - 부정형 과거 시제</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_pl">
+        <item>Spotykając się po raz pierwszy</item>
+        <item>Lubię (....)</item>
+        <item>Nie lubię</item>
+        <item>Lubisz (....)?</item>
+        <item>Liczby 1</item>
+        <item>Liczby 2</item>
+        <item>Pytania</item>
+        <item>Gdzie jest (....)?</item>
+        <item>Tutaj/Tam/Tam</item>
+        <item>To/Tamto/Tamto</item>
+        <item>A jest B</item>
+        <item>Co to jest (to/to/tam)?</item>
+        <item>To/Ten/Tamto (....)</item>
+        <item>Zwracanie się do osoby</item>
+        <item>Podstawowa Struktura Zdania</item>
+        <item>Zaimki</item>
+        <item>Grzeczność</item>
+        <item>Mam (....)</item>
+        <item>Nie mam</item>
+        <item>Masz (....)?</item>
+        <item>Tam jest (....)</item>
+        <item>Tam nie ma (....)</item>
+        <item>Jest tam (....)?</item>
+        <item>Japoński</item>
+        <item>System Piśmienny</item>
+        <item>Partykuły Gramatyczne 1</item>
+        <item>Partykuły Gramatyczne 2</item>
+        <item>Partykuły Gramatyczne 3</item>
+        <item>Partykuła Posiadania [の no]</item>
+        <item>Gdzie jest mój (....)?</item>
+        <item>Przymiotniki</item>
+        <item>Przymiotniki [i い] 1</item>
+        <item>Przymiotniki [i い] 2</item>
+        <item>Przeczenia Przymiotnikowe [i い]</item>
+        <item>Przymiotniki [na な]</item>
+        <item>Przymiotniki [na な] 2</item>
+        <item>Przeczenia Przymiotnikowe [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Umiesz (....)?</item>
+        <item>Chciałbym (....) / Poproszę (....)</item>
+        <item>Chcę (....)</item>
+        <item>I want to (....)</item>
+        <item>Czy chciałbyś (....)?</item>
+        <item>Wyrażanie sugestii / Składanie propozycji</item>
+        <item>Zrobimy (....)?</item>
+        <item>Gdzie - [どこ doko]</item>
+        <item>Co - [何 - なに/なん - nani/nan]</item>
+        <item>Kto? Kiedy? Dlaczego?</item>
+        <item>Czasowniki - Czas Teraźniejszy</item>
+        <item>Czasowniki - Forma Grzecznościowa => Forma Zwykła</item>
+        <item>Forma [て TE]</item>
+        <item>Prośba + CZASOWNIK</item>
+        <item>Czasowniki - Czas Teraźniejszy Progresywny</item>
+        <item>Czasowniki - Czas Przeszły</item>
+        <item>Verbs - Future Tense</item>
+        <item>Czasowniki - Przeczenia</item>
+        <item>Czasowniki - Przeczenia Czasu Przeszłego</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_pt">
+        <item>Conhecendo pela primeira vez</item>
+        <item>Eu gosto (....)</item>
+        <item>Eu não gosto (....)</item>
+        <item>Você gosta (....)?</item>
+        <item>Números 1</item>
+        <item>Números 2</item>
+        <item>Perguntas</item>
+        <item>Onde está (....)?</item>
+        <item>Aqui/Lá/Alí</item>
+        <item>Isso/Aquilo/Aquilo alí</item>
+        <item>A é B</item>
+        <item>O que é (isso/aquilo/aquilo alí)?</item>
+        <item>Esse/Aquele/Aquele alí (....)</item>
+        <item>Dirigindo-se a uma pessoa</item>
+        <item>Estrutura Básica da Sentença</item>
+        <item>Pronomes</item>
+        <item>Forma Polida</item>
+        <item>Eu tenho (....)</item>
+        <item>Eu não tenho (....)</item>
+        <item>Você tem (....)?</item>
+        <item>Há (....)</item>
+        <item>Não há (....)</item>
+        <item>Há (....)?</item>
+        <item>Japonês</item>
+        <item>Sistema de Escrita</item>
+        <item>Partículas Gramaticais 1</item>
+        <item>Partículas Gramaticais 2</item>
+        <item>Partículas Gramaticais 3</item>
+        <item>Partícula de Posse [の no]</item>
+        <item>Onde está o meu (....)?</item>
+        <item>Adjetivos</item>
+        <item>Adjetivos [i い] 1</item>
+        <item>Adjetivos [i い] 2</item>
+        <item>Adjetivos Negativos [i い]</item>
+        <item>Adjetivos [na な]</item>
+        <item>Adjetivos [na な] 2</item>
+        <item>Adjetivos Negativos [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Você pode (....)?</item>
+        <item>Eu gostaria (....) por favor</item>
+        <item>Eu quero (....)</item>
+        <item>I want to (....)</item>
+        <item>Você gostaria de (....)?</item>
+        <item>Vamos (....)</item>
+        <item>Devemos (....)?</item>
+        <item>Onde - [どこ doko]</item>
+        <item>O que - [何 - なに/なん - nani/nan]</item>
+        <item>Quem? Quando? Por quê?</item>
+        <item>Verbos - Presente</item>
+        <item>Verbos - Forma Polida => Forma Simples</item>
+        <item>A forma [て TE]</item>
+        <item>Por favor + VERBO</item>
+        <item>Verbos - Presente Progressivo</item>
+        <item>Verbos - Passado</item>
+        <item>Verbs - Future Tense</item>
+        <item>Verbos - Negativo</item>
+        <item>Verbos - Passado Negativo</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_ru">
+        <item>Первое знакомство</item>
+        <item>Я люблю (....)</item>
+        <item>Я не люблю (....)</item>
+        <item>Вы любите (....)?</item>
+        <item>Числа 1</item>
+        <item>Числа 2</item>
+        <item>Вопросы</item>
+        <item>Где находится (....)?</item>
+        <item>Здесь/Там/Вон там</item>
+        <item>Этот/Тот/Вон тот</item>
+        <item>A есть B</item>
+        <item>Что (есть) (это/то/вон то)?</item>
+        <item>Этот/Тот/Вон тот (....)</item>
+        <item>Обращение к человеку</item>
+        <item>Порядок слов в предложении</item>
+        <item>Местоимения</item>
+        <item>Вежливость</item>
+        <item>У меня есть (....)</item>
+        <item>У меня нет (....)</item>
+        <item>У вас есть (....)?</item>
+        <item>Имеется (....)</item>
+        <item>Нет (....)</item>
+        <item>Есть ли (....)?</item>
+        <item>Японский язык</item>
+        <item>Система письменности</item>
+        <item>Грамматические частицы 1</item>
+        <item>Грамматические частицы 2</item>
+        <item>Грамматические частицы 3</item>
+        <item>Притяжательная частица [の no]</item>
+        <item>Где мой (....)?</item>
+        <item>Прилагательные</item>
+        <item>Прилагательные [i い] 1</item>
+        <item>Прилагательные [i い] 2</item>
+        <item>Отрицательные прилагательные [i い]</item>
+        <item>Прилагательные [na な]</item>
+        <item>Прилагательные [na な] 2</item>
+        <item>Отрицательные прилагательные [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Вы умеете (....)?</item>
+        <item>Я бы хотел (....)</item>
+        <item>"Я хочу (....) "</item>
+        <item>I want to (....)</item>
+        <item>Хотели бы вы (....)?</item>
+        <item>Давайте (....)</item>
+        <item>Давайте (....)?</item>
+        <item>Где - [どこ doko]</item>
+        <item>Что - [何 - なに/なん - nani/nan]</item>
+        <item>Кто? Когда? Почему?</item>
+        <item>Глаголы - настоящее время</item>
+        <item>Глаголы - вежливая форма => обычная форма</item>
+        <item>Форма [て TE]</item>
+        <item>Пожалуйста + ГЛАГОЛ</item>
+        <item>Глаголы - настоящее длительное время</item>
+        <item>Глаголы - прошедшее время</item>
+        <item>Verbs - Future Tense</item>
+        <item>Глаголы - отрицание</item>
+        <item>Глаголы - прошедшее время, отрицание</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="grammar_titles_vi">
+        <item>Lần đầu gặp gỡ</item>
+        <item>Tôi thích (....)</item>
+        <item>Tôi không thích (....)</item>
+        <item>Bạn có thích (....) không?</item>
+        <item>Số 1</item>
+        <item>Số 2</item>
+        <item>Câu hỏi</item>
+        <item>(....) ở đâu?</item>
+        <item>Ở đây/Ở đó/Ở kia</item>
+        <item>Cái này/Cái đó/Cái kia</item>
+        <item>A là B</item>
+        <item>(cái này/cái đó/cái kia) là gì?</item>
+        <item>Cái này/Cái đó/Cái kia (....)</item>
+        <item>Nói chuyện với một người</item>
+        <item>Cấu trúc câu cơ bản</item>
+        <item>Đại từ</item>
+        <item>Lịch sự</item>
+        <item>Tôi có (....)</item>
+        <item>Tôi không có (....)</item>
+        <item>Bạn có (....) không?</item>
+        <item>Có (....)</item>
+        <item>Không có (....)</item>
+        <item>Có (....) không?</item>
+        <item>Tiếng Nhật</item>
+        <item>Hệ thống chữ viết</item>
+        <item>Các thành phần ngữ pháp 1</item>
+        <item>Các thành phần ngữ pháp 2</item>
+        <item>Các thành phần ngữ pháp 3</item>
+        <item>Thành phần sở hữu [の no]</item>
+        <item>(....) của tôi ở đâu?</item>
+        <item>Tính từ</item>
+        <item>Tính từ [i い] 1</item>
+        <item>Tính từ [i い] 2</item>
+        <item>Tính từ phủ định [i い]</item>
+        <item>Tính từ [na な]</item>
+        <item>Tính từ [na な] 2</item>
+        <item>Tính từ phủ định [na な]</item>
+        <item>I can (....)</item>
+        <item>"I can't (....)"</item>
+        <item>Bạn có thể (....) không?</item>
+        <item>Vui lòng cho tôi (....)</item>
+        <item>"Tôi muốn (....) "</item>
+        <item>I want to (....)</item>
+        <item>Bạn có muốn (....) không?</item>
+        <item>Hãy (....) nào</item>
+        <item>Chúng ta (....) chứ?</item>
+        <item>Ở đâu - [どこ doko]</item>
+        <item>Cái gì - [何 - なに/なん - nani/nan]</item>
+        <item>Ai? Khi nào? Tại sao?</item>
+        <item>Động từ - Thì hiện tại</item>
+        <item>Động từ - Dạng lịch sự => Dạng đơn giản</item>
+        <item>Dạng [て TE]</item>
+        <item>Vui lòng + ĐỘNG TỪ</item>
+        <item>Động từ - Thì hiện tại tiếp diễn</item>
+        <item>Động từ - Thì quá khứ</item>
+        <item>Verbs - Future Tense</item>
+        <item>Động từ - Phủ định</item>
+        <item>Động từ - Phủ định thì quá khứ</item>
+        <item>Verbs - Negative Future Tense</item>
+        <item>Consecutive Actions</item>
+    </string-array>
+    <string-array name="hiragana">
+        <item>あ</item>
+        <item>い</item>
+        <item>う</item>
+        <item>え</item>
+        <item>お</item>
+        <item>か</item>
+        <item>き</item>
+        <item>く</item>
+        <item>け</item>
+        <item>こ</item>
+        <item>さ</item>
+        <item>し</item>
+        <item>す</item>
+        <item>せ</item>
+        <item>そ</item>
+        <item>た</item>
+        <item>ち</item>
+        <item>つ</item>
+        <item>て</item>
+        <item>と</item>
+        <item>な</item>
+        <item>に</item>
+        <item>ぬ</item>
+        <item>ね</item>
+        <item>の</item>
+        <item>は</item>
+        <item>ひ</item>
+        <item>ふ</item>
+        <item>へ</item>
+        <item>ほ</item>
+        <item>ま</item>
+        <item>み</item>
+        <item>む</item>
+        <item>め</item>
+        <item>も</item>
+        <item>ら</item>
+        <item>り</item>
+        <item>る</item>
+        <item>れ</item>
+        <item>ろ</item>
+        <item>や</item>
+        <item>ゆ</item>
+        <item>よ</item>
+        <item></item>
+        <item></item>
+        <item>わ</item>
+        <item>を</item>
+        <item>ん</item>
+        <item></item>
+        <item></item>
+        <item>が</item>
+        <item>ぎ</item>
+        <item>ぐ</item>
+        <item>げ</item>
+        <item>ご</item>
+        <item>ざ</item>
+        <item>じ</item>
+        <item>ず</item>
+        <item>ぜ</item>
+        <item>ぞ</item>
+        <item>だ</item>
+        <item>ぢ</item>
+        <item>づ</item>
+        <item>で</item>
+        <item>ど</item>
+        <item>ば</item>
+        <item>び</item>
+        <item>ぶ</item>
+        <item>べ</item>
+        <item>ぼ</item>
+        <item>ぱ</item>
+        <item>ぴ</item>
+        <item>ぷ</item>
+        <item>ぺ</item>
+        <item>ぽ</item>
+        <item>ぎゃ</item>
+        <item>ぎゅ</item>
+        <item>ぎょ</item>
+        <item>じゃ</item>
+        <item>じゅ</item>
+        <item>じょ</item>
+        <item>びゃ</item>
+        <item>びゅ</item>
+        <item>びょ</item>
+        <item>ぴゃ</item>
+        <item>ぴゅ</item>
+        <item>ぴょ</item>
+        <item>きゃ</item>
+        <item>きゅ</item>
+        <item>きょ</item>
+        <item>しゃ</item>
+        <item>しゅ</item>
+        <item>しょ</item>
+        <item>ちゃ</item>
+        <item>ちゅ</item>
+        <item>ちょ</item>
+        <item>にゃ</item>
+        <item>にゅ</item>
+        <item>にょ</item>
+        <item>ひゃ</item>
+        <item>ひゅ</item>
+        <item>ひょ</item>
+        <item>みゃ</item>
+        <item>みゅ</item>
+        <item>みょ</item>
+        <item>りゃ</item>
+        <item>りゅ</item>
+        <item>りょ</item>
+    </string-array>
+    <string-array name="hiragana_katakana">
+        <item>あ</item>
+        <item>い</item>
+        <item>う</item>
+        <item>え</item>
+        <item>お</item>
+        <item>か</item>
+        <item>き</item>
+        <item>く</item>
+        <item>け</item>
+        <item>こ</item>
+        <item>さ</item>
+        <item>し</item>
+        <item>す</item>
+        <item>せ</item>
+        <item>そ</item>
+        <item>た</item>
+        <item>ち</item>
+        <item>つ</item>
+        <item>て</item>
+        <item>と</item>
+        <item>な</item>
+        <item>に</item>
+        <item>ぬ</item>
+        <item>ね</item>
+        <item>の</item>
+        <item>ま</item>
+        <item>み</item>
+        <item>む</item>
+        <item>め</item>
+        <item>も</item>
+        <item>は</item>
+        <item>ひ</item>
+        <item>ふ</item>
+        <item>へ</item>
+        <item>ほ</item>
+        <item>ら</item>
+        <item>り</item>
+        <item>る</item>
+        <item>れ</item>
+        <item>ろ</item>
+        <item>わ</item>
+        <item>を</item>
+        <item>や</item>
+        <item>ゆ</item>
+        <item>よ</item>
+        <item>ん</item>
+        <item>が</item>
+        <item>ぎ</item>
+        <item>ぐ</item>
+        <item>げ</item>
+        <item>ご</item>
+        <item>ざ</item>
+        <item>じ</item>
+        <item>ず</item>
+        <item>ぜ</item>
+        <item>ぞ</item>
+        <item>だ</item>
+        <item>ぢ</item>
+        <item>づ</item>
+        <item>で</item>
+        <item>ど</item>
+        <item>ば</item>
+        <item>び</item>
+        <item>ぶ</item>
+        <item>べ</item>
+        <item>ぼ</item>
+        <item>ぱ</item>
+        <item>ぴ</item>
+        <item>ぷ</item>
+        <item>ぺ</item>
+        <item>ぽ</item>
+        <item>ゃ</item>
+        <item>ゅ</item>
+        <item>ょ</item>
+        <item>っ</item>
+        <item>ア</item>
+        <item>イ</item>
+        <item>ウ</item>
+        <item>エ</item>
+        <item>オ</item>
+        <item>カ</item>
+        <item>キ</item>
+        <item>ク</item>
+        <item>ケ</item>
+        <item>コ</item>
+        <item>サ</item>
+        <item>シ</item>
+        <item>ス</item>
+        <item>セ</item>
+        <item>ソ</item>
+        <item>タ</item>
+        <item>チ</item>
+        <item>ツ</item>
+        <item>テ</item>
+        <item>ト</item>
+        <item>ナ</item>
+        <item>ニ</item>
+        <item>ヌ</item>
+        <item>ネ</item>
+        <item>ノ</item>
+        <item>マ</item>
+        <item>ミ</item>
+        <item>ム</item>
+        <item>メ</item>
+        <item>モ</item>
+        <item>ハ</item>
+        <item>ヒ</item>
+        <item>フ</item>
+        <item>ヘ</item>
+        <item>ホ</item>
+        <item>ラ</item>
+        <item>リ</item>
+        <item>ル</item>
+        <item>レ</item>
+        <item>ロ</item>
+        <item>ワ</item>
+        <item>ヲ</item>
+        <item>ヤ</item>
+        <item>ユ</item>
+        <item>ヨ</item>
+        <item>ン</item>
+        <item>ー</item>
+        <item>ガ</item>
+        <item>ギ</item>
+        <item>グ</item>
+        <item>ゲ</item>
+        <item>ゴ</item>
+        <item>ザ</item>
+        <item>ジ</item>
+        <item>ズ</item>
+        <item>ゼ</item>
+        <item>ゾ</item>
+        <item>ダ</item>
+        <item>ヂ</item>
+        <item>ヅ</item>
+        <item>デ</item>
+        <item>ド</item>
+        <item>バ</item>
+        <item>ビ</item>
+        <item>ブ</item>
+        <item>ベ</item>
+        <item>ボ</item>
+        <item>パ</item>
+        <item>ピ</item>
+        <item>プ</item>
+        <item>ペ</item>
+        <item>ポ</item>
+        <item>ャ</item>
+        <item>ュ</item>
+        <item>ョ</item>
+        <item>ッ</item>
+        <item>ァ</item>
+        <item>ィ</item>
+        <item>ゥ</item>
+        <item>ェ</item>
+        <item>ォ</item>
+    </string-array>
+    <string-array name="hiragana_q">
+        <item>あ</item>
+        <item>い</item>
+        <item>う</item>
+        <item>え</item>
+        <item>お</item>
+        <item>か</item>
+        <item>き</item>
+        <item>く</item>
+        <item>け</item>
+        <item>こ</item>
+        <item>さ</item>
+        <item>し</item>
+        <item>す</item>
+        <item>せ</item>
+        <item>そ</item>
+        <item>た</item>
+        <item>ち</item>
+        <item>つ</item>
+        <item>て</item>
+        <item>と</item>
+        <item>な</item>
+        <item>に</item>
+        <item>ぬ</item>
+        <item>ね</item>
+        <item>の</item>
+        <item>は</item>
+        <item>ひ</item>
+        <item>ふ</item>
+        <item>へ</item>
+        <item>ほ</item>
+        <item>ま</item>
+        <item>み</item>
+        <item>む</item>
+        <item>め</item>
+        <item>も</item>
+        <item>ら</item>
+        <item>り</item>
+        <item>る</item>
+        <item>れ</item>
+        <item>ろ</item>
+        <item>や</item>
+        <item>ゆ</item>
+        <item>よ</item>
+        <item>わ</item>
+        <item>を</item>
+        <item>ん</item>
+        <item>が</item>
+        <item>ぎ</item>
+        <item>ぐ</item>
+        <item>げ</item>
+        <item>ご</item>
+        <item>ざ</item>
+        <item>じ</item>
+        <item>ず</item>
+        <item>ぜ</item>
+        <item>ぞ</item>
+        <item>だ</item>
+        <item>ぢ</item>
+        <item>づ</item>
+        <item>で</item>
+        <item>ど</item>
+        <item>ば</item>
+        <item>び</item>
+        <item>ぶ</item>
+        <item>べ</item>
+        <item>ぼ</item>
+        <item>ぱ</item>
+        <item>ぴ</item>
+        <item>ぷ</item>
+        <item>ぺ</item>
+        <item>ぽ</item>
+        <item>ぎゃ</item>
+        <item>ぎゅ</item>
+        <item>ぎょ</item>
+        <item>じゃ</item>
+        <item>じゅ</item>
+        <item>じょ</item>
+        <item>びゃ</item>
+        <item>びゅ</item>
+        <item>びょ</item>
+        <item>ぴゃ</item>
+        <item>ぴゅ</item>
+        <item>ぴょ</item>
+        <item>きゃ</item>
+        <item>きゅ</item>
+        <item>きょ</item>
+        <item>しゃ</item>
+        <item>しゅ</item>
+        <item>しょ</item>
+        <item>ちゃ</item>
+        <item>ちゅ</item>
+        <item>ちょ</item>
+        <item>にゃ</item>
+        <item>にゅ</item>
+        <item>にょ</item>
+        <item>ひゃ</item>
+        <item>ひゅ</item>
+        <item>ひょ</item>
+        <item>みゃ</item>
+        <item>みゅ</item>
+        <item>みょ</item>
+        <item>りゃ</item>
+        <item>りゅ</item>
+        <item>りょ</item>
+    </string-array>
+    <string-array name="intsets_x">
+        <item>numbers7</item>
+        <item>numbers8</item>
+        <item>numbers9</item>
+        <item>numbers10</item>
+        <item>places3</item>
+        <item>places4</item>
+        <item>places5</item>
+        <item>places6</item>
+        <item>places7</item>
+        <item>places8</item>
+        <item>food5</item>
+        <item>food6</item>
+        <item>food7</item>
+        <item>food8</item>
+        <item>food9</item>
+        <item>food10</item>
+        <item>food11</item>
+        <item>food12</item>
+        <item>food13</item>
+        <item>food14</item>
+        <item>food15</item>
+        <item>animals3</item>
+        <item>animals4</item>
+        <item>animals5</item>
+        <item>animals6</item>
+        <item>animals7</item>
+        <item>animals8</item>
+        <item>countries5</item>
+        <item>countries6</item>
+        <item>countries7</item>
+        <item>countries8</item>
+        <item>countries9</item>
+        <item>countries10</item>
+        <item>countries11</item>
+        <item>countries12</item>
+        <item>countries13</item>
+        <item>interests3</item>
+        <item>interests4</item>
+        <item>interests5</item>
+        <item>interests6</item>
+        <item>interests7</item>
+        <item>interests8</item>
+        <item>interests9</item>
+        <item>interests10</item>
+        <item>body3</item>
+        <item>body4</item>
+        <item>body5</item>
+        <item>body6</item>
+        <item>body7</item>
+        <item>body8</item>
+        <item>time1</item>
+        <item>time2</item>
+        <item>time3</item>
+        <item>eatingout1</item>
+        <item>eatingout2</item>
+        <item>eatingout3</item>
+        <item>clothing3</item>
+        <item>clothing4</item>
+        <item>clothing5</item>
+        <item>clothing6</item>
+        <item>clothing7</item>
+        <item>clothing8</item>
+        <item>colors1</item>
+        <item>colors2</item>
+        <item>colors3</item>
+        <item>school1</item>
+        <item>school2</item>
+        <item>school3</item>
+        <item>school4</item>
+        <item>school5</item>
+        <item>transport1</item>
+        <item>transport2</item>
+        <item>transport3</item>
+        <item>outdoors1</item>
+        <item>outdoors2</item>
+        <item>outdoors3</item>
+        <item>planets1</item>
+        <item>planets2</item>
+        <item>weather1</item>
+        <item>weather2</item>
+        <item>weather3</item>
+        <item>emergencies1</item>
+        <item>emergencies2</item>
+        <item>emergencies3</item>
+        <item>jobs1</item>
+        <item>jobs2</item>
+        <item>jobs3</item>
+        <item>family1</item>
+        <item>family2</item>
+        <item>family3</item>
+        <item>essentials3</item>
+        <item>essentials4</item>
+        <item>essentials5</item>
+        <item>indoors3</item>
+        <item>indoors4</item>
+        <item>indoors5</item>
+        <item>verbs1</item>
+        <item>verbs2</item>
+        <item>verbs3</item>
+        <item>verbs4</item>
+        <item>verbs5</item>
+        <item>verbs6</item>
+        <item>verbs7</item>
+        <item>verbs8</item>
+        <item>verbs9</item>
+        <item>verbs10</item>
+        <item>verbs11</item>
+        <item>verbs12</item>
+        <item>verbs13</item>
+        <item>adjectives1</item>
+        <item>adjectives2</item>
+        <item>adjectives3</item>
+        <item>adjectives4</item>
+        <item>adjectives5</item>
+        <item>adjectives6</item>
+        <item>adjectives7</item>
+        <item>adjectives8</item>
+    </string-array>
+    <string-array name="kana_raw">
+        <item>kana1</item>
+        <item>kana2</item>
+        <item>kana3</item>
+        <item>kana4</item>
+        <item>kana5</item>
+        <item>kana6</item>
+        <item>kana7</item>
+        <item>kana8</item>
+        <item>kana9</item>
+        <item>kana10</item>
+        <item>kana11</item>
+        <item>kana12</item>
+        <item>kana13</item>
+        <item>kana14</item>
+        <item>kana15</item>
+        <item>kana16</item>
+        <item>kana17</item>
+        <item>kana18</item>
+        <item>kana19</item>
+        <item>kana20</item>
+        <item>kana21</item>
+        <item>kana22</item>
+        <item>kana23</item>
+        <item>kana24</item>
+        <item>kana25</item>
+        <item>kana26</item>
+        <item>kana27</item>
+        <item>kana28</item>
+        <item>kana29</item>
+        <item>kana30</item>
+        <item>kana31</item>
+        <item>kana32</item>
+        <item>kana33</item>
+        <item>kana34</item>
+        <item>kana35</item>
+        <item>kana39</item>
+        <item>kana40</item>
+        <item>kana41</item>
+        <item>kana42</item>
+        <item>kana43</item>
+        <item>kana36</item>
+        <item>kana37</item>
+        <item>kana38</item>
+        <item></item>
+        <item></item>
+        <item>kana44</item>
+        <item>kana45</item>
+        <item>kana46</item>
+        <item></item>
+        <item></item>
+        <item>kana47</item>
+        <item>kana48</item>
+        <item>kana49</item>
+        <item>kana50</item>
+        <item>kana51</item>
+        <item>kana52</item>
+        <item>kana53</item>
+        <item>kana54</item>
+        <item>kana55</item>
+        <item>kana56</item>
+        <item>kana57</item>
+        <item>kana58</item>
+        <item>kana59</item>
+        <item>kana60</item>
+        <item>kana61</item>
+        <item>kana62</item>
+        <item>kana63</item>
+        <item>kana64</item>
+        <item>kana65</item>
+        <item>kana66</item>
+        <item>kana67</item>
+        <item>kana68</item>
+        <item>kana69</item>
+        <item>kana70</item>
+        <item>kana71</item>
+        <item>kana72</item>
+        <item>kana73</item>
+        <item>kana74</item>
+        <item>kana75</item>
+        <item>kana76</item>
+        <item>kana77</item>
+        <item>kana78</item>
+        <item>kana79</item>
+        <item>kana80</item>
+        <item>kana81</item>
+        <item>kana82</item>
+        <item>kana83</item>
+        <item>kana84</item>
+        <item>kana85</item>
+        <item>kana86</item>
+        <item>kana87</item>
+        <item>kana88</item>
+        <item>kana89</item>
+        <item>kana90</item>
+        <item>kana91</item>
+        <item>kana92</item>
+        <item>kana93</item>
+        <item>kana94</item>
+        <item>kana95</item>
+        <item>kana96</item>
+        <item>kana97</item>
+        <item>kana98</item>
+        <item>kana99</item>
+        <item>kana100</item>
+        <item>kana101</item>
+        <item>kana102</item>
+        <item>kana103</item>
+        <item>kana104</item>
+        <item></item>
+    </string-array>
+    <string-array name="kana_raw_q">
+        <item>kana1</item>
+        <item>kana2</item>
+        <item>kana3</item>
+        <item>kana4</item>
+        <item>kana5</item>
+        <item>kana6</item>
+        <item>kana7</item>
+        <item>kana8</item>
+        <item>kana9</item>
+        <item>kana10</item>
+        <item>kana11</item>
+        <item>kana12</item>
+        <item>kana13</item>
+        <item>kana14</item>
+        <item>kana15</item>
+        <item>kana16</item>
+        <item>kana17</item>
+        <item>kana18</item>
+        <item>kana19</item>
+        <item>kana20</item>
+        <item>kana21</item>
+        <item>kana22</item>
+        <item>kana23</item>
+        <item>kana24</item>
+        <item>kana25</item>
+        <item>kana26</item>
+        <item>kana27</item>
+        <item>kana28</item>
+        <item>kana29</item>
+        <item>kana30</item>
+        <item>kana31</item>
+        <item>kana32</item>
+        <item>kana33</item>
+        <item>kana34</item>
+        <item>kana35</item>
+        <item>kana39</item>
+        <item>kana40</item>
+        <item>kana41</item>
+        <item>kana42</item>
+        <item>kana43</item>
+        <item>kana36</item>
+        <item>kana37</item>
+        <item>kana38</item>
+        <item>kana44</item>
+        <item>kana45</item>
+        <item>kana46</item>
+        <item>kana47</item>
+        <item>kana48</item>
+        <item>kana49</item>
+        <item>kana50</item>
+        <item>kana51</item>
+        <item>kana52</item>
+        <item>kana53</item>
+        <item>kana54</item>
+        <item>kana55</item>
+        <item>kana56</item>
+        <item>kana57</item>
+        <item>kana58</item>
+        <item>kana59</item>
+        <item>kana60</item>
+        <item>kana61</item>
+        <item>kana62</item>
+        <item>kana63</item>
+        <item>kana64</item>
+        <item>kana65</item>
+        <item>kana66</item>
+        <item>kana67</item>
+        <item>kana68</item>
+        <item>kana69</item>
+        <item>kana70</item>
+        <item>kana71</item>
+        <item>kana72</item>
+        <item>kana73</item>
+        <item>kana74</item>
+        <item>kana75</item>
+        <item>kana76</item>
+        <item>kana77</item>
+        <item>kana78</item>
+        <item>kana79</item>
+        <item>kana80</item>
+        <item>kana81</item>
+        <item>kana82</item>
+        <item>kana83</item>
+        <item>kana84</item>
+        <item>kana85</item>
+        <item>kana86</item>
+        <item>kana87</item>
+        <item>kana88</item>
+        <item>kana89</item>
+        <item>kana90</item>
+        <item>kana91</item>
+        <item>kana92</item>
+        <item>kana93</item>
+        <item>kana94</item>
+        <item>kana95</item>
+        <item>kana96</item>
+        <item>kana97</item>
+        <item>kana98</item>
+        <item>kana99</item>
+        <item>kana100</item>
+        <item>kana101</item>
+        <item>kana102</item>
+        <item>kana103</item>
+        <item>kana104</item>
+        <item></item>
+    </string-array>
+    <string-array name="katakana">
+        <item>ア</item>
+        <item>イ</item>
+        <item>ウ</item>
+        <item>エ</item>
+        <item>オ</item>
+        <item>カ</item>
+        <item>キ</item>
+        <item>ク</item>
+        <item>ケ</item>
+        <item>コ</item>
+        <item>サ</item>
+        <item>シ</item>
+        <item>ス</item>
+        <item>セ</item>
+        <item>ソ</item>
+        <item>タ</item>
+        <item>チ</item>
+        <item>ツ</item>
+        <item>テ</item>
+        <item>ト</item>
+        <item>ナ</item>
+        <item>ニ</item>
+        <item>ヌ</item>
+        <item>ネ</item>
+        <item>ノ</item>
+        <item>ハ</item>
+        <item>ヒ</item>
+        <item>フ</item>
+        <item>ヘ</item>
+        <item>ホ</item>
+        <item>マ</item>
+        <item>ミ</item>
+        <item>ム</item>
+        <item>メ</item>
+        <item>モ</item>
+        <item>ラ</item>
+        <item>リ</item>
+        <item>ル</item>
+        <item>レ</item>
+        <item>ロ</item>
+        <item>ヤ</item>
+        <item>ユ</item>
+        <item>ヨ</item>
+        <item></item>
+        <item></item>
+        <item>ワ</item>
+        <item>ヲ</item>
+        <item>ン</item>
+        <item></item>
+        <item></item>
+        <item>ガ</item>
+        <item>ギ</item>
+        <item>グ</item>
+        <item>ゲ</item>
+        <item>ゴ</item>
+        <item>ザ</item>
+        <item>ジ</item>
+        <item>ズ</item>
+        <item>ゼ</item>
+        <item>ゾ</item>
+        <item>ダ</item>
+        <item>ヂ</item>
+        <item>ヅ</item>
+        <item>デ</item>
+        <item>ド</item>
+        <item>バ</item>
+        <item>ビ</item>
+        <item>ブ</item>
+        <item>ベ</item>
+        <item>ボ</item>
+        <item>パ</item>
+        <item>ピ</item>
+        <item>プ</item>
+        <item>ペ</item>
+        <item>ポ</item>
+        <item>ギャ</item>
+        <item>ギュ</item>
+        <item>ギョ</item>
+        <item>ジャ</item>
+        <item>ジュ</item>
+        <item>ジョ</item>
+        <item>ビャ</item>
+        <item>ビュ</item>
+        <item>ビョ</item>
+        <item>ピャ</item>
+        <item>ピュ</item>
+        <item>ピョ</item>
+        <item>キャ</item>
+        <item>キュ</item>
+        <item>キョ</item>
+        <item>シャ</item>
+        <item>シュ</item>
+        <item>ショ</item>
+        <item>チャ</item>
+        <item>チュ</item>
+        <item>チョ</item>
+        <item>ニャ</item>
+        <item>ニュ</item>
+        <item>ニョ</item>
+        <item>ヒャ</item>
+        <item>ヒュ</item>
+        <item>ヒョ</item>
+        <item>ミャ</item>
+        <item>ミュ</item>
+        <item>ミョ</item>
+        <item>リャ</item>
+        <item>リュ</item>
+        <item>リョ</item>
+        <item>ー</item>
+    </string-array>
+    <string-array name="katakana_q">
+        <item>ア</item>
+        <item>イ</item>
+        <item>ウ</item>
+        <item>エ</item>
+        <item>オ</item>
+        <item>カ</item>
+        <item>キ</item>
+        <item>ク</item>
+        <item>ケ</item>
+        <item>コ</item>
+        <item>サ</item>
+        <item>シ</item>
+        <item>ス</item>
+        <item>セ</item>
+        <item>ソ</item>
+        <item>タ</item>
+        <item>チ</item>
+        <item>ツ</item>
+        <item>テ</item>
+        <item>ト</item>
+        <item>ナ</item>
+        <item>ニ</item>
+        <item>ヌ</item>
+        <item>ネ</item>
+        <item>ノ</item>
+        <item>ハ</item>
+        <item>ヒ</item>
+        <item>フ</item>
+        <item>ヘ</item>
+        <item>ホ</item>
+        <item>マ</item>
+        <item>ミ</item>
+        <item>ム</item>
+        <item>メ</item>
+        <item>モ</item>
+        <item>ラ</item>
+        <item>リ</item>
+        <item>ル</item>
+        <item>レ</item>
+        <item>ロ</item>
+        <item>ヤ</item>
+        <item>ユ</item>
+        <item>ヨ</item>
+        <item>ワ</item>
+        <item>ヲ</item>
+        <item>ン</item>
+        <item>ガ</item>
+        <item>ギ</item>
+        <item>グ</item>
+        <item>ゲ</item>
+        <item>ゴ</item>
+        <item>ザ</item>
+        <item>ジ</item>
+        <item>ズ</item>
+        <item>ゼ</item>
+        <item>ゾ</item>
+        <item>ダ</item>
+        <item>ヂ</item>
+        <item>ヅ</item>
+        <item>デ</item>
+        <item>ド</item>
+        <item>バ</item>
+        <item>ビ</item>
+        <item>ブ</item>
+        <item>ベ</item>
+        <item>ボ</item>
+        <item>パ</item>
+        <item>ピ</item>
+        <item>プ</item>
+        <item>ペ</item>
+        <item>ポ</item>
+        <item>ギャ</item>
+        <item>ギュ</item>
+        <item>ギョ</item>
+        <item>ジャ</item>
+        <item>ジュ</item>
+        <item>ジョ</item>
+        <item>ビャ</item>
+        <item>ビュ</item>
+        <item>ビョ</item>
+        <item>ピャ</item>
+        <item>ピュ</item>
+        <item>ピョ</item>
+        <item>キャ</item>
+        <item>キュ</item>
+        <item>キョ</item>
+        <item>シャ</item>
+        <item>シュ</item>
+        <item>ショ</item>
+        <item>チャ</item>
+        <item>チュ</item>
+        <item>チョ</item>
+        <item>ニャ</item>
+        <item>ニュ</item>
+        <item>ニョ</item>
+        <item>ヒャ</item>
+        <item>ヒュ</item>
+        <item>ヒョ</item>
+        <item>ミャ</item>
+        <item>ミュ</item>
+        <item>ミョ</item>
+        <item>リャ</item>
+        <item>リュ</item>
+        <item>リョ</item>
+        <item>ー</item>
+    </string-array>
+    <string-array name="language_names">
+        <item>English</item>
+        <item>中文(简体)</item>
+        <item>中文(繁體)</item>
+        <item>日本語</item>
+        <item>한국어</item>
+        <item>العربية</item>
+        <item>فارسی</item>
+        <item>Español</item>
+        <item>Français</item>
+        <item>Deutsche</item>
+        <item>Русский</item>
+        <item>Português</item>
+        <item>ภาษาไทย</item>
+        <item>Tiếng Việt</item>
+        <item>"Bahasa
+Indonesia"</item>
+        <item>"Bahasa
+Melayu"</item>
+        <item>Türkçe</item>
+        <item>Italiano</item>
+        <item>Svenska</item>
+        <item>Čeština</item>
+        <item>Nederlands</item>
+        <item>Polski</item>
+        <item>Dansk</item>
+        <item>Suomi</item>
+        <item>Română</item>
+        <item>ភាសាខ្មែរ</item>
+        <item>हिन्दी</item>
+        <item>नेपाली</item>
+    </string-array>
+    <string-array name="languages">
+        <item>en</item>
+        <item>chs</item>
+        <item>cht</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>ar</item>
+        <item>fa</item>
+        <item>es</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>ru</item>
+        <item>pt</item>
+        <item>th</item>
+        <item>vi</item>
+        <item>in</item>
+        <item>ms</item>
+        <item>tr</item>
+        <item>it</item>
+        <item>sv</item>
+        <item>cs</item>
+        <item>nl</item>
+        <item>pl</item>
+        <item>da</item>
+        <item>fi</item>
+        <item>ro</item>
+        <item>km</item>
+        <item>hi</item>
+        <item>ne</item>
+    </string-array>
+    <string-array name="pguess">
+        <item>food</item>
+        <item>music</item>
+        <item>socks</item>
+        <item>bank</item>
+        <item>movie</item>
+        <item>bird</item>
+        <item>body</item>
+        <item>busstop</item>
+        <item>sport</item>
+        <item>arm</item>
+        <item>passport</item>
+        <item>restaurant</item>
+        <item>dog</item>
+        <item>six</item>
+        <item>eye</item>
+        <item>hand</item>
+        <item>hair</item>
+        <item>monkey</item>
+        <item>fresh</item>
+        <item>three</item>
+        <item>bear</item>
+        <item>tiger</item>
+        <item>thailand</item>
+        <item>shirt</item>
+        <item>expensive</item>
+        <item>hiking</item>
+        <item>water</item>
+        <item>five</item>
+        <item>nine</item>
+        <item>ten</item>
+        <item>trousers</item>
+        <item>taiwan</item>
+        <item>bag</item>
+        <item>glasses</item>
+        <item>gardening</item>
+        <item>big</item>
+        <item>trainstation</item>
+        <item>vegetable</item>
+        <item>pig</item>
+        <item>hospital</item>
+        <item>cheap</item>
+        <item>japan</item>
+        <item>horse</item>
+        <item>brazil</item>
+        <item>market</item>
+        <item>hotel</item>
+        <item>fish</item>
+        <item>head</item>
+        <item>small</item>
+        <item>china</item>
+        <item>fruit</item>
+        <item>vietnam</item>
+        <item>unitedstates</item>
+        <item>stockings</item>
+        <item>nose</item>
+        <item>pharmacy</item>
+        <item>philippines</item>
+        <item>skirt</item>
+        <item>toilet</item>
+        <item>malaysia</item>
+        <item>travelling</item>
+        <item>dancing</item>
+        <item>one</item>
+        <item>bread</item>
+        <item>spicy</item>
+        <item>shorts</item>
+        <item>cellphone</item>
+        <item>two</item>
+        <item>shoes</item>
+        <item>battery</item>
+        <item>postoffice</item>
+        <item>sweet</item>
+        <item>beef</item>
+        <item>cat</item>
+        <item>sweater</item>
+        <item>chicken</item>
+        <item>rice</item>
+        <item>ear</item>
+        <item>four</item>
+        <item>reading</item>
+        <item>turkey</item>
+        <item>drink</item>
+        <item>saudiarabia</item>
+        <item>cooking</item>
+        <item>fish</item>
+        <item>mouth</item>
+        <item>clothes</item>
+        <item>salt</item>
+        <item>luggage</item>
+        <item>key</item>
+        <item>seven</item>
+        <item>unitedkingdom</item>
+        <item>mexico</item>
+        <item>russia</item>
+        <item>southkorea</item>
+        <item>shopping</item>
+        <item>dirty</item>
+        <item>germany</item>
+        <item>clean</item>
+        <item>teeth</item>
+        <item>peru</item>
+        <item>indonesia</item>
+        <item>photography</item>
+        <item>france</item>
+        <item>elephant</item>
+        <item>eight</item>
+        <item>watch</item>
+        <item>egypt</item>
+        <item>jewellery</item>
+        <item>money</item>
+    </string-array>
+    <string-array name="pguess2">
+        <item>food</item>
+        <item>music</item>
+        <item>socks</item>
+        <item>bank</item>
+        <item>movie</item>
+        <item>bird</item>
+        <item>body</item>
+        <item>busstop</item>
+        <item>sport</item>
+        <item>arm</item>
+        <item>passport</item>
+        <item>restaurant</item>
+        <item>dog</item>
+        <item>six</item>
+        <item>eye</item>
+        <item>hand</item>
+        <item>hair</item>
+        <item>monkey</item>
+        <item>fresh</item>
+        <item>three</item>
+        <item>bear</item>
+        <item>tiger</item>
+        <item>thailand</item>
+        <item>shirt</item>
+        <item>expensive</item>
+        <item>hiking</item>
+        <item>water</item>
+        <item>five</item>
+        <item>nine</item>
+        <item>ten</item>
+        <item>trousers</item>
+        <item>taiwan</item>
+        <item>bag</item>
+        <item>glasses</item>
+        <item>gardening</item>
+        <item>big</item>
+        <item>trainstation</item>
+        <item>vegetable</item>
+        <item>pig</item>
+        <item>hospital</item>
+        <item>cheap</item>
+        <item>japan</item>
+        <item>horse</item>
+        <item>brazil</item>
+        <item>market</item>
+        <item>hotel</item>
+        <item>fish</item>
+        <item>head</item>
+        <item>small</item>
+        <item>china</item>
+        <item>fruit</item>
+        <item>vietnam</item>
+        <item>unitedstates</item>
+        <item>stockings</item>
+        <item>nose</item>
+        <item>pharmacy</item>
+        <item>philippines</item>
+        <item>skirt</item>
+        <item>toilet</item>
+        <item>malaysia</item>
+        <item>travelling</item>
+        <item>dancing</item>
+        <item>one</item>
+        <item>bread</item>
+        <item>spicy</item>
+        <item>shorts</item>
+        <item>cellphone</item>
+        <item>two</item>
+        <item>shoes</item>
+        <item>battery</item>
+        <item>postoffice</item>
+        <item>sweet</item>
+        <item>beef</item>
+        <item>cat</item>
+        <item>sweater</item>
+        <item>chicken</item>
+        <item>rice</item>
+        <item>ear</item>
+        <item>four</item>
+        <item>reading</item>
+        <item>turkey</item>
+        <item>drink</item>
+        <item>saudiarabia</item>
+        <item>cooking</item>
+        <item>fish</item>
+        <item>mouth</item>
+        <item>clothes</item>
+        <item>salt</item>
+        <item>luggage</item>
+        <item>key</item>
+        <item>seven</item>
+        <item>unitedkingdom</item>
+        <item>mexico</item>
+        <item>russia</item>
+        <item>southkorea</item>
+        <item>shopping</item>
+        <item>dirty</item>
+        <item>germany</item>
+        <item>clean</item>
+        <item>teeth</item>
+        <item>peru</item>
+        <item>indonesia</item>
+        <item>photography</item>
+        <item>france</item>
+        <item>elephant</item>
+        <item>eight</item>
+        <item>watch</item>
+        <item>egypt</item>
+        <item>jewellery</item>
+        <item>money</item>
+    </string-array>
+    <string-array name="pguess_a">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="pguess_a2">
+        <item>あ</item>
+        <item>い</item>
+        <item>う</item>
+        <item>え</item>
+        <item>お</item>
+        <item>か</item>
+        <item>き</item>
+        <item>く</item>
+        <item>け</item>
+        <item>こ</item>
+        <item>さ</item>
+        <item>し</item>
+        <item>す</item>
+        <item>せ</item>
+        <item>そ</item>
+        <item>た</item>
+        <item>ち</item>
+        <item>つ</item>
+        <item>て</item>
+        <item>と</item>
+        <item>な</item>
+        <item>に</item>
+        <item>ぬ</item>
+        <item>ね</item>
+        <item>の</item>
+        <item>ま</item>
+        <item>み</item>
+        <item>む</item>
+        <item>め</item>
+        <item>も</item>
+        <item>は</item>
+        <item>ひ</item>
+        <item>ふ</item>
+        <item>へ</item>
+        <item>ほ</item>
+        <item>ら</item>
+        <item>り</item>
+        <item>る</item>
+        <item>れ</item>
+        <item>ろ</item>
+        <item>わ</item>
+        <item>を</item>
+        <item>や</item>
+        <item>ゆ</item>
+        <item>よ</item>
+        <item>ん</item>
+        <item>が</item>
+        <item>ぎ</item>
+        <item>ぐ</item>
+        <item>げ</item>
+        <item>ご</item>
+        <item>ざ</item>
+        <item>じ</item>
+        <item>ず</item>
+        <item>ぜ</item>
+        <item>ぞ</item>
+        <item>だ</item>
+        <item>ぢ</item>
+        <item>づ</item>
+        <item>で</item>
+        <item>ど</item>
+        <item>ば</item>
+        <item>び</item>
+        <item>ぶ</item>
+        <item>べ</item>
+        <item>ぼ</item>
+        <item>ぱ</item>
+        <item>ぴ</item>
+        <item>ぷ</item>
+        <item>ぺ</item>
+        <item>ぽ</item>
+        <item>ゃ</item>
+        <item>ゅ</item>
+        <item>ょ</item>
+        <item>っ</item>
+        <item>ア</item>
+        <item>イ</item>
+        <item>ウ</item>
+        <item>エ</item>
+        <item>オ</item>
+        <item>カ</item>
+        <item>キ</item>
+        <item>ク</item>
+        <item>ケ</item>
+        <item>コ</item>
+        <item>サ</item>
+        <item>シ</item>
+        <item>ス</item>
+        <item>セ</item>
+        <item>ソ</item>
+        <item>タ</item>
+        <item>チ</item>
+        <item>ツ</item>
+        <item>テ</item>
+        <item>ト</item>
+        <item>ナ</item>
+        <item>ニ</item>
+        <item>ヌ</item>
+        <item>ネ</item>
+        <item>ノ</item>
+        <item>マ</item>
+        <item>ミ</item>
+        <item>ム</item>
+        <item>メ</item>
+        <item>モ</item>
+        <item>ハ</item>
+        <item>ヒ</item>
+        <item>フ</item>
+        <item>ヘ</item>
+        <item>ホ</item>
+        <item>ラ</item>
+        <item>リ</item>
+        <item>ル</item>
+        <item>レ</item>
+        <item>ロ</item>
+        <item>ワ</item>
+        <item>ヲ</item>
+        <item>ヤ</item>
+        <item>ユ</item>
+        <item>ヨ</item>
+        <item>ン</item>
+        <item>ー</item>
+        <item>ガ</item>
+        <item>ギ</item>
+        <item>グ</item>
+        <item>ゲ</item>
+        <item>ゴ</item>
+        <item>ザ</item>
+        <item>ジ</item>
+        <item>ズ</item>
+        <item>ゼ</item>
+        <item>ゾ</item>
+        <item>ダ</item>
+        <item>ヂ</item>
+        <item>ヅ</item>
+        <item>デ</item>
+        <item>ド</item>
+        <item>バ</item>
+        <item>ビ</item>
+        <item>ブ</item>
+        <item>ベ</item>
+        <item>ボ</item>
+        <item>パ</item>
+        <item>ピ</item>
+        <item>プ</item>
+        <item>ペ</item>
+        <item>ポ</item>
+        <item>ャ</item>
+        <item>ュ</item>
+        <item>ョ</item>
+        <item>ッ</item>
+        <item>ァ</item>
+        <item>ィ</item>
+        <item>ゥ</item>
+        <item>ェ</item>
+        <item>ォ</item>
+    </string-array>
+    <string-array name="pguess_f">
+        <item>TABEMONO</item>
+        <item>ONGAKU</item>
+        <item>KUTSUSHITA</item>
+        <item>GINKOU</item>
+        <item>EIGA</item>
+        <item>TORI</item>
+        <item>KARADA</item>
+        <item>BASUTEI</item>
+        <item>SUPOOTSU</item>
+        <item>UDE</item>
+        <item>PASUPOOTO</item>
+        <item>RESUTORAN</item>
+        <item>INU</item>
+        <item>ROKU</item>
+        <item>ME</item>
+        <item>TE</item>
+        <item>KAMINOKE</item>
+        <item>SARU</item>
+        <item>SHINSENNA</item>
+        <item>SAN</item>
+        <item>KUMA</item>
+        <item>TORA</item>
+        <item>TAI</item>
+        <item>SHATSU</item>
+        <item>TAKAI</item>
+        <item>HAIKINGU</item>
+        <item>MIZU</item>
+        <item>GO</item>
+        <item>KYUU</item>
+        <item>JUU</item>
+        <item>ZUBON</item>
+        <item>TAIWAN</item>
+        <item>KABAN</item>
+        <item>MEGANE</item>
+        <item>GAADENINGU</item>
+        <item>OOKII</item>
+        <item>EKI</item>
+        <item>YASAI</item>
+        <item>BUTA</item>
+        <item>BYOUIN</item>
+        <item>YASUI</item>
+        <item>NIHON</item>
+        <item>UMA</item>
+        <item>BURAJIRU</item>
+        <item>ICHIBA</item>
+        <item>HOTERU</item>
+        <item>SAKANA</item>
+        <item>ATAMA</item>
+        <item>CHIISAI</item>
+        <item>CHUUGOKU</item>
+        <item>KUDAMONO</item>
+        <item>BETONAMU</item>
+        <item>AMERIKA</item>
+        <item>SUTOKINGU</item>
+        <item>HANA</item>
+        <item>YAKKYOKU</item>
+        <item>FIRIPIN</item>
+        <item>SUKAATO</item>
+        <item>TOIRE</item>
+        <item>MAREESHIA</item>
+        <item>RYOKOU</item>
+        <item>DANSU</item>
+        <item>ICHI</item>
+        <item>PAN</item>
+        <item>KARAI</item>
+        <item>HANZUBON</item>
+        <item>KEITAIDENWA</item>
+        <item>NI</item>
+        <item>KUTSU</item>
+        <item>DENCHI</item>
+        <item>YUUBINKYOKU</item>
+        <item>AMAI</item>
+        <item>GYUUNIKU</item>
+        <item>NEKO</item>
+        <item>SEETAA</item>
+        <item>TORINIKU</item>
+        <item>GOHAN</item>
+        <item>MIMI</item>
+        <item>YON</item>
+        <item>DOKUSHO</item>
+        <item>TORUKO</item>
+        <item>NOMIMONO</item>
+        <item>SAUJIARABIA</item>
+        <item>RYOURI</item>
+        <item>SAKANA</item>
+        <item>KUCHI</item>
+        <item>FUKU</item>
+        <item>SHIOKARAI</item>
+        <item>NIMOTSU</item>
+        <item>KAGI</item>
+        <item>NANA</item>
+        <item>IGIRISU</item>
+        <item>MEKISHIKO</item>
+        <item>ROSHIA</item>
+        <item>KANKOKU</item>
+        <item>KAIMONO</item>
+        <item>KITANAI</item>
+        <item>DOITSU</item>
+        <item>KIREI</item>
+        <item>HA</item>
+        <item>PERUU</item>
+        <item>INDONESHIA</item>
+        <item>KAMERA</item>
+        <item>FURANSU</item>
+        <item>ZOU</item>
+        <item>HACHI</item>
+        <item>UDEDOKEI</item>
+        <item>EJIPUTO</item>
+        <item>JUERII</item>
+        <item>OKANE</item>
+    </string-array>
+    <string-array name="pguess_f2">
+        <item>たべもの</item>
+        <item>おんがく</item>
+        <item>くつした</item>
+        <item>ぎんこう</item>
+        <item>えいが</item>
+        <item>とり</item>
+        <item>からだ</item>
+        <item>ばすてい</item>
+        <item>スポーツ</item>
+        <item>うで</item>
+        <item>パスポート</item>
+        <item>レストラン</item>
+        <item>いぬ</item>
+        <item>ろく</item>
+        <item>め</item>
+        <item>て</item>
+        <item>かみのけ</item>
+        <item>さる</item>
+        <item>しんせんな</item>
+        <item>さん</item>
+        <item>クマ</item>
+        <item>トラ</item>
+        <item>タイ</item>
+        <item>シャツ</item>
+        <item>たかい</item>
+        <item>ハイキング</item>
+        <item>みず</item>
+        <item>ご</item>
+        <item>きゅう</item>
+        <item>じゅう</item>
+        <item>ズボン</item>
+        <item>たいわん</item>
+        <item>カバン</item>
+        <item>めがね</item>
+        <item>ガーデニング</item>
+        <item>おおきい</item>
+        <item>えき</item>
+        <item>やさい</item>
+        <item>ぶた</item>
+        <item>びょういん</item>
+        <item>やすい</item>
+        <item>にほん</item>
+        <item>うま</item>
+        <item>ブラジル</item>
+        <item>いちば</item>
+        <item>ホテル</item>
+        <item>さかな</item>
+        <item>あたま</item>
+        <item>ちいさい</item>
+        <item>ちゅうごく</item>
+        <item>くだもの</item>
+        <item>ベトナム</item>
+        <item>アメリカ</item>
+        <item>ストキング</item>
+        <item>はな</item>
+        <item>やっきょく</item>
+        <item>フィリピン</item>
+        <item>スカート</item>
+        <item>トイレ</item>
+        <item>マレーシア</item>
+        <item>りょこう</item>
+        <item>ダンス</item>
+        <item>いち</item>
+        <item>パン</item>
+        <item>からい</item>
+        <item>はんズボン</item>
+        <item>けいたいでんわ</item>
+        <item>に</item>
+        <item>くつ</item>
+        <item>でんち</item>
+        <item>ゆうびんきょく</item>
+        <item>あまい</item>
+        <item>ぎゅうにく</item>
+        <item>ねこ</item>
+        <item>セーター</item>
+        <item>とりにく</item>
+        <item>ごはん</item>
+        <item>みみ</item>
+        <item>よん</item>
+        <item>どくしょ</item>
+        <item>トルコ</item>
+        <item>のみもの</item>
+        <item>サウジアラビア</item>
+        <item>りょうり</item>
+        <item>さかな</item>
+        <item>くち</item>
+        <item>ふく</item>
+        <item>しおからい</item>
+        <item>にもつ</item>
+        <item>かぎ</item>
+        <item>なな</item>
+        <item>イギリス</item>
+        <item>メキシコ</item>
+        <item>ロシア</item>
+        <item>かんこく</item>
+        <item>かいもの</item>
+        <item>きたない</item>
+        <item>ドイツ</item>
+        <item>きれい</item>
+        <item>は</item>
+        <item>ペルー</item>
+        <item>インドネシア</item>
+        <item>カメラ</item>
+        <item>フランス</item>
+        <item>ぞう</item>
+        <item>はち</item>
+        <item>うでどけい</item>
+        <item>エジプト</item>
+        <item>ジュエリー</item>
+        <item>おかね</item>
+    </string-array>
+    <string-array name="pquiz_x">
+        <item>food1</item>
+        <item>numbers1</item>
+        <item>places1</item>
+        <item>essentials1</item>
+        <item>animals1</item>
+        <item>body1</item>
+        <item>clothing1</item>
+        <item>adjectives1</item>
+        <item>countries1</item>
+        <item>countries2</item>
+        <item>interests1</item>
+        <item>adjectives2</item>
+        <item>adjectives3</item>
+        <item>animals2</item>
+        <item>animals3</item>
+        <item>animals4</item>
+        <item>animals5</item>
+        <item>body2</item>
+        <item>body3</item>
+        <item>body4</item>
+        <item>clothing2</item>
+        <item>clothing3</item>
+        <item>colors</item>
+        <item>countries3</item>
+        <item>countries4</item>
+        <item>countries5</item>
+        <item>countries6</item>
+        <item>countries7</item>
+        <item>countries8</item>
+        <item>dates</item>
+        <item>eatingout1</item>
+        <item>essentials2</item>
+        <item>essentials3</item>
+        <item>food2</item>
+        <item>food3</item>
+        <item>food4</item>
+        <item>food5</item>
+        <item>food6</item>
+        <item>food7</item>
+        <item>food8</item>
+        <item>indoors1</item>
+        <item>indoors2</item>
+        <item>interests2</item>
+        <item>interests3</item>
+        <item>interests4</item>
+        <item>numbers2</item>
+        <item>numbers3</item>
+        <item>outdoors1</item>
+        <item>outdoors2</item>
+        <item>outdoors3</item>
+        <item>places2</item>
+        <item>places3</item>
+        <item>places4</item>
+        <item>school1</item>
+        <item>school2</item>
+        <item>shopping</item>
+        <item>time</item>
+        <item>transport</item>
+        <item>verbs1</item>
+        <item>verbs2</item>
+        <item>verbs3</item>
+        <item>verbs4</item>
+        <item>verbs5</item>
+        <item>world1</item>
+        <item>world2</item>
+    </string-array>
+    <string-array name="roomaji">
+        <item>A</item>
+        <item>I</item>
+        <item>U</item>
+        <item>E</item>
+        <item>O</item>
+        <item>KA</item>
+        <item>KI</item>
+        <item>KU</item>
+        <item>KE</item>
+        <item>KO</item>
+        <item>SA</item>
+        <item>SHI</item>
+        <item>SU</item>
+        <item>SE</item>
+        <item>SO</item>
+        <item>TA</item>
+        <item>CHI</item>
+        <item>TSU</item>
+        <item>TE</item>
+        <item>TO</item>
+        <item>NA</item>
+        <item>NI</item>
+        <item>NU</item>
+        <item>NE</item>
+        <item>NO</item>
+        <item>HA</item>
+        <item>HI</item>
+        <item>FU</item>
+        <item>HE</item>
+        <item>HO</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MU</item>
+        <item>ME</item>
+        <item>MO</item>
+        <item>RA</item>
+        <item>RI</item>
+        <item>RU</item>
+        <item>RE</item>
+        <item>RO</item>
+        <item>YA</item>
+        <item>YU</item>
+        <item>YO</item>
+        <item></item>
+        <item></item>
+        <item>WA</item>
+        <item>WO</item>
+        <item>N</item>
+        <item></item>
+        <item></item>
+        <item>GA</item>
+        <item>GI</item>
+        <item>GU</item>
+        <item>GE</item>
+        <item>GO</item>
+        <item>ZA</item>
+        <item>JI</item>
+        <item>ZU</item>
+        <item>ZE</item>
+        <item>ZO</item>
+        <item>DA</item>
+        <item>JI</item>
+        <item>ZU</item>
+        <item>DE</item>
+        <item>DO</item>
+        <item>BA</item>
+        <item>BI</item>
+        <item>BU</item>
+        <item>BE</item>
+        <item>BO</item>
+        <item>PA</item>
+        <item>PI</item>
+        <item>PU</item>
+        <item>PE</item>
+        <item>PO</item>
+        <item>GYA</item>
+        <item>GYU</item>
+        <item>GYO</item>
+        <item>JA</item>
+        <item>JU</item>
+        <item>JO</item>
+        <item>BYA</item>
+        <item>BYU</item>
+        <item>BYO</item>
+        <item>PYA</item>
+        <item>PYU</item>
+        <item>PYO</item>
+        <item>KYA</item>
+        <item>KYU</item>
+        <item>KYO</item>
+        <item>SHA</item>
+        <item>SHU</item>
+        <item>SHO</item>
+        <item>CHA</item>
+        <item>CHU</item>
+        <item>CHO</item>
+        <item>NYA</item>
+        <item>NYU</item>
+        <item>NYO</item>
+        <item>HYA</item>
+        <item>HYU</item>
+        <item>HYO</item>
+        <item>MYA</item>
+        <item>MYU</item>
+        <item>MYO</item>
+        <item>RYA</item>
+        <item>RYU</item>
+        <item>RYO</item>
+    </string-array>
+    <string-array name="roomaji_k">
+        <item>A</item>
+        <item>I</item>
+        <item>U</item>
+        <item>E</item>
+        <item>O</item>
+        <item>KA</item>
+        <item>KI</item>
+        <item>KU</item>
+        <item>KE</item>
+        <item>KO</item>
+        <item>SA</item>
+        <item>SHI</item>
+        <item>SU</item>
+        <item>SE</item>
+        <item>SO</item>
+        <item>TA</item>
+        <item>CHI</item>
+        <item>TSU</item>
+        <item>TE</item>
+        <item>TO</item>
+        <item>NA</item>
+        <item>NI</item>
+        <item>NU</item>
+        <item>NE</item>
+        <item>NO</item>
+        <item>HA</item>
+        <item>HI</item>
+        <item>FU</item>
+        <item>HE</item>
+        <item>HO</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MU</item>
+        <item>ME</item>
+        <item>MO</item>
+        <item>RA</item>
+        <item>RI</item>
+        <item>RU</item>
+        <item>RE</item>
+        <item>RO</item>
+        <item>YA</item>
+        <item>YU</item>
+        <item>YO</item>
+        <item></item>
+        <item></item>
+        <item>WA</item>
+        <item>WO</item>
+        <item>N</item>
+        <item></item>
+        <item></item>
+        <item>GA</item>
+        <item>GI</item>
+        <item>GU</item>
+        <item>GE</item>
+        <item>GO</item>
+        <item>ZA</item>
+        <item>JI</item>
+        <item>ZU</item>
+        <item>ZE</item>
+        <item>ZO</item>
+        <item>DA</item>
+        <item>JI</item>
+        <item>ZU</item>
+        <item>DE</item>
+        <item>DO</item>
+        <item>BA</item>
+        <item>BI</item>
+        <item>BU</item>
+        <item>BE</item>
+        <item>BO</item>
+        <item>PA</item>
+        <item>PI</item>
+        <item>PU</item>
+        <item>PE</item>
+        <item>PO</item>
+        <item>GYA</item>
+        <item>GYU</item>
+        <item>GYO</item>
+        <item>JA</item>
+        <item>JU</item>
+        <item>JO</item>
+        <item>BYA</item>
+        <item>BYU</item>
+        <item>BYO</item>
+        <item>PYA</item>
+        <item>PYU</item>
+        <item>PYO</item>
+        <item>KYA</item>
+        <item>KYU</item>
+        <item>KYO</item>
+        <item>SHA</item>
+        <item>SHU</item>
+        <item>SHO</item>
+        <item>CHA</item>
+        <item>CHU</item>
+        <item>CHO</item>
+        <item>NYA</item>
+        <item>NYU</item>
+        <item>NYO</item>
+        <item>HYA</item>
+        <item>HYU</item>
+        <item>HYO</item>
+        <item>MYA</item>
+        <item>MYU</item>
+        <item>MYO</item>
+        <item>RYA</item>
+        <item>RYU</item>
+        <item>RYO</item>
+        <item></item>
+    </string-array>
+    <string-array name="roomaji_q">
+        <item>A</item>
+        <item>I</item>
+        <item>U</item>
+        <item>E</item>
+        <item>O</item>
+        <item>KA</item>
+        <item>KI</item>
+        <item>KU</item>
+        <item>KE</item>
+        <item>KO</item>
+        <item>SA</item>
+        <item>SHI</item>
+        <item>SU</item>
+        <item>SE</item>
+        <item>SO</item>
+        <item>TA</item>
+        <item>CHI</item>
+        <item>TSU</item>
+        <item>TE</item>
+        <item>TO</item>
+        <item>NA</item>
+        <item>NI</item>
+        <item>NU</item>
+        <item>NE</item>
+        <item>NO</item>
+        <item>HA</item>
+        <item>HI</item>
+        <item>FU</item>
+        <item>HE</item>
+        <item>HO</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MU</item>
+        <item>ME</item>
+        <item>MO</item>
+        <item>RA</item>
+        <item>RI</item>
+        <item>RU</item>
+        <item>RE</item>
+        <item>RO</item>
+        <item>YA</item>
+        <item>YU</item>
+        <item>YO</item>
+        <item>WA</item>
+        <item>WO</item>
+        <item>N</item>
+        <item>GA</item>
+        <item>GI</item>
+        <item>GU</item>
+        <item>GE</item>
+        <item>GO</item>
+        <item>ZA</item>
+        <item>JI</item>
+        <item>ZU</item>
+        <item>ZE</item>
+        <item>ZO</item>
+        <item>DA</item>
+        <item>JI</item>
+        <item>ZU</item>
+        <item>DE</item>
+        <item>DO</item>
+        <item>BA</item>
+        <item>BI</item>
+        <item>BU</item>
+        <item>BE</item>
+        <item>BO</item>
+        <item>PA</item>
+        <item>PI</item>
+        <item>PU</item>
+        <item>PE</item>
+        <item>PO</item>
+        <item>GYA</item>
+        <item>GYU</item>
+        <item>GYO</item>
+        <item>JA</item>
+        <item>JU</item>
+        <item>JO</item>
+        <item>BYA</item>
+        <item>BYU</item>
+        <item>BYO</item>
+        <item>PYA</item>
+        <item>PYU</item>
+        <item>PYO</item>
+        <item>KYA</item>
+        <item>KYU</item>
+        <item>KYO</item>
+        <item>SHA</item>
+        <item>SHU</item>
+        <item>SHO</item>
+        <item>CHA</item>
+        <item>CHU</item>
+        <item>CHO</item>
+        <item>NYA</item>
+        <item>NYU</item>
+        <item>NYO</item>
+        <item>HYA</item>
+        <item>HYU</item>
+        <item>HYO</item>
+        <item>MYA</item>
+        <item>MYU</item>
+        <item>MYO</item>
+        <item>RYA</item>
+        <item>RYU</item>
+        <item>RYO</item>
+    </string-array>
+    <integer-array name="set_lengths">
+        <item>8</item>
+        <item>9</item>
+        <item>4</item>
+        <item>10</item>
+        <item>11</item>
+        <item>9</item>
+        <item>5</item>
+        <item>6</item>
+        <item>11</item>
+        <item>13</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>11</item>
+        <item>5</item>
+        <item>6</item>
+        <item>9</item>
+        <item>13</item>
+        <item>5</item>
+        <item>9</item>
+    </integer-array>
+    <string-array name="setp_ar">
+        <item>تحيات</item>
+        <item>المصالح</item>
+        <item>أرقام</item>
+        <item>السفر</item>
+        <item>التسوق</item>
+        <item>النعوت</item>
+        <item>الحيوانات</item>
+        <item>الهيئة</item>
+        <item>البلدان</item>
+        <item>الغذاء</item>
+        <item>اللغة</item>
+        <item>المدرسة</item>
+        <item>حالات الطوارئ</item>
+        <item>اتجاهات</item>
+        <item>الأسرة</item>
+        <item>في الهواء الطلق</item>
+        <item>الوقت</item>
+        <item>الأفعال</item>
+        <item>العمل</item>
+        <item>العالم</item>
+    </string-array>
+    <string-array name="setp_chs">
+        <item>问候</item>
+        <item>兴趣</item>
+        <item>数字</item>
+        <item>旅游</item>
+        <item>购物</item>
+        <item>形容词</item>
+        <item>动物</item>
+        <item>身体</item>
+        <item>国家</item>
+        <item>食物</item>
+        <item>语言</item>
+        <item>学校</item>
+        <item>紧急情况</item>
+        <item>方向</item>
+        <item>家庭</item>
+        <item>户外</item>
+        <item>时间</item>
+        <item>动词</item>
+        <item>工作</item>
+        <item>世界</item>
+    </string-array>
+    <string-array name="setp_cht">
+        <item>問候</item>
+        <item>興趣</item>
+        <item>數字</item>
+        <item>旅遊</item>
+        <item>購物</item>
+        <item>形容詞</item>
+        <item>動物</item>
+        <item>身體</item>
+        <item>國家</item>
+        <item>食物</item>
+        <item>語言</item>
+        <item>學校</item>
+        <item>緊急情況</item>
+        <item>方向</item>
+        <item>家庭</item>
+        <item>戶外</item>
+        <item>時間</item>
+        <item>動詞</item>
+        <item>工作</item>
+        <item>世界</item>
+    </string-array>
+    <string-array name="setp_cs">
+        <item>Pozdrav</item>
+        <item>Zájmy</item>
+        <item>Čísla</item>
+        <item>Cestování</item>
+        <item>Nákupy</item>
+        <item>Přídavná jména</item>
+        <item>Zvířata</item>
+        <item>Tělo</item>
+        <item>Země</item>
+        <item>Jídlo</item>
+        <item>Jazyk</item>
+        <item>Škola</item>
+        <item>Nouzové situace</item>
+        <item>Instrukce</item>
+        <item>Rodina</item>
+        <item>Venku</item>
+        <item>Čas</item>
+        <item>Slovesa</item>
+        <item>Práce</item>
+        <item>Svět</item>
+    </string-array>
+    <string-array name="setp_da">
+        <item>Hilsener</item>
+        <item>Interesser</item>
+        <item>Tal</item>
+        <item>Rejse</item>
+        <item>Indkøb</item>
+        <item>Adjektiver</item>
+        <item>Dyr</item>
+        <item>Krop</item>
+        <item>Lande</item>
+        <item>Mad</item>
+        <item>Sprog</item>
+        <item>Skole</item>
+        <item>Nødsituationer</item>
+        <item>Vejanvisninger</item>
+        <item>Familie</item>
+        <item>Udendørs</item>
+        <item>Tid</item>
+        <item>Verber</item>
+        <item>Arbejde</item>
+        <item>Verden</item>
+    </string-array>
+    <string-array name="setp_de">
+        <item>Begrüßungen</item>
+        <item>Interessen</item>
+        <item>Zahlen</item>
+        <item>Reise</item>
+        <item>Einkaufen</item>
+        <item>Adjektive</item>
+        <item>Tiere</item>
+        <item>Körper</item>
+        <item>Länder</item>
+        <item>Essen</item>
+        <item>Sprache</item>
+        <item>Schule</item>
+        <item>Unfälle</item>
+        <item>Wegbeschreibungen</item>
+        <item>Familie</item>
+        <item>Natur</item>
+        <item>Zeit</item>
+        <item>Verben</item>
+        <item>Arbeit</item>
+        <item>Welt</item>
+    </string-array>
+    <string-array name="setp_en">
+        <item>Greetings</item>
+        <item>Interests</item>
+        <item>Numbers</item>
+        <item>Travel</item>
+        <item>Shopping</item>
+        <item>Adjectives</item>
+        <item>Animals</item>
+        <item>Body</item>
+        <item>Countries</item>
+        <item>Food</item>
+        <item>Language</item>
+        <item>School</item>
+        <item>Emergencies</item>
+        <item>Directions</item>
+        <item>Family</item>
+        <item>Outdoors</item>
+        <item>Time</item>
+        <item>Verbs</item>
+        <item>Work</item>
+        <item>World</item>
+    </string-array>
+    <string-array name="setp_es">
+        <item>Saludos</item>
+        <item>Intereses</item>
+        <item>Números</item>
+        <item>Viaje</item>
+        <item>Compras</item>
+        <item>Adjetivos</item>
+        <item>Animales</item>
+        <item>Cuerpo</item>
+        <item>Países</item>
+        <item>Comida</item>
+        <item>Idioma</item>
+        <item>Escuela</item>
+        <item>Emergencias</item>
+        <item>Direcciones</item>
+        <item>Familia</item>
+        <item>Aire Libre</item>
+        <item>Tiempo</item>
+        <item>Verbos</item>
+        <item>Trabajo</item>
+        <item>Mundo</item>
+    </string-array>
+    <string-array name="setp_fa">
+        <item>خوش امد گویی</item>
+        <item>علایق</item>
+        <item>شماره ها</item>
+        <item>مسافرت کردن</item>
+        <item>خريد كردن</item>
+        <item>صفات</item>
+        <item>حیوانات</item>
+        <item>بدن</item>
+        <item>کشورها</item>
+        <item>غذا</item>
+        <item>زبان</item>
+        <item>مدرسه</item>
+        <item>شرایط اضطراری</item>
+        <item>جهت ها</item>
+        <item>خانواده</item>
+        <item>بیرون از خانه</item>
+        <item>زمان</item>
+        <item>افعال</item>
+        <item>کار</item>
+        <item>جهان</item>
+    </string-array>
+    <string-array name="setp_fi">
+        <item>Tervehdykset</item>
+        <item>Kiinnostuksen kohteet</item>
+        <item>Numerot</item>
+        <item>Matkailu</item>
+        <item>Shoppailu</item>
+        <item>Adjektiivit</item>
+        <item>Eläimet</item>
+        <item>Keho</item>
+        <item>Maat</item>
+        <item>Ruoka</item>
+        <item>Kieli</item>
+        <item>Koulu</item>
+        <item>Hätätilanteet</item>
+        <item>Suunnan kysyminen</item>
+        <item>Perhe</item>
+        <item>Ulkoilu</item>
+        <item>Aika</item>
+        <item>Verbit</item>
+        <item>Työ</item>
+        <item>Maailma</item>
+    </string-array>
+    <string-array name="setp_fr">
+        <item>Salutations</item>
+        <item>Intérêts</item>
+        <item>Nombres</item>
+        <item>Voyage</item>
+        <item>Achats</item>
+        <item>Adjectifs</item>
+        <item>Animaux</item>
+        <item>Corps</item>
+        <item>Pays</item>
+        <item>Aliments</item>
+        <item>Langue</item>
+        <item>École</item>
+        <item>Urgences</item>
+        <item>Instructions</item>
+        <item>Famille</item>
+        <item>Extérieur</item>
+        <item>Temps</item>
+        <item>Verbes</item>
+        <item>Travail</item>
+        <item>Monde</item>
+    </string-array>
+    <string-array name="setp_hi">
+        <item>अभिवादन</item>
+        <item>रूचियाँ</item>
+        <item>नंबर</item>
+        <item>यात्रा</item>
+        <item>शॉपिंग</item>
+        <item>विशेषण</item>
+        <item>पशु</item>
+        <item>शव</item>
+        <item>देशों</item>
+        <item>भोजन</item>
+        <item>भाषा</item>
+        <item>स्कूल</item>
+        <item>आपात स्थिति</item>
+        <item>दिशा-निर्देश</item>
+        <item>परिवार</item>
+        <item>सड़क पर</item>
+        <item>समय</item>
+        <item>क्रियाएं</item>
+        <item>काम</item>
+        <item>दुनिया</item>
+    </string-array>
+    <string-array name="setp_in">
+        <item>Salam</item>
+        <item>Hobi</item>
+        <item>Angka</item>
+        <item>Wisata</item>
+        <item>Belanja</item>
+        <item>Kata Sifat</item>
+        <item>Hewan</item>
+        <item>Tubuh</item>
+        <item>Negara</item>
+        <item>Makanan</item>
+        <item>Bahasa</item>
+        <item>Sekolah</item>
+        <item>Darurat</item>
+        <item>Arah</item>
+        <item>Keluarga</item>
+        <item>Luar ruangan</item>
+        <item>Waktu</item>
+        <item>Kata kerja</item>
+        <item>Kerja</item>
+        <item>Dunia</item>
+    </string-array>
+    <string-array name="setp_it">
+        <item>Saluti</item>
+        <item>Interessi</item>
+        <item>Numeri</item>
+        <item>Viaggio</item>
+        <item>Shopping</item>
+        <item>Aggettivi</item>
+        <item>Animali</item>
+        <item>Corpo</item>
+        <item>Nazioni</item>
+        <item>Cibo</item>
+        <item>Lingua</item>
+        <item>Scuola</item>
+        <item>Emergenze</item>
+        <item>Indicazioni</item>
+        <item>Famiglia</item>
+        <item>Aria Aperta</item>
+        <item>Tempo</item>
+        <item>Verbi</item>
+        <item>Lavoro</item>
+        <item>Mondo</item>
+    </string-array>
+    <string-array name="setp_ja">
+        <item>挨拶</item>
+        <item>趣味</item>
+        <item>数字</item>
+        <item>旅行</item>
+        <item>買物</item>
+        <item>形容詞</item>
+        <item>動物</item>
+        <item>身体</item>
+        <item>国家</item>
+        <item>食品</item>
+        <item>言語</item>
+        <item>学校</item>
+        <item>緊急事態</item>
+        <item>方向</item>
+        <item>家族</item>
+        <item>環境</item>
+        <item>時間</item>
+        <item>動詞</item>
+        <item>仕事</item>
+        <item>世界</item>
+    </string-array>
+    <string-array name="setp_km">
+        <item>ការស្វាគមន៍</item>
+        <item>ចំណាប់អារម្មណ៍</item>
+        <item>ចំនួន</item>
+        <item>ការធ្វើដំណើរ</item>
+        <item>ការទិញឥវ៉ាន់</item>
+        <item>គុណនាម</item>
+        <item>សត្វ</item>
+        <item>រាងកាយ</item>
+        <item>ប្រទេស</item>
+        <item>អាហារ</item>
+        <item>ភាសា</item>
+        <item>សាលារៀន</item>
+        <item>បន្ទាន់</item>
+        <item>ទិសដៅ</item>
+        <item>គ្រួសារ</item>
+        <item>បរិយាកាសខាងក្រៅ</item>
+        <item>ពេលវេលា</item>
+        <item>កិរិយាស័ព្ទ</item>
+        <item>ការងារ</item>
+        <item>ពិភពលោក</item>
+    </string-array>
+    <string-array name="setp_ko">
+        <item>인사말</item>
+        <item>취미</item>
+        <item>숫자</item>
+        <item>여행</item>
+        <item>쇼핑</item>
+        <item>형용사</item>
+        <item>동물</item>
+        <item>몸</item>
+        <item>국가</item>
+        <item>음식</item>
+        <item>언어</item>
+        <item>학교</item>
+        <item>비상 사태</item>
+        <item>방향</item>
+        <item>가족</item>
+        <item>야외</item>
+        <item>시간</item>
+        <item>동사</item>
+        <item>작업</item>
+        <item>세계</item>
+    </string-array>
+    <string-array name="setp_ms">
+        <item>Ucapan</item>
+        <item>Hobi</item>
+        <item>Nombor</item>
+        <item>Perjalanan</item>
+        <item>Membeli-belah</item>
+        <item>Kata Sifat</item>
+        <item>Haiwan</item>
+        <item>Anggota Badan</item>
+        <item>Negara</item>
+        <item>Makanan</item>
+        <item>Bahasa</item>
+        <item>Sekolah</item>
+        <item>Kecemasan</item>
+        <item>Arah Petunjuk</item>
+        <item>Keluarga</item>
+        <item>Aktiviti Rekreasi</item>
+        <item>Masa</item>
+        <item>Kata Kerja</item>
+        <item>Kerja</item>
+        <item>Dunia</item>
+    </string-array>
+    <string-array name="setp_ne">
+        <item>अभिवादन</item>
+        <item>रुचीहरु</item>
+        <item>संख्याहरु</item>
+        <item>यात्रा</item>
+        <item>किनमेल</item>
+        <item>विशेषणहरु</item>
+        <item>जनावरहरु</item>
+        <item>शरीर</item>
+        <item>देशहरु</item>
+        <item>खाना</item>
+        <item>भाषा</item>
+        <item>विद्यालय</item>
+        <item>आपतकालीन अवस्थाहरु</item>
+        <item>दिशाहरु</item>
+        <item>परिवार</item>
+        <item>घरबाहिर</item>
+        <item>समय</item>
+        <item>क्रियाहरु</item>
+        <item>कार्य</item>
+        <item>संसार</item>
+    </string-array>
+    <string-array name="setp_nl">
+        <item>Begroetingen</item>
+        <item>Interesses</item>
+        <item>Nummers</item>
+        <item>Reizen</item>
+        <item>Winkelen</item>
+        <item>Bijvoeglijk Naamwoord</item>
+        <item>Dieren</item>
+        <item>Lichaam</item>
+        <item>Landen</item>
+        <item>Eten</item>
+        <item>Taal</item>
+        <item>School</item>
+        <item>Noodgeval</item>
+        <item>Ricthing Geven</item>
+        <item>Familie</item>
+        <item>Buitenshuis</item>
+        <item>Tijd</item>
+        <item>Werkwoorden</item>
+        <item>Werk</item>
+        <item>Wereld</item>
+    </string-array>
+    <string-array name="setp_pl">
+        <item>Powitania</item>
+        <item>Zainteresowania</item>
+        <item>Liczby</item>
+        <item>Podróże</item>
+        <item>Zakupy</item>
+        <item>Przymiotniki</item>
+        <item>Zwierzęta</item>
+        <item>Ciało</item>
+        <item>Państwa</item>
+        <item>Jedzenie</item>
+        <item>Język</item>
+        <item>Szkoła</item>
+        <item>Nagłe Wypadki</item>
+        <item>Kierunki</item>
+        <item>Rodzina</item>
+        <item>Poza Domem</item>
+        <item>Czas</item>
+        <item>Czasowniki</item>
+        <item>Praca</item>
+        <item>Świat</item>
+    </string-array>
+    <string-array name="setp_pt">
+        <item>Saudações</item>
+        <item>Interesses</item>
+        <item>Números</item>
+        <item>Viagem</item>
+        <item>Compras</item>
+        <item>Adjetivos</item>
+        <item>Animais</item>
+        <item>Corpo</item>
+        <item>Países</item>
+        <item>Comida</item>
+        <item>Idioma</item>
+        <item>Escola</item>
+        <item>Emergências</item>
+        <item>Instruções</item>
+        <item>Família</item>
+        <item>Ao ar livre</item>
+        <item>Tempo</item>
+        <item>Verbos</item>
+        <item>Trabalho</item>
+        <item>Mundo</item>
+    </string-array>
+    <string-array name="setp_ro">
+        <item>Saluturi</item>
+        <item>Interese</item>
+        <item>Numere</item>
+        <item>Călătorie</item>
+        <item>Cumpărături</item>
+        <item>Adjective</item>
+        <item>Animale</item>
+        <item>Corpul omenesc</item>
+        <item>Ţări</item>
+        <item>Alimente</item>
+        <item>Limbă</item>
+        <item>Şcoală</item>
+        <item>Urgenţe</item>
+        <item>Indicaţii</item>
+        <item>Familie</item>
+        <item>Mediul înconjurător</item>
+        <item>Timp</item>
+        <item>Verbe</item>
+        <item>Muncă</item>
+        <item>Lume</item>
+    </string-array>
+    <string-array name="setp_ru">
+        <item>Приветствия</item>
+        <item>Хобби и интересы</item>
+        <item>Числа</item>
+        <item>Путешествие</item>
+        <item>Покупки</item>
+        <item>Прилагательное</item>
+        <item>Животные</item>
+        <item>Тело</item>
+        <item>Страны</item>
+        <item>Еда</item>
+        <item>Язык</item>
+        <item>Школа</item>
+        <item>Аварийные случаи</item>
+        <item>Направления</item>
+        <item>Семья</item>
+        <item>Окружающий мир</item>
+        <item>Время</item>
+        <item>Глаголы</item>
+        <item>Работа</item>
+        <item>Наша планета</item>
+    </string-array>
+    <string-array name="setp_sv">
+        <item>Hälsningar</item>
+        <item>Intressen</item>
+        <item>Nummer</item>
+        <item>Resor</item>
+        <item>Shopping</item>
+        <item>Adjektiv</item>
+        <item>Djur</item>
+        <item>Kroppen</item>
+        <item>Land</item>
+        <item>Mat</item>
+        <item>Språk</item>
+        <item>Skola</item>
+        <item>Nödtillfällen</item>
+        <item>Vägvisningar</item>
+        <item>Familj</item>
+        <item>Utomhus</item>
+        <item>Tid</item>
+        <item>Verb</item>
+        <item>Arbete</item>
+        <item>Värld</item>
+    </string-array>
+    <string-array name="setp_th">
+        <item>การทักทาย</item>
+        <item>ความสนใจ</item>
+        <item>ตัวเลข</item>
+        <item>การเดินทาง</item>
+        <item>ช้อปปิ้ง</item>
+        <item>คำคุณศัพท์</item>
+        <item>สัตว์</item>
+        <item>ร่างกาย</item>
+        <item>ประเทศ</item>
+        <item>อาหาร</item>
+        <item>ภาษา</item>
+        <item>โรงเรียน</item>
+        <item>เหตุฉุกเฉิน</item>
+        <item>ทิศทาง</item>
+        <item>ครอบครัว</item>
+        <item>กลางแจ้ง</item>
+        <item>เวลา</item>
+        <item>กริยา</item>
+        <item>การทำงาน</item>
+        <item>โลก</item>
+    </string-array>
+    <string-array name="setp_tr">
+        <item>Selamlama</item>
+        <item>İlgiler</item>
+        <item>Sayılar</item>
+        <item>Seyahat</item>
+        <item>Alışveriş</item>
+        <item>Sıfatlar</item>
+        <item>Hayvanlar</item>
+        <item>Vücut</item>
+        <item>Ülkeler</item>
+        <item>Yiyecek</item>
+        <item>Dil</item>
+        <item>Okul</item>
+        <item>Acil Durumlar</item>
+        <item>Yönler</item>
+        <item>Aile</item>
+        <item>Dış Mekanlar</item>
+        <item>Zaman</item>
+        <item>Fiiller</item>
+        <item>İş</item>
+        <item>Dünya</item>
+    </string-array>
+    <string-array name="setp_vi">
+        <item>Chào hỏi</item>
+        <item>Sở thích</item>
+        <item>Con số</item>
+        <item>Du lịch</item>
+        <item>Mua sắm</item>
+        <item>Tính từ</item>
+        <item>Động vật</item>
+        <item>Thân thể</item>
+        <item>Quốc gia</item>
+        <item>Món ăn</item>
+        <item>Ngôn ngữ</item>
+        <item>Trường học</item>
+        <item>Khẩn cấp</item>
+        <item>Hướng</item>
+        <item>Gia đình</item>
+        <item>Ngoài trời</item>
+        <item>Thời gian</item>
+        <item>Động từ</item>
+        <item>Công việc</item>
+        <item>Thế giới</item>
+    </string-array>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorACCB">#edb1ab</color>
+    <color name="colorAccent">#ea1f37</color>
+    <color name="colorGTCB">#00A79D</color>
+    <color name="colorGTCB2">#71315f</color>
+    <color name="colorHiragana">#27ABE2</color>
+    <color name="colorKatakana">#f6af3b</color>
+    <color name="colorKanji">#d81c3c</color>
+
+</resources>

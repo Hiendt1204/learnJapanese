@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Tiếng nhật cơ bản</string>
+    <string name="HiraganaJ">ひらがな</string>
+    <string name="HiraganaV">Hiragana</string>
+    <string-array name="arrBaihoc_Hiragana">
+        <item>Bài 1: あ ~ こ</item>
+        <item>Bài 2: さ ~ と</item>
+        <item>Bài 3: な ~ ほ</item>
+        <item>Bài 4: ま ~ よ</item>
+        <item>Bài 5: ら ~ ん</item>
+        <item>Bài 6: が ~ ぽ</item>
+        <item>Bài 7: きゃ ~ りょ</item>
+        <item>Bài 8: ぎゃ ~ ぴょ</item>
+    </string-array>
+    <string-array name="arrBaihoc_Katakana">
+        <item>Bài 1: ア ~ コ</item>
+        <item>Bài 2: サ ~ ト</item>
+        <item>Bài 3: ナ ~ ホ</item>
+        <item>Bài 4: マ ~ ヨ</item>
+        <item>Bài 5: ワ ~ ン</item>
+        <item>Bài 6: ガ ~ ポ</item>
+        <item>Bài 7: ギャ ~ ピョ</item>
+        <item>Bài 8: キャ ~ リョ</item>
+    </string-array>
+</resources>
