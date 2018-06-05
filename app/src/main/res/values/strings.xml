@@ -22,4 +22,47 @@
         <item>Bài 7: ギャ ~ ピョ</item>
         <item>Bài 8: キャ ~ リョ</item>
     </string-array>
+    <string-array name="arrBaihoc_MCCB">
+        <item>Chào hỏi</item>
+        <item>Hội thoại</item>
+        <item>Số đếm</item>
+        <item>Ngày giờ</item>
+        <item>Phương tiện</item>
+        <item>Địa điểm</item>
+        <item>Ăn uống</item>
+        <item>Mua sắm</item>
+        <item>Màu sắc</item>
+        <item>Thành phố</item>
+        <item>Quốc gia</item>
+        <item>Danh lam</item>
+        <item>Gia đình</item>
+        <item>Hẹn hò</item>
+        <item>Khẩn cấp</item>
+        <item>Đau ốm</item>
+        <item>Câu đồng âm</item>
+        <item>Phương hướng</item>
+    </string-array>
+    <string-array name="arrImage_MCCB">
+        <item>ic_wc_black_24dp</item>
+        <item>conversation</item>
+        <item>if_number_123_1_1553071</item>
+        <item>if_time_clock_107185</item>
+        <item>ic_directions_car_black_24dp</item>
+        <item>ic_diadiem_on_black_24dp</item>
+        <item>ic_local_dining_black_24dp</item>
+        <item>ic_shopping_cart_black_24dp</item>
+        <item>ic_color_lens_black_24dp</item>
+        <item>ic_location_city_black_24dp</item>
+        <item>country</item>
+        <item>danhlam</item>
+        <item>family</item>
+        <item>dating</item>
+        <item>khancap</item>
+        <item>sick</item>
+        <item>caudongam</item>
+        <item>phuonghuong</item>
+
+    </string-array>
+
+
 </resources>

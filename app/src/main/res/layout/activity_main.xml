@@ -32,12 +32,12 @@
 
         </FrameLayout>
         <FrameLayout
-            android:id="@+id/frm_GTCB"
+            android:id="@+id/frm_MCCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <Button
-                android:id="@+id/Btn_GTCB"
+                android:id="@+id/Btn_MCCB"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:scaleType="fitCenter"
@@ -46,7 +46,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="5dp"
                 android:background="@color/colorGTCB"
-                android:text="Giao tiếp cơ bản 1"
+                android:text="         Mẫu câu cơ bản           "
                 android:textColor="@color/colorBackground"/>
         </FrameLayout>
     </LinearLayout>
@@ -94,27 +94,43 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <FrameLayout
-            android:id="@+id/frm_GTCB2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/frm_TNSC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
             <Button
-                android:id="@+id/Btn_GTCB2"
+                android:id="@+id/Btn_TNSC"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginLeft="10dp"
                 android:scaleType="fitCenter"
                 android:background="@color/colorGTCB2"
-                android:text="Giao tiếp cơ bản 2"
+                android:text="Tiếng nhật sơ cấp"
                 android:textColor="@color/colorBackground"/>
 
         </FrameLayout>
-
-
+        <FrameLayout
+            android:id="@+id/frm_TNTC"
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/Btn_TNTC"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorKanji"
+                android:scaleType="fitCenter"
+                android:text="Tiếng nhật trung cấp"
+                android:textColor="@color/colorBackground" />
+        </FrameLayout>
     </LinearLayout>
-
-
         </LinearLayout>
