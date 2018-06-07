@@ -95,37 +95,25 @@ public class Detail_MCCB_Activity extends AppCompatActivity  {
             @Override
             public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
                 loaded = true;
+                Log.d("hiendt","onLoadComplete");
+                soundWord.play(sound, 1, 1, 0, 0, 1);
+                Log.d("hiendt","played ");
             }
         });
 
-        // Tải file nhạc tiếng vật thể bị phá hủy (destroy.war) vào SoundPool.
-        //this.soundIdDestroy = this.soundPool.load(this, R.raw.accommodation1, 1);
-
-
-        getListSound();
 
         ll_lvMCCB.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-                sound = soundWord.load(Detail_MCCB_Activity.this, getResources()
-                        .getIdentifier(mlistSound.get(pos), "raw", getPackageName()), 1);
-//                pos2=pos;
+                int resourceId = getResources()
+                        .getIdentifier(detail_mccbslist.get(pos).getSound_NewWord() + "_f", "raw", getPackageName());
+                Log.d("hiendt","onItemClick "+resourceId);
+                sound = soundWord.load(Detail_MCCB_Activity.this, resourceId, 1);
             }
         });
     }
 
-    private ArrayList<String> getListSound() {
-        for (int i=0;i<detail_mccbslist.size();i++){
-            NewWordMCCB newWordMCCB=new NewWordMCCB();
-             newWordMCCB=detail_mccbslist.get(i);
-            mlistSound.add(newWordMCCB.getSound_NewWord());
-        }
-        return mlistSound;
-    }
-
     private void addControl() {
-        btn_PlaySound=findViewById(R.id.btn_PlayMCCB);
-
 //        btn_PlaySound.setOnClickListener(this);
         ll_lvMCCB=findViewById(R.id.lv_detailMCCB);
 

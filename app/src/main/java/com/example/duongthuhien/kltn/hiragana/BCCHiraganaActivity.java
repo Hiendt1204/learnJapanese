@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.text.NoCopySpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,7 @@ import java.util.ArrayList;
 public class BCCHiraganaActivity extends Activity implements View.OnClickListener {
     TextView tv_VwordDetail;
     TextView tv_JwordDetail;
+    int trangthaibtn;
     Button btn_Close;
     LinearLayout ll_WordDetail;
     GridView gv_Word;
@@ -59,7 +61,10 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bcchiragana);
-        mListWord = getWordList();
+        Intent intent=getIntent();
+        trangthaibtn=intent.getIntExtra("A",-1);
+        Log.d("hiendt","HiraganaActivity trangthaibtn " + trangthaibtn);
+        mListWord = getWordList(trangthaibtn);
         addControls();
 
         // Đối tượng AudioManager sử dụng để điều chỉnh âm lượng.
@@ -147,15 +152,29 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
         return mlistSound;
     }
 
-    public ArrayList getWordList() {
-        String[] Tiengviet = getResources().getStringArray(R.array.roomaji);
-        String[] hiragana = getResources().getStringArray(R.array.hiragana);
-        for (int i = 0; i < Tiengviet.length; i++) {
-            Word word = new Word();
-            word.setId(i);
-            word.setJword(hiragana[i]);
-            word.setVword(Tiengviet[i]);
-            mListWord.add(word);
+    public ArrayList getWordList(int trangthaibtn) {
+        if (trangthaibtn==2){
+            String[] Tiengviet = getResources().getStringArray(R.array.roomaji);
+            String[] hiragana = getResources().getStringArray(R.array.hiragana);
+            for (int i = 0; i < Tiengviet.length; i++) {
+                Word word = new Word();
+                word.setId(i);
+                word.setJword(hiragana[i]);
+                word.setVword(Tiengviet[i]);
+                mListWord.add(word);
+            }
+        }
+        else if (trangthaibtn==1){
+            String[] Tiengviet = getResources().getStringArray(R.array.roomaji_k);
+            String[] hiragana = getResources().getStringArray(R.array.katakana);
+            for (int i = 0; i < Tiengviet.length; i++) {
+                Word word = new Word();
+                word.setId(i);
+                word.setJword(hiragana[i]);
+                word.setVword(Tiengviet[i]);
+                mListWord.add(word);
+            }
+
         }
         return mListWord;
     }

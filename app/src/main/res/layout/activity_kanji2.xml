@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    tools:context="com.example.duongthuhien.kltn.kanji.KanjiActivity">
+    <TextView
+        android:id="@+id/tv_Kanji"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="25sp"
+        android:background="@color/colorBackground"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorBackground">
+        <TextView
+            android:id="@+id/tv_PhienAm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="15sp"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/tv_JWord_PhienAm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="15sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_Kanji"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+
+</LinearLayout>

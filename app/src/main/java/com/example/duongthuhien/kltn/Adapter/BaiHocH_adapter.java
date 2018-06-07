@@ -53,19 +53,8 @@ public class BaiHocH_adapter extends ArrayAdapter {
 
         txt_BaiHocH.setText(baiHocH.getStrBaiHoc());
 
-        ll_Listview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                xulychitiet(position);
-            }
-        });
-
         return row;
     }
 
-    private void xulychitiet(int positionListview) {
-        Intent intent=new Intent(this.context, HBCCHiraganaActivity.class);
-        intent.putExtra("positionListview",positionListview);
-        this.context.startActivity(intent);
-    }
+
 }

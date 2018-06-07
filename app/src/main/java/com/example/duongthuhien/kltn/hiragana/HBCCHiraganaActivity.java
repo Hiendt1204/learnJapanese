@@ -28,9 +28,10 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
     LinearLayout llAnswer;
     ImageView imvIconAnswer;
     TextView tvAnser;
+    int trangthaibtn;
 
     ArrayList<AnswerList> answerLists=new ArrayList<>();
-    ArrayList<Word> listWord = new ArrayList<Word>();
+    ArrayList<Word> mlistWord = new ArrayList<Word>();
     int[] mIdUsed = {-1, -1, -1, -1};
     int[] midAnswerSelected = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
     Button[] btnAnswer = new Button[4];
@@ -61,11 +62,12 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
 
         Intent intent = getIntent();
         mposListview = intent.getIntExtra("positionListview", -1);
+        trangthaibtn=intent.getIntExtra("A",-1);
 
 //        Toast.makeText(this,"da an vi tri" +positionListview,
 //                Toast.LENGTH_SHORT).show();
 
-        getWordList();
+        getWordList(trangthaibtn);
         addControl();
         fillData(mposListview);
 
@@ -89,20 +91,22 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
         int wordId = -1;
         do {
             wordPos = rd.nextInt(10) + posListview*10;
-            wordId = listWord.get(wordPos).getId();
+            Log.d("HBCCHiraganaActivity", "mlistWord" +mlistWord );
+            wordId = mlistWord.get(wordPos).getId();
+
         } while (isIdAnswerSelected(wordId));
         Log.d("HBCCHiraganaActivity", "wordPos " + wordPos + " posListView "  + posListview);
         midAnswerSelected[mAnswerCount] = wordId;
         mAnswerCount++;
-        tvWordSelected.setText(listWord.get(wordPos).getJword());
-        tvWordSelected.setTag(listWord.get(wordPos).getId());
+        tvWordSelected.setText(mlistWord.get(wordPos).getJword());
+        tvWordSelected.setTag(mlistWord.get(wordPos).getId());
         mCorrectId = wordPos;
 
         Random rd1 = new Random();
         int btnPos = rd1.nextInt((3 - 0 + 1) + 0);
-        btnAnswer[btnPos].setTag(listWord.get(wordPos).getId());
-        btnAnswer[btnPos].setText(listWord.get(wordPos).getVword());
-        mIdUsed[0] = listWord.get(wordPos).getId();
+        btnAnswer[btnPos].setTag(mlistWord.get(wordPos).getId());
+        btnAnswer[btnPos].setText(mlistWord.get(wordPos).getVword());
+        mIdUsed[0] = mlistWord.get(wordPos).getId();
         int pos = 1;
         for (int i = 0; i <= 3; i++) {
             int wordPos1 = 0;
@@ -110,9 +114,9 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
 
                 wordPos1 = rd.nextInt(9);
                 if (!isUsed(wordPos1)) {
-                    btnAnswer[i].setText(listWord.get(wordPos1).getVword());
-                    btnAnswer[i].setTag(listWord.get(wordPos1).getId());
-                    mIdUsed[pos] = listWord.get(wordPos1).getId();
+                    btnAnswer[i].setText(mlistWord.get(wordPos1).getVword());
+                    btnAnswer[i].setTag(mlistWord.get(wordPos1).getId());
+                    mIdUsed[pos] = mlistWord.get(wordPos1).getId();
 
                     pos++;
                 } else {
@@ -160,24 +164,32 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
         btnAnswer[3].setOnClickListener(this);
 
     }
-    public ArrayList getWordList() {
-//        Word word = new Word();
-//        word.setId(0);
-//        word.setJword("a");
-//        word.setVword("あ");
-//        listWord.add(word);
-        String[] Tiengviet = getResources().getStringArray(R.array.roomaji);
-        String[] hiragana = getResources().getStringArray(R.array.hiragana);
-        for (int i=0;i<Tiengviet.length;i++){
-            Word word=new Word();
-            word.setId(i);
-            word.setJword(hiragana[i]);
-            word.setVword(Tiengviet[i]);
-            listWord.add(word);
+    public ArrayList getWordList(int trangthaibtn) {
+
+        if (trangthaibtn==2){
+            String[] Tiengviet = getResources().getStringArray(R.array.roomaji);
+            String[] hiragana = getResources().getStringArray(R.array.hiragana);
+            for (int i = 0; i < Tiengviet.length; i++) {
+                Word word = new Word();
+                word.setId(i);
+                word.setJword(hiragana[i]);
+                word.setVword(Tiengviet[i]);
+                mlistWord.add(word);
+            }
         }
+        else if (trangthaibtn==1){
+            String[] Tiengviet = getResources().getStringArray(R.array.roomaji_k);
+            String[] hiragana = getResources().getStringArray(R.array.katakana);
+            for (int i = 0; i < Tiengviet.length; i++) {
+                Word word = new Word();
+                word.setId(i);
+                word.setJword(hiragana[i]);
+                word.setVword(Tiengviet[i]);
+                mlistWord.add(word);
+            }
 
-
-        return listWord;
+        }
+        return mlistWord;
     }
 
     @Override
@@ -196,13 +208,13 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
             tvAnser.setText("Bạn đã chọn sai");
             imvIconAnswer.setImageResource(R.drawable.ic_mood_bad_black_24dp);
             mScore = mScore - SCORE_WRONG;
-            answerList.setWrongAnswer(listWord.get(id).getVword());
+            answerList.setWrongAnswer(mlistWord.get(id).getVword());
 
         }
         mtvScore.setText(String.valueOf(mScore));
 
-            answerList.setQuestion(listWord.get(mCorrectId).getJword());
-            answerList.setCorrectAnswer(listWord.get(mCorrectId).getVword());
+            answerList.setQuestion(mlistWord.get(mCorrectId).getJword());
+            answerList.setCorrectAnswer(mlistWord.get(mCorrectId).getVword());
 
             answerLists.add(answerList);
 

@@ -46,7 +46,6 @@ public class Detail_MCCB_Adapter extends ArrayAdapter {
         LayoutInflater inflater = this.context.getLayoutInflater();
         View row = inflater.inflate(this.resource,null);
 
-        btn_PlayMCCB=row.findViewById(R.id.btn_PlayMCCB);
         tv_JWord=row.findViewById(R.id.tv_Jword);
         tv_VWord=row.findViewById(R.id.tv_Vword);
         tv_PhienAm=row.findViewById(R.id.tv_PhienAm);

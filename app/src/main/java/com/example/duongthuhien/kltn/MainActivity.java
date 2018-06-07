@@ -78,18 +78,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void doClickBtn_Hiragana() {
         Intent intent=new Intent(MainActivity.this,HiraganaActivity.class);
-        intent.putExtra("btn_Hiragana",2);
+        intent.putExtra("A",2);
         startActivity(intent);
     }
 
     private void doClickBtn_Katakana() {
         Intent intent=new Intent(MainActivity.this,HiraganaActivity.class);
-        intent.putExtra("btn_Katakana",1);
+        intent.putExtra("A",1);
         startActivity(intent);
     }
 
     private void doClickBtn_Kanji() {
-        Intent intent=new Intent(MainActivity.this, KanjiActivity.class);
+        Intent intent=new Intent(MainActivity.this, HiraganaActivity.class);
+       // intent.putExtra("trangthaibtn",3);
         startActivity(intent);
     }
 

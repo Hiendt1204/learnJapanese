@@ -13,10 +13,10 @@
         android:layout_margin="20dp"
         android:background="@color/colorHiragana">
         <ImageView
+            android:id="@+id/img_BCCListview"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_margin="20dp"
-            android:background="@drawable/iconhiragana"/>
+            android:layout_margin="20dp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
