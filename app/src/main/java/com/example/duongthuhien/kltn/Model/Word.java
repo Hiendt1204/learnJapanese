@@ -1,4 +1,4 @@
-package com.example.duongthuhien.kltn;
+package com.example.duongthuhien.kltn.Model;
 
 /**
  * Created by Duong Thu Hien on 5/24/2018.

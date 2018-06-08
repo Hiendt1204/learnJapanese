@@ -7,11 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.duongthuhien.kltn.Adapter.BaiHocH_adapter;
 import com.example.duongthuhien.kltn.Adapter.MCCB_adapter;
 import com.example.duongthuhien.kltn.Model.BaiHocMCCB;
 import com.example.duongthuhien.kltn.R;
-import com.example.duongthuhien.kltn.Word;
 
 import java.util.ArrayList;
 

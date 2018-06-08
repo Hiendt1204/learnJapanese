@@ -1,16 +1,13 @@
 package com.example.duongthuhien.kltn.SQLiteData;
 
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.duongthuhien.kltn.NewWord;
-import com.example.duongthuhien.kltn.NewWordMCCB;
+import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 
 import java.io.File;
 import java.io.FileOutputStream;

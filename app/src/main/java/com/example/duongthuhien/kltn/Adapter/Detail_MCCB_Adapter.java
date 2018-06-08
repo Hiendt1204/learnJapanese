@@ -1,8 +1,6 @@
 package com.example.duongthuhien.kltn.Adapter;
 
 import android.app.Activity;
-import android.content.Context;
-import android.media.SoundPool;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.duongthuhien.kltn.Model.Detail_MCCB;
-import com.example.duongthuhien.kltn.NewWord;
-import com.example.duongthuhien.kltn.NewWordMCCB;
+import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 import com.example.duongthuhien.kltn.R;
-import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
 
 import java.util.ArrayList;
 import java.util.List;

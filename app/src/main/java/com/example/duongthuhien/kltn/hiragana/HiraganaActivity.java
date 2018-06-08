@@ -58,7 +58,6 @@ public class HiraganaActivity extends AppCompatActivity implements View.OnClickL
         lv_BaihocHiragana = findViewById(R.id.lv_BaihocHiragana);
 
         if (trangthaibtn==2){
-            img_BCCListview.setImageResource(R.drawable.iconhiragana);
             img_BCC.setImageResource(R.drawable.iconhiragana);
             tv_BCCV.setText("Hiragana");
             tv_BCCJ.setText("ひらがな");
@@ -72,7 +71,6 @@ public class HiraganaActivity extends AppCompatActivity implements View.OnClickL
 
         }
         else if (trangthaibtn==1){
-            //img_BCCListview.setImageResource(R.drawable.katakana);
             img_BCC.setImageResource(R.drawable.katakana);
             tv_BCCV.setText("Katakana");
             tv_BCCJ.setText("カタカナ");

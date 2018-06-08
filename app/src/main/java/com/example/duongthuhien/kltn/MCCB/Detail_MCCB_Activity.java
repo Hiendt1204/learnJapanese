@@ -15,8 +15,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.duongthuhien.kltn.Adapter.Detail_MCCB_Adapter;
-import com.example.duongthuhien.kltn.Model.Detail_MCCB;
-import com.example.duongthuhien.kltn.NewWordMCCB;
+import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 import com.example.duongthuhien.kltn.R;
 import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
 

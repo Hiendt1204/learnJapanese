@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.R;
-import com.example.duongthuhien.kltn.Word;
+import com.example.duongthuhien.kltn.Model.Word;
 
 import java.util.List;
 

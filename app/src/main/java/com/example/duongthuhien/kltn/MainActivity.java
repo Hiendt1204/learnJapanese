@@ -7,16 +7,16 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.duongthuhien.kltn.MCCB.MCCBActivity;
-import com.example.duongthuhien.kltn.TNSC.TNSCActivity;
+import com.example.duongthuhien.kltn.Minna.MinnaActivity;
 import com.example.duongthuhien.kltn.hiragana.HiraganaActivity;
 
-import com.example.duongthuhien.kltn.TNTC.TNTCActivity;
+import com.example.duongthuhien.kltn.Tuvungyeuthich.TuvungyeuthichActivity;
 import com.example.duongthuhien.kltn.kanji.KanjiActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button Btn_Katakana;
-    Button Btn_TNSC;
-    Button Btn_TNTC;
+    Button Btn_Minna;
+    Button Btn_Tuvungyeuthich;
     Button Btn_MCCB;
     Button Btn_Hiragana;
     Button Btn_Kanji;
@@ -35,28 +35,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void addControl() {
-        Btn_TNSC=findViewById(R.id.Btn_TNSC);
-        Btn_TNTC=findViewById(R.id.Btn_TNTC);
-        Btn_Hiragana=findViewById(R.id.Btn_Hiragana);
+        Btn_Minna=findViewById(R.id.Btn_Minna);
+        Btn_Tuvungyeuthich=findViewById(R.id.Btn_Tuvungyeuthich);
+        Btn_Hiragana=findViewById(R.id.btn_Hiragana);
         Btn_Kanji=findViewById(R.id.Btn_Kanji);
         Btn_Katakana=findViewById(R.id.Btn_Katakana);
         Btn_MCCB=findViewById(R.id.Btn_MCCB);
         
-        Btn_TNSC.setOnClickListener(this);
+        Btn_Minna.setOnClickListener(this);
         Btn_Hiragana.setOnClickListener(this);
         Btn_Kanji.setOnClickListener(this);
         Btn_Katakana.setOnClickListener(this);
-        Btn_TNTC.setOnClickListener(this);
+        Btn_Tuvungyeuthich.setOnClickListener(this);
         Btn_MCCB.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.Btn_TNSC:
-                doClickBtn_TNSC();
+            case R.id.Btn_MCCB:
+                doClickBtn_MCCB();
                 break;
-            case R.id.Btn_Hiragana:
+            case R.id.btn_Hiragana:
                 doClickBtn_Hiragana();
                 break;
             case R.id.Btn_Kanji:
@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Btn_Katakana:
                 doClickBtn_Katakana();
                 break;
-            case R.id.Btn_TNTC:
-                doClickBtn_TNTC();
+            case R.id.Btn_Tuvungyeuthich:
+                doClickBtn_Tuvungyeuthich();
                 break;
-            case R.id.Btn_MCCB:
-                doClickBtn_MCCB();
+            case R.id.Btn_Minna:
+                doClickBtn_Minna();
                 break;
         }
 
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void doClickBtn_Kanji() {
-        Intent intent=new Intent(MainActivity.this, HiraganaActivity.class);
+        Intent intent=new Intent(MainActivity.this, KanjiActivity.class);
        // intent.putExtra("trangthaibtn",3);
         startActivity(intent);
     }
@@ -98,12 +98,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent=new Intent(MainActivity.this, MCCBActivity.class);
         startActivity(intent);
     }
-    private void doClickBtn_TNSC() {
-        Intent intent=new Intent(MainActivity.this, TNSCActivity.class);
+    private void doClickBtn_Minna() {
+        Intent intent=new Intent(MainActivity.this, MinnaActivity.class);
         startActivity(intent);
     }
-    private void doClickBtn_TNTC() {
-        Intent intent=new Intent(MainActivity.this, TNTCActivity.class);
+    private void doClickBtn_Tuvungyeuthich() {
+        Intent intent=new Intent(MainActivity.this, TuvungyeuthichActivity.class);
         startActivity(intent);
     }
 

@@ -8,5 +8,6 @@
     <color name="colorHiragana">#27ABE2</color>
     <color name="colorKatakana">#f6af3b</color>
     <color name="colorKanji">#d81c3c</color>
+    <color name="colorTV">#dc6d7d</color>
 
 </resources>

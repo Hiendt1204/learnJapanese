@@ -1,4 +1,4 @@
-package com.example.duongthuhien.kltn;
+package com.example.duongthuhien.kltn.Model;
 
 import android.media.Image;
 import android.media.SoundPool;

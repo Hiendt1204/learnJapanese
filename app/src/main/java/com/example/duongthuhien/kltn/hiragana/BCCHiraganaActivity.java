@@ -1,7 +1,6 @@
 package com.example.duongthuhien.kltn.hiragana;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
@@ -10,22 +9,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.text.NoCopySpan;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.Adapter.Gridview_adapter;
 import com.example.duongthuhien.kltn.R;
-import com.example.duongthuhien.kltn.Word;
+import com.example.duongthuhien.kltn.Model.Word;
 
 import java.util.ArrayList;
 
@@ -115,7 +109,7 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
         //this.soundIdDestroy = this.soundPool.load(this, R.raw.accommodation1, 1);
 
 
-        getListSound();
+        getListSound(trangthaibtn);
         Gridview_adapter gridview_adapter = new Gridview_adapter(BCCHiraganaActivity.this, mListWord);
         gv_Word.setAdapter(gridview_adapter);
 
@@ -144,11 +138,12 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
         btn_PlayWord.setOnClickListener(this);
         btn_Close.setOnClickListener(this);
     }
-    public ArrayList getListSound(){
-        String[] sound=getResources().getStringArray(R.array.kana_raw);
-        for (int i=0;i<sound.length;i++){
-            mlistSound.add(sound[i]);
+    public ArrayList getListSound(int trangthaibtn){
+            String[] sound=getResources().getStringArray(R.array.kana_raw);
+            for (int i=0;i<sound.length;i++){
+                mlistSound.add(sound[i]);
         }
+
         return mlistSound;
     }
 
