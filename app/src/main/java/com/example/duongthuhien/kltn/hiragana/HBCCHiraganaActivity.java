@@ -52,7 +52,6 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
     //biến lưu tổng điểm
     private int mScore = 0;
 
-    //
 
 
     @Override

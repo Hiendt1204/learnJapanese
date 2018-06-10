@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.duongthuhien.kltn.TracNghiemActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorBackground">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/mtvScore"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="right"
+                android:background="@color/colorBackground"
+                android:textSize="25sp"/>
+            <TextView
+                android:background="@color/colorBackground"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:text="/100"
+                android:textSize="25sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvTudechon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/colorACCB"
+                android:textSize="50sp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+                <Button
+                    android:id="@+id/btnAnswer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorBackground" />
+                <Button
+                    android:id="@+id/btnAnswer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorBackground" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+                    <Button
+                        android:id="@+id/btnAnswer3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:textSize="30sp"
+                        android:textColor="@color/colorBackground" />
+                    <Button
+                        android:id="@+id/btnAnswer4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:textSize="30sp"
+                        android:textColor="@color/colorBackground" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

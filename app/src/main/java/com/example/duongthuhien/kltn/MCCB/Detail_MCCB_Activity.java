@@ -105,7 +105,8 @@ public class Detail_MCCB_Activity extends AppCompatActivity  {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
                 int resourceId = getResources()
-                        .getIdentifier(detail_mccbslist.get(pos).getSound_NewWord() + "_f", "raw", getPackageName());
+                        .getIdentifier(detail_mccbslist.get(pos).getSound_NewWord() + "_f",
+                                "raw", getPackageName());
                 Log.d("hiendt","onItemClick "+resourceId);
                 sound = soundWord.load(Detail_MCCB_Activity.this, resourceId, 1);
             }
@@ -124,7 +125,6 @@ public class Detail_MCCB_Activity extends AppCompatActivity  {
 
         detail_mccbslist=sqLiteDataController.getbyCatagoryID(position);
         for(NewWordMCCB word : detail_mccbslist){
-            Log.d(TAG, "word : " + word.getPhienAm());
         }
 
         Detail_MCCB_Adapter detail_mccb_adapter=new Detail_MCCB_Adapter

@@ -22,6 +22,43 @@
         <item>Bài 7: ギャ ~ ピョ</item>
         <item>Bài 8: キャ ~ リョ</item>
     </string-array>
+    <string-array name="arrBaihoc_Kanji1">
+        <item>Bài 1</item>
+        <item>Bài 2</item>
+        <item>Bài 3</item>
+        <item>Bài 4</item>
+        <item>Bài 5</item>
+        <item>Bài 6</item>
+        <item>Bài 7</item>
+        <item>Bài 8</item>
+        <item>Bài 9</item>
+        <item>Bài 10</item>
+        <item>Bài 11</item>
+        <item>Bài 12</item>
+        <item>Bài 13</item>
+        <item>Bài 14</item>
+        <item>Bài 15</item>
+        <item>Bài 16</item>
+        <item>Bài 17</item>
+        <item>Bài 18</item>
+        <item>Bài 19</item>
+        <item>Bài 20</item>
+        <item>Bài 21</item>
+        <item>Bài 22</item>
+        <item>Bài 23</item>
+        <item>Bài 24</item>
+        <item>Bài 25</item>
+        <item>Bài 26</item>
+        <item>Bài 27</item>
+        <item>Bài 28</item>
+        <item>Bài 29</item>
+        <item>Bài 30</item>
+        <item>Bài 31</item>
+        <item>Bài 32</item>
+        <item>Bài 33</item>
+        <item>Bài 34</item>
+        <item>Bài 35</item>
+    </string-array>
     <string-array name="arrBaihoc_MCCB">
         <item>Chào hỏi</item>
         <item>Hội thoại</item>
@@ -61,6 +98,11 @@
         <item>sick</item>
         <item>caudongam</item>
         <item>phuonghuong</item>
+
+    </string-array>
+    <string-array name="arrKieuHocK2">
+        <item>Trắc nghiệm</item>
+        <item>Ghép từ</item>
 
     </string-array>
 

@@ -1,10 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.duongthuhien.kltn.kanji.KanjiActivity">
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/Ghi"
+        tools:context="com.example.duongthuhien.kltn.kanji.KanjiActivity">
 
-</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/spinner_DSBaiHoc"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"></Spinner>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_Kanji1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+        </ListView>
+
+
+
+    </LinearLayout>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btn_GhepTu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            fab:fab_size="mini"
+            fab:fab_label="Ghép từ"
+            app:fab_colorNormal="@color/colorAccent"
+            android:src="@drawable/ic_play_circle_outline_black_24dp"/>
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btn_TracNghiem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            app:fab_colorNormal="@color/colorAccent"
+            fab:fab_size="mini"
+            fab:fab_label="Trắc nghiệm"
+            android:src="@drawable/ic_play_circle_outline_black_24dp"/>
+    </com.github.clans.fab.FloatingActionMenu>
+
+</FrameLayout>

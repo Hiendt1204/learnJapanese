@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 
 import java.io.File;
@@ -37,14 +38,30 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
 
     // Tên bảng: Note.
+    //Bang MCCB
     private static final String TABLE_PHRASE = "phrase";
-
     private static final String COLUMN_PHRASE_ID = "_id";
     private static final String COLUMN_PHRASE_CATEGORY_ID = "category_id";
     private static final String COLUMN_PHRASE_PHIENAM = "pinyin";
     private static final String COLUMN_PHRASE_JNEWWORD = "japanese";
     private static final String COLUMN_PHRASE_VNEWWORD = "vietnamese";
     private static final String COLUMN_PHRASE_SOUND_NEWWORD = "voice";
+
+    //Bang Kanji
+    private static final String TABLE_KANJI = "ikanji";
+    private static final String COLUMN_KANJI_ID = "id";
+    private static final String COLUMN_KANJI_LESSON_ID = "lesson";
+    private static final String COLUMN_KANJI_ON = "onjomi";
+    private static final String COLUMN_KANJI_KUN = "kunjomi";
+    private static final String COLUMN_KANJI_JWORD = "word";
+    private static final String COLUMN_KANJI_VWORD = "vi_mean";
+    private static final String COLUMN_KANJI_SOUND_NEWWORD = "id";
+    private static final String COLUMN_KANJI_IMAGE = "image";
+    private static final String COLUMN_KANJI_MOTA_V = "remember";
+    private static final String COLUMN_KANJI_RON = "ronjomi";
+    private static final String COLUMN_KANJI_RKUN = "rkunjomi";
+    private static final String COLUMN_KANJI_CNWORD = "cn_mean";
+    private static final String COLUMN_KANJI_NOTE = "note";
 
 
     public SQLiteDataController(Context context) {
@@ -160,6 +177,39 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         return newWord;
     }
 
+    public Kanji1 getWord(int id) {
+        Log.i(TAG, "MyDatabaseHelper.getNote ... " + id);
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_KANJI, new String[]{COLUMN_KANJI_ID,
+                        COLUMN_KANJI_LESSON_ID, COLUMN_KANJI_ON,
+                        COLUMN_KANJI_KUN, COLUMN_KANJI_JWORD, COLUMN_KANJI_VWORD,COLUMN_KANJI_SOUND_NEWWORD
+                ,COLUMN_KANJI_IMAGE,COLUMN_KANJI_MOTA_V,COLUMN_KANJI_CNWORD,COLUMN_KANJI_RKUN,COLUMN_KANJI_RON},
+                COLUMN_KANJI_LESSON_ID + "=?",
+                new String[]{String.valueOf(id)}, null, null, null, null);
+        if (cursor != null)
+            cursor.moveToFirst();
+
+        Kanji1 kanji1 = new Kanji1();
+        kanji1.setId(cursor.getInt(cursor.getColumnIndex("id")));
+        kanji1.setStr_Sothutu(cursor.getInt(cursor.getColumnIndex("id")));
+        kanji1.setStr_JWord_K(cursor.getString(cursor.getColumnIndex("word")));
+        kanji1.setStr_Kun(cursor.getString(cursor.getColumnIndex("kunjomi")));
+        kanji1.setStr_MoTa(cursor.getString(cursor.getColumnIndex("image")));
+        kanji1.setStr_MoTa_V(cursor.getString(cursor.getColumnIndex("remember")));
+        kanji1.setStr_On(cursor.getString(cursor.getColumnIndex("onjomi")));
+        kanji1.setStr_VWord_K(cursor.getString(cursor.getColumnIndex("vi_mean")));
+        kanji1.setSoundK("sound_"+ cursor.getString(cursor.getColumnIndex("id")));
+        kanji1.setStr_AmHan(cursor.getString(cursor.getColumnIndex("cn_mean")));
+        kanji1.setStr_ronjomi(cursor.getString(cursor.getColumnIndex("ronjomi")));
+        kanji1.setStr_rkunjomi(cursor.getString(cursor.getColumnIndex("rkunjomi")));
+        kanji1.setStr_ViDu(cursor.getString(cursor.getColumnIndex("note")));
+        // return note
+        return kanji1;
+    }
+
+
 
     public List<NewWordMCCB> getAllNewWord() {
         Log.i(TAG, "MyDatabaseHelper.getAllNotes ... ");
@@ -220,6 +270,42 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         // return note list
         return wordList;
+    }
+    public List<Kanji1> getbylessionID(int id) {
+
+        List<Kanji1> wordListKanji1 = new ArrayList<Kanji1>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_KANJI + " WHERE " + COLUMN_KANJI_LESSON_ID
+                + " = ?";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] arg = {String.valueOf(id+1)};
+        Cursor cursor = db.rawQuery(selectQuery, arg);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                Kanji1 kanji1 = new Kanji1();
+                kanji1.setId(cursor.getInt(cursor.getColumnIndex("id")));
+                kanji1.setStr_Sothutu(cursor.getInt(cursor.getColumnIndex("id")));
+                kanji1.setStr_JWord_K(cursor.getString(cursor.getColumnIndex("word")));
+                kanji1.setStr_Kun(cursor.getString(cursor.getColumnIndex("kunjomi")));
+                kanji1.setStr_MoTa(cursor.getString(cursor.getColumnIndex("image")));
+                kanji1.setStr_MoTa_V(cursor.getString(cursor.getColumnIndex("remember")));
+                kanji1.setStr_On(cursor.getString(cursor.getColumnIndex("onjomi")));
+                kanji1.setStr_VWord_K(cursor.getString(cursor.getColumnIndex("vi_mean")));
+                kanji1.setSoundK("sound_"+ cursor.getString(cursor.getColumnIndex("id")));
+                kanji1.setStr_AmHan(cursor.getString(cursor.getColumnIndex("cn_mean")));
+                kanji1.setStr_ronjomi(cursor.getString(cursor.getColumnIndex("ronjomi")));
+                kanji1.setStr_rkunjomi(cursor.getString(cursor.getColumnIndex("rkunjomi")));
+                kanji1.setStr_ViDu(cursor.getString(cursor.getColumnIndex("note")));
+                wordListKanji1.add(kanji1);
+            } while (cursor.moveToNext());
+        }
+
+        // return note list
+        return wordListKanji1;
     }
 
 

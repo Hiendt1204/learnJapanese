@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KLTN.iml" filepath="$PROJECT_DIR$/KLTN.iml" />
+      <module fileurl="file://E:\Git\Hien\learnJapanese\KLTN.iml" filepath="E:\Git\Hien\learnJapanese\KLTN.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learnJapanese.iml" filepath="$PROJECT_DIR$/learnJapanese.iml" />
     </modules>
   </component>
 </project>

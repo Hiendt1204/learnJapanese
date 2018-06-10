@@ -24,7 +24,10 @@
         <activity android:name=".hiragana.ResultWordActivity" />
         <activity android:name=".MCCB.MCCBActivity" />
         <activity android:name=".MCCB.Detail_MCCB_Activity" />
-        <activity android:name=".kanji.KanjiActivity"></activity>
+        <activity android:name=".kanji.KanjiActivity" />
+        <activity android:name=".TracNghiemActivity" />
+        <activity android:name=".GhepTuActivity" />
+        <activity android:name=".kanji.Kanji2Activity"></activity>
     </application>
 
 </manifest>
