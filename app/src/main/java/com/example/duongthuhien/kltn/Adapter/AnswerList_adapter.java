@@ -57,9 +57,9 @@ public class AnswerList_adapter extends ArrayAdapter {
             tv_CorrectAnswer.setText(answerList.getCorrectAnswer());
         }
         if (position%2==0)
-            row.setBackgroundColor(Color.parseColor("#edb1ab"));
+            row.setBackgroundColor(Color.parseColor("#ffffff"));
         else
-            row.setBackgroundColor(Color.parseColor("#ea1f37"));
+            row.setBackgroundColor(Color.parseColor("#ffcccc"));
 
         return row;
     }

@@ -27,7 +27,8 @@ public class ResultWordActivity extends AppCompatActivity implements View.OnClic
         ArrayList<AnswerList> answerLists = (ArrayList<AnswerList>)intent.getSerializableExtra("answerLists");
 
         addControls();
-        AnswerList_adapter answerList_adapter=new AnswerList_adapter(ResultWordActivity.this,R.layout.item_answerlist, answerLists);
+        AnswerList_adapter answerList_adapter=new AnswerList_adapter
+                (ResultWordActivity.this,R.layout.item_answerlist, answerLists);
         lv_AnswerList.setAdapter(answerList_adapter);
     }
 
