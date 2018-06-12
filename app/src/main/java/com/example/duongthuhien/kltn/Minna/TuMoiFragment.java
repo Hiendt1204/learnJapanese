@@ -27,6 +27,8 @@ public class TuMoiFragment extends Fragment {
 
 
 
+
+
         return view;
     }
 
