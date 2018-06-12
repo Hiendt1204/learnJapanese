@@ -26,7 +26,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
     private String DB_PATH = "/data/data/com.example.duongthuhien.kltn/databases/";
     private SQLiteDatabase myDatabase;
     private Context context;
-    private static final String TAG = "hiendt_SQLiteDataController";
+    private static final String TAG = "hiendt_SQLiteData";
 
 
     // Phiên bản

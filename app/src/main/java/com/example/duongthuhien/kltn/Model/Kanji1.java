@@ -64,6 +64,7 @@ public class Kanji1 implements Serializable {
         for(String row : rowStr) {
             String[] cols = row.split("∴");
             if (cols != null && cols.length > 0) {
+                //Log.d("hiendt2","played "+ cols[0]);
                 KanjiExample example = new KanjiExample();
                 example.setCot1(cols[0]);
                 example.setCot2(cols[1]);

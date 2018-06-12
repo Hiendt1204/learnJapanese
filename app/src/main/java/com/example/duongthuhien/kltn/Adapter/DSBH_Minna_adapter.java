@@ -36,8 +36,8 @@ public class DSBH_Minna_adapter extends ArrayAdapter {
 
         final DSBH_minna dsbh_minna=(DSBH_minna) this.objects.get(pos);
 
-        TextView tv_TenBaiHocM=row.findViewById(R.id.tv_TenbaihocM);
-        tv_TenBaiHocM.setText(dsbh_minna.getStr_TenBaihoc());
+        //TextView tv_TenBaiHocM=row.findViewById(R.id.tv_TenbaihocM);
+        //tv_TenBaiHocM.setText(dsbh_minna.getStr_TenBaihoc());
 
         return row;
     }
