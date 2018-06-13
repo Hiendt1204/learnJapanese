@@ -9,6 +9,8 @@ import android.util.Log;
 
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.Model.NewWordMCCB;
+import com.example.duongthuhien.kltn.Model.NguPhap_Frag;
+import com.example.duongthuhien.kltn.Model.Tumoi_Frag;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -62,6 +64,28 @@ public class SQLiteDataController extends SQLiteOpenHelper {
     private static final String COLUMN_KANJI_RKUN = "rkunjomi";
     private static final String COLUMN_KANJI_CNWORD = "cn_mean";
     private static final String COLUMN_KANJI_NOTE = "note";
+
+    //Bang kotoba
+    private static final String TABLE_KOTOBA = "kotoba";
+    private static final String COLUMN_KOTOBA_ID = "id";
+    private static final String COLUMN_KOTOBA_LESSON_ID = "lesson_id";
+    private static final String COLUMN_KOTOBA_HIRAGANA= "hiragana";
+    private static final String COLUMN_KOTOBA_KANJI = "kanji";
+    private static final String COLUMN_KOTOBA_ROUMAJI = "roumaji";
+    private static final String COLUMN_KOTOBA_MEAN= "mean";
+    private static final String COLUMN_KOTOBA_FAVORITE = "favorite";
+    private static final String COLUMN_KOTOBA_CNMEAN = "cn_mean";
+//    private static final String COLUMN_KOTOBA_MOTA_V = "remember";
+//    private static final String COLUMN_KOTOBA_RON = "ronjomi";
+//    private static final String COLUMN_KOTOBA_RKUN = "rkunjomi";
+
+    //Bang ngu phap
+    private static final String TABLE_NGUPHAP = "grammar";
+    private static final String COLUMN_NGUPHAP_ID = "id";
+    private static final String COLUMN_NGUPHAP_LESSON_ID = "lesson_id";
+    private static final String COLUMN_NGUPHAP_FAVORITE = "favorite";
+    private static final String COLUMN_NGUPHAP_NAME = "name";
+    private static final String COLUMN_NGUPHAP_CONTENT = "content";
 
 
     public SQLiteDataController(Context context) {
@@ -322,6 +346,63 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         // return count
         return count;
+    }
+
+    public ArrayList<Tumoi_Frag> getWordbylessionID_M(int id) {
+
+        ArrayList<Tumoi_Frag> wordListTuMoi_frag= new ArrayList<Tumoi_Frag>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_KOTOBA + " WHERE " + COLUMN_KOTOBA_LESSON_ID
+                + " = ?";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] arg = {String.valueOf(id+1)};
+        Cursor cursor = db.rawQuery(selectQuery, arg);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                Tumoi_Frag tumoi_frag = new Tumoi_Frag();
+                tumoi_frag.setId(cursor.getInt(cursor.getColumnIndex("id")));
+                tumoi_frag.setSoThuTu_M(cursor.getInt(cursor.getColumnIndex("id")));
+                tumoi_frag.setStrJWord_M(cursor.getString(cursor.getColumnIndex("hiragana")));
+                tumoi_frag.setStrPhienAm_M(cursor.getString(cursor.getColumnIndex("roumaji")));
+                tumoi_frag.setStrVWord_M(cursor.getString(cursor.getColumnIndex("mean")));
+                tumoi_frag.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
+                tumoi_frag.setStrKanji(cursor.getString(cursor.getColumnIndex("kanji")));
+                tumoi_frag.setStrCn_Mean(cursor.getString(cursor.getColumnIndex("cn_mean")));
+                wordListTuMoi_frag.add(tumoi_frag);
+            } while (cursor.moveToNext());
+        }
+
+        // return note list
+        return wordListTuMoi_frag;
+    }
+    public ArrayList<NguPhap_Frag> getNguPhapbylessionID_M(int id) {
+
+        ArrayList<NguPhap_Frag> nguPhapFragArrayList= new ArrayList<NguPhap_Frag>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_NGUPHAP + " WHERE " + COLUMN_NGUPHAP_LESSON_ID
+                + " = ?";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] arg = {String.valueOf(id+1)};
+        Cursor cursor = db.rawQuery(selectQuery, arg);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                NguPhap_Frag nguPhap_frag = new NguPhap_Frag();
+                nguPhap_frag.setStrListItem(cursor.getString(cursor.getColumnIndex("content")));
+                nguPhap_frag.setStrListTitle(cursor.getString(cursor.getColumnIndex("name")));
+                nguPhapFragArrayList.add(nguPhap_frag);
+            } while (cursor.moveToNext());
+        }
+
+        // return note list
+        return nguPhapFragArrayList;
     }
 
 

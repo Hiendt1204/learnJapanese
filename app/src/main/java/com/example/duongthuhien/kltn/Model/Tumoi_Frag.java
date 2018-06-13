@@ -5,24 +5,55 @@ package com.example.duongthuhien.kltn.Model;
  */
 
 public class Tumoi_Frag {
+    int id;
     int SoThuTu_M;
     String strJWord_M;
     String strPhienAm_M;
     String strVWord_M;
     String strPlayM1;
     int Favorite;
+    String strKanji;
+    String strCn_Mean;
 
     public Tumoi_Frag() {
     }
 
-    public Tumoi_Frag(int soThuTu_M, String strJWord_M,
-                      String strPhienAm_M, String strVWord_M, String strPlayM1, int favorite) {
-        SoThuTu_M = soThuTu_M;
+    public Tumoi_Frag(int id,int soThuTu_M, String strJWord_M,
+                      String strPhienAm_M, String strVWord_M, String strPlayM1, int favorite
+            ,String strKanji,String strCn_Mean) {
+        this.id = id;
+        this.SoThuTu_M = soThuTu_M;
         this.strJWord_M = strJWord_M;
         this.strPhienAm_M = strPhienAm_M;
         this.strVWord_M = strVWord_M;
         this.strPlayM1 = strPlayM1;
-        Favorite = favorite;
+        this.Favorite = favorite;
+        this.strKanji=strKanji;
+        this.strCn_Mean=strCn_Mean;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getStrCn_Mean() {
+        return strCn_Mean;
+    }
+
+    public void setStrCn_Mean(String strCn_Mean) {
+        this.strCn_Mean = strCn_Mean;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getStrKanji() {
+        return strKanji;
+    }
+
+    public void setStrKanji(String strKanji) {
+        this.strKanji = strKanji;
     }
 
     public int getSoThuTu_M() {

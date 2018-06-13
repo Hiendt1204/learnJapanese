@@ -55,6 +55,8 @@ public class TuMoiFrag_Adapter extends BaseAdapter {
             holder.tv_VWord_M = (TextView) convertView.findViewById(R.id.tv_VWord_M);
             holder.btn_Favorite = (Button) convertView.findViewById(R.id.btn_Favorite);
             holder.btn_PlayM1 = (Button) convertView.findViewById(R.id.btn_PlayM1);
+            holder.tv_Kanji_M = (TextView) convertView.findViewById(R.id.tv_Kanji_M);
+            holder.tv_cnMean_M = (TextView) convertView.findViewById(R.id.tv_cnMean_M);
 
 
 
@@ -63,16 +65,18 @@ public class TuMoiFrag_Adapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.tv_SoThuTu_M.setText(listTuMoiFrag.get(position).getSoThuTu_M());
+        holder.tv_SoThuTu_M.setText("" + listTuMoiFrag.get(position).getSoThuTu_M());
         holder.tv_JWord_M.setText(listTuMoiFrag.get(position).getStrJWord_M());
         holder.tv_PhienAm_M.setText(listTuMoiFrag.get(position).getStrPhienAm_M());
         holder.tv_VWord_M.setText(listTuMoiFrag.get(position).getStrVWord_M());
+        holder.tv_Kanji_M.setText(listTuMoiFrag.get(position).getStrKanji());
+        holder.tv_cnMean_M.setText(listTuMoiFrag.get(position).getStrCn_Mean());
 
         return convertView;
     }
 
     static class ViewHolder{
-        TextView tv_SoThuTu_M, tv_JWord_M,tv_PhienAm_M,tv_VWord_M;
+        TextView tv_SoThuTu_M, tv_JWord_M,tv_PhienAm_M,tv_VWord_M,tv_Kanji_M,tv_cnMean_M;
         Button btn_PlayM1,btn_Favorite;
     }
 
