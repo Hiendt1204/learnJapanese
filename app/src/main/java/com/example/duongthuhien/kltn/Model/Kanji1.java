@@ -63,7 +63,7 @@ public class Kanji1 implements Serializable {
         String[] rowStr = this.str_ViDu.split("※");
         for(String row : rowStr) {
             String[] cols = row.split("∴");
-            if (cols != null && cols.length > 0) {
+            if (cols != null && cols.length > 2) {
                 //Log.d("hiendt2","played "+ cols[0]);
                 KanjiExample example = new KanjiExample();
                 example.setCot1(cols[0]);

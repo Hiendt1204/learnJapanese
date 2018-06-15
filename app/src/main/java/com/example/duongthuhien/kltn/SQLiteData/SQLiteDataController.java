@@ -10,6 +10,7 @@ import android.util.Log;
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 import com.example.duongthuhien.kltn.Model.NguPhap_Frag;
+import com.example.duongthuhien.kltn.Model.ThamKhao_frag;
 import com.example.duongthuhien.kltn.Model.Tumoi_Frag;
 
 import java.io.File;
@@ -86,6 +87,13 @@ public class SQLiteDataController extends SQLiteOpenHelper {
     private static final String COLUMN_NGUPHAP_FAVORITE = "favorite";
     private static final String COLUMN_NGUPHAP_NAME = "name";
     private static final String COLUMN_NGUPHAP_CONTENT = "content";
+
+
+    //Bang Tham Khao
+    private static final String TABLE_THAMKHAO = "reference";
+    private static final String COLUMN_THAMKHAO_ID = "id";
+    private static final String COLUMN_THAMKHAO_LESSON_ID = "lesson_id";
+
 
 
     public SQLiteDataController(Context context) {
@@ -404,6 +412,35 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // return note list
         return nguPhapFragArrayList;
     }
+
+
+    public ArrayList<ThamKhao_frag> getThamKhaobylessionID_TK(int id) {
+
+        ArrayList<ThamKhao_frag> thamkhaoFragArrayList= new ArrayList<ThamKhao_frag>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_THAMKHAO + " WHERE " + COLUMN_THAMKHAO_LESSON_ID
+                + " = ?";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] arg = {String.valueOf(id+1)};
+        Cursor cursor = db.rawQuery(selectQuery, arg);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                ThamKhao_frag thamKhao_frag = new ThamKhao_frag();
+                thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("japanese")));
+                thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("roumaji")));
+                thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("vietnamese")));
+                thamkhaoFragArrayList.add(thamKhao_frag);
+            } while (cursor.moveToNext());
+        }
+
+        // return note list
+        return thamkhaoFragArrayList;
+    }
+
 
 
 //    public int updateNote() {

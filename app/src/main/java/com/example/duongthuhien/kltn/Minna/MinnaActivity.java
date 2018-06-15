@@ -29,15 +29,15 @@ public class MinnaActivity extends AppCompatActivity implements View.OnClickList
         String[] ArrayPhanHocMinna=getResources().getStringArray(R.array.arrPhanHoc_Minna);
 
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,
-                R.layout.support_simple_spinner_dropdown_item,ArrayBaiHocMinna);
+                R.layout.item_spinner,ArrayBaiHocMinna);
 
-        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.item_spinner);
         spinner_DSBaiHoc.setAdapter(adapter);
 
         ArrayAdapter<String> adapter1=new ArrayAdapter<String>(this,
-                R.layout.support_simple_spinner_dropdown_item,ArrayPhanHocMinna);
+                R.layout.item_spinner,ArrayPhanHocMinna);
 
-        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.item_spinner);
         spinner_KieuHoc.setAdapter(adapter1);
 
         spinner_DSBaiHoc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -85,10 +85,17 @@ public class MinnaActivity extends AppCompatActivity implements View.OnClickList
         } else if (posKieuHoc == 1) {
             fragment = new NguPhapFragment();
         }
+        else if (posKieuHoc ==2 ){
+            fragment=new Kaiwa_Fragment();
+        }
+        else if (posKieuHoc ==3 ){
+            fragment=new  ThamKhaoFragment();
+        }
         if (fragment == null) {
             Log.d("hiendt","fragment is null");
             return;
         }
+
         Bundle bundle = new Bundle();
         bundle.putInt("Bai",posDSBaiHoc);
         fragment.setArguments(bundle);

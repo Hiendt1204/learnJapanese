@@ -2,6 +2,7 @@ package com.example.duongthuhien.kltn.Adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -100,7 +101,7 @@ public class NguPhapFrag_adapter extends BaseExpandableListAdapter {
         TextView txtListChild = (TextView) convertView
                 .findViewById(R.id.ListItem);
 
-        txtListChild.setText(listNguPhapFrag.get(childPosition).getStrListItem());
+        txtListChild.setText(Html.fromHtml(childText));
         return convertView;
     }
 
