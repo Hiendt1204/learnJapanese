@@ -2,6 +2,7 @@ package com.example.duongthuhien.kltn.Adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.R;
+import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
 import com.example.duongthuhien.kltn.kanji.Kanji2Activity;
 
 import java.util.ArrayList;
@@ -31,6 +33,7 @@ import java.util.List;
 
 public class Kanji1_adapter extends ArrayAdapter{
     Button btn_Play;
+    Button btn_FavoriteK1;
     Activity context;
     int resource;
     @NonNull List<Kanji1> objects;
@@ -120,6 +123,17 @@ public class Kanji1_adapter extends ArrayAdapter{
         ImageView tv_MoTa=row.findViewById(R.id.img_MoTa);
         TextView tv_MoTa_V=row.findViewById(R.id.tv_MoTa_V);
         ListView lv_Kanji1=row.findViewById(R.id.lv_Kanji1);
+        btn_FavoriteK1=row.findViewById(R.id.btn_FavoriteK1);
+
+
+        btn_FavoriteK1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDataController sqLiteDataController=new SQLiteDataController(context);
+                 sqLiteDataController.open();
+                SQLiteDatabase database=sqLiteDataController.getMyDatabase();
+            }
+        });
 
         btn_Play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,7 +142,6 @@ public class Kanji1_adapter extends ArrayAdapter{
                         .getIdentifier(objects.get(pos).getSoundK(),
                                 "raw", context.getPackageName());
                 sound = soundWord.load(context, resourceId, 1);
-                Log.d("hiendt","onItemClick "+resourceId);
             }
         });
 

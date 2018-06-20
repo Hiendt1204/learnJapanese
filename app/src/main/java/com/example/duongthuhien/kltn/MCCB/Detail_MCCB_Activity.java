@@ -9,6 +9,7 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -53,6 +54,7 @@ public class Detail_MCCB_Activity extends AppCompatActivity  {
         position=intent.getIntExtra("POS",-1);
         addControl();
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Đối tượng AudioManager sử dụng để điều chỉnh âm lượng.
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
 
@@ -113,6 +115,17 @@ public class Detail_MCCB_Activity extends AppCompatActivity  {
         });
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
     private void addControl() {
 //        btn_PlaySound.setOnClickListener(this);
         ll_lvMCCB=findViewById(R.id.lv_detailMCCB);

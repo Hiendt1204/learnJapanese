@@ -159,8 +159,8 @@
     </string-array>
 
     <string-array name="arrPhanHoc_Minna">
-    <item>Từ mới</item>
-    <item>Ngữ pháp</item>
+        <item>Từ mới</item>
+        <item>Ngữ pháp</item>
         <item>KaiWa</item>
         <item>Tham khảo</item>
     </string-array>

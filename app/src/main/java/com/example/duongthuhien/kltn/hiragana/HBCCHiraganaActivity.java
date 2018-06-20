@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.Model.AnswerList;
@@ -22,7 +25,7 @@ import java.util.Random;
  * Created by Duong Thu Hien on 5/14/2018.
  */
 
-public class HBCCHiraganaActivity extends Activity implements View.OnClickListener {
+public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnClickListener {
     TextView mtvScore;
     TextView tvWordSelected;
     LinearLayout llAnswer;
@@ -59,6 +62,7 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hbcchiragana);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         mposListview = intent.getIntExtra("positionListview", -1);
         trangthaibtn=intent.getIntExtra("A",-1);
@@ -73,6 +77,17 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+                default:break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     private void fillData(int posListview) {
         if (mAnswerCount > 9) {

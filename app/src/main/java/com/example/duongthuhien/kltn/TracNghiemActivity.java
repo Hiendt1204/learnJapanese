@@ -3,9 +3,11 @@ package com.example.duongthuhien.kltn;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -55,7 +57,7 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_trac_nghiem);
 
         addControls();
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         lession_Id = intent.getIntExtra("LESSION_ID", -1);
@@ -67,7 +69,17 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
 
         fillData(lession_Id);
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
 
+            default:break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
     private void fillData(int lession_Id) {
         if (mAnswerCount >= kanji1List.size()) {
             Intent intent = new Intent(TracNghiemActivity.this, KetQuaActivity.class);

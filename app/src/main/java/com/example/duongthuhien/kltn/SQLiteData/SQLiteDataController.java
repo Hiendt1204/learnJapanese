@@ -1,5 +1,6 @@
 package com.example.duongthuhien.kltn.SQLiteData;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -65,15 +66,16 @@ public class SQLiteDataController extends SQLiteOpenHelper {
     private static final String COLUMN_KANJI_RKUN = "rkunjomi";
     private static final String COLUMN_KANJI_CNWORD = "cn_mean";
     private static final String COLUMN_KANJI_NOTE = "note";
+    private static final String COLUMN_KANJI_FAVORITE = "favorite";
 
     //Bang kotoba
     private static final String TABLE_KOTOBA = "kotoba";
     private static final String COLUMN_KOTOBA_ID = "id";
     private static final String COLUMN_KOTOBA_LESSON_ID = "lesson_id";
-    private static final String COLUMN_KOTOBA_HIRAGANA= "hiragana";
+    private static final String COLUMN_KOTOBA_HIRAGANA = "hiragana";
     private static final String COLUMN_KOTOBA_KANJI = "kanji";
     private static final String COLUMN_KOTOBA_ROUMAJI = "roumaji";
-    private static final String COLUMN_KOTOBA_MEAN= "mean";
+    private static final String COLUMN_KOTOBA_MEAN = "mean";
     private static final String COLUMN_KOTOBA_FAVORITE = "favorite";
     private static final String COLUMN_KOTOBA_CNMEAN = "cn_mean";
 //    private static final String COLUMN_KOTOBA_MOTA_V = "remember";
@@ -95,18 +97,14 @@ public class SQLiteDataController extends SQLiteOpenHelper {
     private static final String COLUMN_THAMKHAO_LESSON_ID = "lesson_id";
 
 
-
     public SQLiteDataController(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
         boolean dbexist = checkdatabase();
 
-        if(dbexist)
-        {
+        if (dbexist) {
             Log.d(TAG, "Database exist");
-        }
-        else
-        {
+        } else {
             Log.d(TAG, "Database isn't existed");
             createDatabse();
         }
@@ -117,20 +115,20 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         this.getReadableDatabase();
 
-        try
-        {
+        try {
             copyDatabase();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
 
     }
 
     private void copyDatabase() throws IOException {
-        Log.d(TAG,"copyDatabase");
+        Log.d(TAG, "copyDatabase");
         InputStream myinput = context.getAssets().open(DATABASE_NAME);
 
         String outFileName = DB_PATH + DATABASE_NAME;
@@ -141,8 +139,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         byte[] buffer = new byte[1024];
         int length;
 
-        while ((length = myinput.read(buffer)) > 0)
-        {
+        while ((length = myinput.read(buffer)) > 0) {
             myOutput.write(buffer, 0, length);
         }
 
@@ -150,14 +147,13 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         myOutput.close();
         myinput.close();
     }
-    public void open()
-    {
+
+    public void open() {
         String myPath = DB_PATH + DATABASE_NAME;
         myDatabase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
     }
 
-    public synchronized void close()
-    {
+    public synchronized void close() {
         myDatabase.close();
         super.close();
     }
@@ -166,23 +162,21 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         boolean checkdb = false;
 
-        try
-        {
+        try {
             String myPath = DB_PATH + DATABASE_NAME;
             File dbfile = new File(myPath);
             checkdb = dbfile.exists();
-        }
-        catch (SQLException e)
-        {
+        } catch (SQLException e) {
             System.out.println("Databse doesn't exist!");
         }
 
         return checkdb;
     }
-    public SQLiteDatabase getMyDatabase()
-    {
+
+    public SQLiteDatabase getMyDatabase() {
         return myDatabase;
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
@@ -216,8 +210,8 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         Cursor cursor = db.query(TABLE_KANJI, new String[]{COLUMN_KANJI_ID,
                         COLUMN_KANJI_LESSON_ID, COLUMN_KANJI_ON,
-                        COLUMN_KANJI_KUN, COLUMN_KANJI_JWORD, COLUMN_KANJI_VWORD,COLUMN_KANJI_SOUND_NEWWORD
-                ,COLUMN_KANJI_IMAGE,COLUMN_KANJI_MOTA_V,COLUMN_KANJI_CNWORD,COLUMN_KANJI_RKUN,COLUMN_KANJI_RON},
+                        COLUMN_KANJI_KUN, COLUMN_KANJI_JWORD, COLUMN_KANJI_VWORD, COLUMN_KANJI_SOUND_NEWWORD
+                        , COLUMN_KANJI_IMAGE, COLUMN_KANJI_MOTA_V, COLUMN_KANJI_CNWORD, COLUMN_KANJI_RKUN, COLUMN_KANJI_RON},
                 COLUMN_KANJI_LESSON_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
         if (cursor != null)
@@ -232,7 +226,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         kanji1.setStr_MoTa_V(cursor.getString(cursor.getColumnIndex("remember")));
         kanji1.setStr_On(cursor.getString(cursor.getColumnIndex("onjomi")));
         kanji1.setStr_VWord_K(cursor.getString(cursor.getColumnIndex("vi_mean")));
-        kanji1.setSoundK("sound_"+ cursor.getString(cursor.getColumnIndex("id")));
+        kanji1.setSoundK("sound_" + cursor.getString(cursor.getColumnIndex("id")));
         kanji1.setStr_AmHan(cursor.getString(cursor.getColumnIndex("cn_mean")));
         kanji1.setStr_ronjomi(cursor.getString(cursor.getColumnIndex("ronjomi")));
         kanji1.setStr_rkunjomi(cursor.getString(cursor.getColumnIndex("rkunjomi")));
@@ -240,7 +234,6 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // return note
         return kanji1;
     }
-
 
 
     public List<NewWordMCCB> getAllNewWord() {
@@ -281,7 +274,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
                 + " = ?";
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] arg = {String.valueOf(id+1)};
+        String[] arg = {String.valueOf(id + 1)};
         Cursor cursor = db.rawQuery(selectQuery, arg);
 
 
@@ -303,6 +296,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // return note list
         return wordList;
     }
+
     public List<Kanji1> getbylessionID(int id) {
 
         List<Kanji1> wordListKanji1 = new ArrayList<Kanji1>();
@@ -311,7 +305,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
                 + " = ?";
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] arg = {String.valueOf(id+1)};
+        String[] arg = {String.valueOf(id + 1)};
         Cursor cursor = db.rawQuery(selectQuery, arg);
 
 
@@ -327,7 +321,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
                 kanji1.setStr_MoTa_V(cursor.getString(cursor.getColumnIndex("remember")));
                 kanji1.setStr_On(cursor.getString(cursor.getColumnIndex("onjomi")));
                 kanji1.setStr_VWord_K(cursor.getString(cursor.getColumnIndex("vi_mean")));
-                kanji1.setSoundK("sound_"+ cursor.getString(cursor.getColumnIndex("id")));
+                kanji1.setSoundK("sound_" + cursor.getString(cursor.getColumnIndex("id")));
                 kanji1.setStr_AmHan(cursor.getString(cursor.getColumnIndex("cn_mean")));
                 kanji1.setStr_ronjomi(cursor.getString(cursor.getColumnIndex("ronjomi")));
                 kanji1.setStr_rkunjomi(cursor.getString(cursor.getColumnIndex("rkunjomi")));
@@ -358,13 +352,13 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
     public ArrayList<Tumoi_Frag> getWordbylessionID_M(int id) {
 
-        ArrayList<Tumoi_Frag> wordListTuMoi_frag= new ArrayList<Tumoi_Frag>();
+        ArrayList<Tumoi_Frag> wordListTuMoi_frag = new ArrayList<Tumoi_Frag>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_KOTOBA + " WHERE " + COLUMN_KOTOBA_LESSON_ID
                 + " = ?";
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] arg = {String.valueOf(id+1)};
+        String[] arg = {String.valueOf(id + 1)};
         Cursor cursor = db.rawQuery(selectQuery, arg);
 
 
@@ -387,15 +381,16 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // return note list
         return wordListTuMoi_frag;
     }
+
     public ArrayList<NguPhap_Frag> getNguPhapbylessionID_M(int id) {
 
-        ArrayList<NguPhap_Frag> nguPhapFragArrayList= new ArrayList<NguPhap_Frag>();
+        ArrayList<NguPhap_Frag> nguPhapFragArrayList = new ArrayList<NguPhap_Frag>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_NGUPHAP + " WHERE " + COLUMN_NGUPHAP_LESSON_ID
                 + " = ?";
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] arg = {String.valueOf(id+1)};
+        String[] arg = {String.valueOf(id + 1)};
         Cursor cursor = db.rawQuery(selectQuery, arg);
 
 
@@ -416,13 +411,13 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
     public ArrayList<ThamKhao_frag> getThamKhaobylessionID_TK(int id) {
 
-        ArrayList<ThamKhao_frag> thamkhaoFragArrayList= new ArrayList<ThamKhao_frag>();
+        ArrayList<ThamKhao_frag> thamkhaoFragArrayList = new ArrayList<ThamKhao_frag>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_THAMKHAO + " WHERE " + COLUMN_THAMKHAO_LESSON_ID
                 + " = ?";
 
         SQLiteDatabase db = this.getWritableDatabase();
-        String[] arg = {String.valueOf(id+1)};
+        String[] arg = {String.valueOf(id + 1)};
         Cursor cursor = db.rawQuery(selectQuery, arg);
 
 
@@ -441,6 +436,84 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         return thamkhaoFragArrayList;
     }
 
+    public ArrayList<ThamKhao_frag> getFavourite() {
+
+        ArrayList<ThamKhao_frag> favouriteArrayList = new ArrayList<ThamKhao_frag>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_KANJI + " WHERE " + COLUMN_KANJI_FAVORITE + "=1";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                ThamKhao_frag thamKhao_frag = new ThamKhao_frag();
+                thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("word")));
+                thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("cn_mean")));
+                thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("vi_mean")));
+                favouriteArrayList.add(thamKhao_frag);
+            } while (cursor.moveToNext());
+        }
+        if (cursor != null) {
+            cursor.close();
+        }
+
+        selectQuery = "SELECT  * FROM " + TABLE_KOTOBA + " WHERE " + COLUMN_KOTOBA_FAVORITE + "=1";
+
+        cursor = db.rawQuery(selectQuery, null);
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                ThamKhao_frag thamKhao_frag = new ThamKhao_frag();
+                thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("kanji")));
+                thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("roumaji")));
+                thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("mean")));
+                favouriteArrayList.add(thamKhao_frag);
+            } while (cursor.moveToNext());
+        }
+
+        // return note list
+        return favouriteArrayList;
+    }
+
+    public void update1FavoriteKanji(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_KANJI_FAVORITE,"1");
+
+        db.update(COLUMN_KANJI_FAVORITE, values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
+        db.close();
+    }
+
+    public void update1FavoriteKotoba(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_KOTOBA_FAVORITE,"1");
+
+        db.update(COLUMN_KOTOBA_FAVORITE, values, COLUMN_KOTOBA_ID+ " = ?", new String[] { String.valueOf(id) });
+        db.close();
+    }
+
+    public void update0FavoriteKanji(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_KANJI_FAVORITE,"0");
+
+        db.update(COLUMN_KANJI_FAVORITE, values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
+        db.close();
+    }
+
+    public void update0FavoriteKotoba(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_KOTOBA_FAVORITE,"0");
+
+        db.update(COLUMN_KOTOBA_FAVORITE, values, COLUMN_KOTOBA_ID+ " = ?", new String[] { String.valueOf(id) });
+        db.close();
+    }
 
 
 //    public int updateNote() {

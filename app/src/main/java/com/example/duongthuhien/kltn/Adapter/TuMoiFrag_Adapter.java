@@ -1,6 +1,7 @@
 package com.example.duongthuhien.kltn.Adapter;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 import com.example.duongthuhien.kltn.Minna.TuMoiFragment;
 import com.example.duongthuhien.kltn.Model.Tumoi_Frag;
 import com.example.duongthuhien.kltn.R;
+import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
+import com.example.duongthuhien.kltn.Tuvungyeuthich.TuvungyeuthichActivity;
 
 import java.util.ArrayList;
 
@@ -18,8 +21,10 @@ import java.util.ArrayList;
  * Created by 84973 on 6/12/2018.
  */
 
-public class TuMoiFrag_Adapter extends BaseAdapter {
+public class TuMoiFrag_Adapter extends BaseAdapter implements View.OnClickListener {
     private static ArrayList<Tumoi_Frag> listTuMoiFrag;
+    int mpos;
+
 
     private LayoutInflater mInflater;
     public TuMoiFrag_Adapter(Context TuMoiFragment, ArrayList<Tumoi_Frag> results){
@@ -45,6 +50,7 @@ public class TuMoiFrag_Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        mpos=position;
         ViewHolder holder;
         if(convertView == null){
             convertView = mInflater.inflate(R.layout.item_tumoi_fagment, null);
@@ -71,9 +77,19 @@ public class TuMoiFrag_Adapter extends BaseAdapter {
         holder.tv_VWord_M.setText(listTuMoiFrag.get(position).getStrVWord_M());
         holder.tv_Kanji_M.setText(listTuMoiFrag.get(position).getStrKanji());
         holder.tv_cnMean_M.setText(listTuMoiFrag.get(position).getStrCn_Mean());
+        holder.btn_Favorite.setOnClickListener(this);
 
         return convertView;
     }
+
+    @Override
+    public void onClick(View v) {
+//        SQLiteDataController sqLiteDataController=new SQLiteDataController(this.getActivity());
+//        sqLiteDataController.open();
+//        SQLiteDatabase database=sqLiteDataController.getMyDatabase();
+
+    }
+
 
     static class ViewHolder{
         TextView tv_SoThuTu_M, tv_JWord_M,tv_PhienAm_M,tv_VWord_M,tv_Kanji_M,tv_cnMean_M;
