@@ -1,6 +1,7 @@
 package com.example.duongthuhien.kltn;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,8 +13,7 @@ import android.widget.TextView;
 import com.example.duongthuhien.kltn.Model.AnswerList;
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
-import com.example.duongthuhien.kltn.hiragana.HBCCHiraganaActivity;
-import com.example.duongthuhien.kltn.hiragana.ResultWordActivity;
+import com.example.duongthuhien.kltn.hiragana.KetQuaActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,18 +24,20 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
     List<Kanji1> kanji1List;
     TextView tvWordSelected;
     TextView mtvScore;
+    int btnPos;
 
     int[] mIdUsed = {-1, -1, -1, -1};
     ArrayList<Integer> midAnswerSelected =new ArrayList<>();
     Button[] btnAnswer = new Button[4];
 
     ArrayList<AnswerList> answerLists=new ArrayList<>();
+    private Handler mHandler = new Handler();
 
     int mposListview = -1;
     int mAnswerCount = 0;
     int mCorrectId = -1;
     //số điểm cộng vào tổng điểm khi chọn đúng đáp án
-    private static final int SCORE_MATCH = 10;
+    private static final int SCORE_MATCH = 1;
     //số điểm trừ khi chọn đáp án sai
     private static final int SCORE_WRONG = 1;
     //time delay để chuyển câu
@@ -68,7 +70,7 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
 
     private void fillData(int lession_Id) {
         if (mAnswerCount >= kanji1List.size()) {
-            Intent intent = new Intent(TracNghiemActivity.this, ResultWordActivity.class);
+            Intent intent = new Intent(TracNghiemActivity.this, KetQuaActivity.class);
             intent.putExtra("answerLists",answerLists );
             startActivity(intent);
             return;
@@ -97,7 +99,7 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
         mCorrectId = wordPos;
 
         Random rd1 = new Random();
-        int btnPos = rd1.nextInt((3 - 0 + 1) + 0);
+        btnPos = rd1.nextInt((3 - 0 + 1) + 0);
         btnAnswer[btnPos].setTag(kanji1List.get(wordPos).getId());
         btnAnswer[btnPos].setText(kanji1List.get(wordPos).getStr_VWord_K());
         mIdUsed[0] = kanji1List.get(wordPos).getId();
@@ -159,18 +161,37 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
     }
 
     @Override
-    public void onClick(View view) {
+    public void onClick(final View view) {
         AnswerList answerList =new AnswerList();
 
         int id = (int) view.getTag();
+
         if (checkAnswer(id)) {
             mScore = mScore + SCORE_MATCH;
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    view.setBackgroundColor(Color.parseColor("#edb1ab"));
+                }
+            }, 500);
+            view.setBackgroundColor(Color.parseColor("#EE2C2C"));
+
 
         } else if (!checkAnswer(id)) {
-            mScore = mScore - SCORE_WRONG;
             answerList.setWrongAnswer(kanji1List.get(id).getStr_VWord_K());
-
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    view.setBackgroundColor(Color.parseColor("#edb1ab"));
+                   // btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#edb1ab"));
+                    Log.d("Hiendt","pos  " );
+                }
+            }, 500);
+            view.setBackgroundColor(Color.parseColor("#87CEFA"));
+            //btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#EE2C2C"));
         }
+
+
         mtvScore.setText(String.valueOf(mScore));
 
         answerList.setQuestion(kanji1List.get(mCorrectId).getStr_JWord_K());
@@ -178,13 +199,12 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
 
         answerLists.add(answerList);
 
-        hidePopup();
+
         fillData(lession_Id);
 
     }
     private void hidePopup(){
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
 

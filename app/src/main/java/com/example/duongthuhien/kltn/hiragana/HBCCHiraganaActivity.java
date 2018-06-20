@@ -76,7 +76,7 @@ public class HBCCHiraganaActivity extends Activity implements View.OnClickListen
 
     private void fillData(int posListview) {
         if (mAnswerCount > 9) {
-            Intent intent = new Intent(HBCCHiraganaActivity.this, ResultWordActivity.class);
+            Intent intent = new Intent(HBCCHiraganaActivity.this, KetQuaActivity.class);
             intent.putExtra("answerLists", answerLists);
             startActivity(intent);
             return;

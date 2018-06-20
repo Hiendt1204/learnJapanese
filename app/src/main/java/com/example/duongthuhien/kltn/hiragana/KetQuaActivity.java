@@ -1,6 +1,5 @@
 package com.example.duongthuhien.kltn.hiragana;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +13,7 @@ import com.example.duongthuhien.kltn.R;
 
 import java.util.ArrayList;
 
-public class ResultWordActivity extends AppCompatActivity implements View.OnClickListener {
+public class KetQuaActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn_LessonList;
     Button btn_StudyAgain;
     ListView lv_AnswerList;
@@ -22,13 +21,13 @@ public class ResultWordActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result_word);
+        setContentView(R.layout.activity_ketqua);
         Intent intent = getIntent();
         ArrayList<AnswerList> answerLists = (ArrayList<AnswerList>)intent.getSerializableExtra("answerLists");
 
         addControls();
         AnswerList_adapter answerList_adapter=new AnswerList_adapter
-                (ResultWordActivity.this,R.layout.item_answerlist, answerLists);
+                (KetQuaActivity.this,R.layout.item_answerlist, answerLists);
         lv_AnswerList.setAdapter(answerList_adapter);
     }
 
@@ -46,11 +45,11 @@ public class ResultWordActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_LessonList:
-                Intent intent = new Intent(ResultWordActivity.this,HiraganaActivity.class);
+                Intent intent = new Intent(KetQuaActivity.this,HiraganaActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_StudyAgain:
-                Intent intent1 = new Intent(ResultWordActivity.this,HBCCHiraganaActivity.class);
+                Intent intent1 = new Intent(KetQuaActivity.this,HBCCHiraganaActivity.class);
                 startActivity(intent1);
                 break;
 

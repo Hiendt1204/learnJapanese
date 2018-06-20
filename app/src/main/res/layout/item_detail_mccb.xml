@@ -8,16 +8,17 @@
     <TextView
         android:id="@+id/tv_Jword"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"
         android:textSize="25dp"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_PhienAm"
             android:layout_width="350dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:textSize="25dp"/>
         <ImageView
             android:id="@+id/btn_PlayMCCB"
@@ -30,7 +31,7 @@
     <TextView
         android:id="@+id/tv_Vword"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:textSize="25dp"/>
 
 </LinearLayout>
