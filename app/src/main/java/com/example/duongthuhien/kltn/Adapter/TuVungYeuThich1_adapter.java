@@ -3,7 +3,6 @@ package com.example.duongthuhien.kltn.Adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -29,10 +28,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 84973 on 6/8/2018.
+ * Created by 84973 on 6/20/2018.
  */
 
-public class Kanji1_adapter extends ArrayAdapter{
+public class TuVungYeuThich1_adapter extends ArrayAdapter{
     Activity context;
     int resource;
     @NonNull List<Kanji1> objects;
@@ -56,12 +55,13 @@ public class Kanji1_adapter extends ArrayAdapter{
     private float volume;
 
     private int lessionPosition;
-    public Kanji1_adapter(@NonNull Activity context, int resource, @NonNull List objects, int lessionPosition) {
+    public TuVungYeuThich1_adapter(@NonNull Activity context, int resource, @NonNull List objects) {
         super(context, resource, objects);
         this.context=context;
         this.resource=resource;
         this.objects=objects;
-        this.lessionPosition = lessionPosition;
+
+
         // Đối tượng AudioManager sử dụng để điều chỉnh âm lượng.
         audioManager = (AudioManager)context. getSystemService(context.AUDIO_SERVICE);
 
@@ -138,7 +138,7 @@ public class Kanji1_adapter extends ArrayAdapter{
             @Override
             public void onClick(View v) {
                 SQLiteDataController sqLiteDataController=new SQLiteDataController(context);
-                 sqLiteDataController.open();
+                sqLiteDataController.open();
                 SQLiteDatabase database=sqLiteDataController.getMyDatabase();
 
                 if (objects.get(pos).getFavorite()==1){
@@ -174,7 +174,7 @@ public class Kanji1_adapter extends ArrayAdapter{
                 Intent intent=new Intent(context, Kanji2Activity.class);
                 intent.putExtra("PosK1",pos);
                 intent.putExtra("ID",objects.get(pos).getStr_Sothutu());
-                intent.putExtra("LessionPosition", Kanji1_adapter.this.lessionPosition);
+                intent.putExtra("LessionPosition", TuVungYeuThich1_adapter.this.lessionPosition);
                 context.startActivity(intent);
 
             }
@@ -201,6 +201,4 @@ public class Kanji1_adapter extends ArrayAdapter{
 
         return row;
     }
-
-
 }

@@ -21,7 +21,7 @@ import java.util.ArrayList;
  * Created by 84973 on 6/12/2018.
  */
 
-public class TuMoiFrag_Adapter extends BaseAdapter implements View.OnClickListener {
+public class TuMoiFrag_Adapter extends BaseAdapter  {
     private static ArrayList<Tumoi_Frag> listTuMoiFrag;
     int mpos;
 
@@ -77,18 +77,16 @@ public class TuMoiFrag_Adapter extends BaseAdapter implements View.OnClickListen
         holder.tv_VWord_M.setText(listTuMoiFrag.get(position).getStrVWord_M());
         holder.tv_Kanji_M.setText(listTuMoiFrag.get(position).getStrKanji());
         holder.tv_cnMean_M.setText(listTuMoiFrag.get(position).getStrCn_Mean());
-        holder.btn_Favorite.setOnClickListener(this);
+        holder.btn_Favorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         return convertView;
     }
 
-    @Override
-    public void onClick(View v) {
-//        SQLiteDataController sqLiteDataController=new SQLiteDataController(this.getActivity());
-//        sqLiteDataController.open();
-//        SQLiteDatabase database=sqLiteDataController.getMyDatabase();
-
-    }
 
 
     static class ViewHolder{

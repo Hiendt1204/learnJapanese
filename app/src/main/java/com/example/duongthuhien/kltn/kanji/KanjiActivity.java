@@ -31,6 +31,7 @@ import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.R;
 import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
 import com.example.duongthuhien.kltn.TracNghiemActivity;
+import com.example.duongthuhien.kltn.Tuvungyeuthich.TuvungyeuthichActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,6 +118,9 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
 
                 @Override
                 public void onCompletion(MediaPlayer mp) {
+                    if (currentTrack==(mlistSound.size()-1)){
+                        return;
+                    }
                     currentTrack = (currentTrack + 1) % mlistSound.size();
                     Uri nextTrack = Uri.parse("android.resource://com.example.duongthuhien.kltn/"
                             + mlistSound.get(currentTrack));
@@ -154,7 +158,10 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
             case R.id.playall:
                 playAll();
                 break;
-
+            case R.id.favorite:
+                Intent intent=new Intent(KanjiActivity.this, TuvungyeuthichActivity.class);
+                intent.putExtra("posF",1);
+                startActivity(intent);
             default:
                 break;
         }

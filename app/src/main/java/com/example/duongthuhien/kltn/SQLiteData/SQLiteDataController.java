@@ -13,6 +13,7 @@ import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 import com.example.duongthuhien.kltn.Model.NguPhap_Frag;
 import com.example.duongthuhien.kltn.Model.ThamKhao_frag;
 import com.example.duongthuhien.kltn.Model.Tumoi_Frag;
+import com.example.duongthuhien.kltn.kanji.KanjiActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -437,6 +438,43 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         return thamkhaoFragArrayList;
     }
 
+    public ArrayList<Kanji1> getFavouriteK() {
+
+        ArrayList<Kanji1> favouriteArrayList = new ArrayList<Kanji1>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_KANJI + " WHERE " + COLUMN_KANJI_FAVORITE + "=1";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                Kanji1 kanji1 = new Kanji1();
+                kanji1.setId(cursor.getInt(cursor.getColumnIndex("id")));
+                kanji1.setStr_Sothutu(cursor.getInt(cursor.getColumnIndex("id")));
+                kanji1.setStr_JWord_K(cursor.getString(cursor.getColumnIndex("word")));
+                kanji1.setStr_Kun(cursor.getString(cursor.getColumnIndex("kunjomi")));
+                kanji1.setStr_MoTa(cursor.getString(cursor.getColumnIndex("image")));
+                kanji1.setStr_MoTa_V(cursor.getString(cursor.getColumnIndex("remember")));
+                kanji1.setStr_On(cursor.getString(cursor.getColumnIndex("onjomi")));
+                kanji1.setStr_VWord_K(cursor.getString(cursor.getColumnIndex("vi_mean")));
+                kanji1.setSoundK("sound_" + cursor.getString(cursor.getColumnIndex("id")));
+                kanji1.setStr_AmHan(cursor.getString(cursor.getColumnIndex("cn_mean")));
+                kanji1.setStr_ronjomi(cursor.getString(cursor.getColumnIndex("ronjomi")));
+                kanji1.setStr_rkunjomi(cursor.getString(cursor.getColumnIndex("rkunjomi")));
+                kanji1.setStr_ViDu(cursor.getString(cursor.getColumnIndex("note")));
+                kanji1.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
+                favouriteArrayList.add(kanji1);
+            } while (cursor.moveToNext());
+        }
+        if (cursor != null) {
+            cursor.close();
+        }
+
+        return favouriteArrayList;
+    }
     public ArrayList<ThamKhao_frag> getFavourite() {
 
         ArrayList<ThamKhao_frag> favouriteArrayList = new ArrayList<ThamKhao_frag>();
