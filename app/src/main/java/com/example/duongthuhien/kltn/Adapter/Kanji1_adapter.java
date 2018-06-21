@@ -33,13 +33,27 @@ import java.util.List;
  */
 
 public class Kanji1_adapter extends ArrayAdapter{
-    Button btn_Play;
-    ImageView btn_FavoriteK1;
     Activity context;
     int resource;
     @NonNull List<Kanji1> objects;
 
+    SoundPool soundWord;
+    AudioManager audioManager;
+    int pos1;
+
+
     ArrayList<String> mlistSound=new ArrayList<String>();
+
+    // Số luồng âm thanh phát ra tối đa.
+    private static final int MAX_STREAMS = 5;
+
+    // Chọn loại luồng âm thanh để phát nhạc.
+    private static final int streamType = AudioManager.STREAM_MUSIC;
+
+    private boolean loaded;
+
+    private int sound;
+    private float volume;
 
     private int lessionPosition;
     public Kanji1_adapter(@NonNull Activity context, int resource, @NonNull List objects, int lessionPosition) {
@@ -49,12 +63,60 @@ public class Kanji1_adapter extends ArrayAdapter{
         this.objects=objects;
         this.lessionPosition = lessionPosition;
 
+        // Đối tượng AudioManager sử dụng để điều chỉnh âm lượng.
+        audioManager = (AudioManager)context. getSystemService(context.AUDIO_SERVICE);
+
+        // Chỉ số âm lượng hiện tại của loại luồng nhạc cụ thể (streamType).
+        float currentVolumeIndex = (float) audioManager.getStreamVolume(streamType);
+
+
+        // Chỉ số âm lượng tối đa của loại luồng nhạc cụ thể (streamType).
+        float maxVolumeIndex = (float) audioManager.getStreamMaxVolume(streamType);
+
+        // Âm lượng  (0 --> 1)
+        this.volume = currentVolumeIndex / maxVolumeIndex;
+
+        // Cho phép thay đổi âm lượng các luồng kiểu 'streamType' bằng các nút
+        // điều khiển của phần cứng.
+        context.setVolumeControlStream(streamType);
+
+        // Với phiên bản Android SDK >= 21
+        if (Build.VERSION.SDK_INT >= 21) {
+
+            AudioAttributes audioAttrib = new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_GAME)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build();
+
+            SoundPool.Builder builder = new SoundPool.Builder();
+            builder.setAudioAttributes(audioAttrib).setMaxStreams(MAX_STREAMS);
+
+            this.soundWord = builder.build();
+        }
+        // Với phiên bản Android SDK < 21
+        else {
+            // SoundPool(int maxStreams, int streamType, int srcQuality)
+            this.soundWord = new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
+        }
+
+        // Sự kiện SoundPool đã tải lên bộ nhớ thành công.
+        this.soundWord.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
+            @Override
+            public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+                loaded = true;
+                Log.d("hiendt","onLoadComplete");
+                soundWord.play(sound, 1, 1, 0, 0, 1);
+                Log.d("hiendt","played ");
+            }
+        });
+
+
 
     }
     public View getView(final int pos, View convertView, ViewGroup parent){
         LayoutInflater inflater=this.context.getLayoutInflater();
         View row=inflater.inflate(this.resource,null);
-        btn_Play=row.findViewById(R.id.btn_PlayK1);
+        final Button btn_Play=row.findViewById(R.id.btn_PlayK1);
         TextView tv_Sothutu=row.findViewById(R.id.tv_SoThuTu);
         TextView tv_JWord_K=row.findViewById(R.id.tv_JWord_K);
         TextView tv_VWord_K=row.findViewById(R.id.tv_VWord_K);
@@ -63,8 +125,15 @@ public class Kanji1_adapter extends ArrayAdapter{
         ImageView tv_MoTa=row.findViewById(R.id.img_MoTa);
         TextView tv_MoTa_V=row.findViewById(R.id.tv_MoTa_V);
         ListView lv_Kanji1=row.findViewById(R.id.lv_Kanji1);
-        btn_FavoriteK1=row.findViewById(R.id.btn_FavoriteK1);
+        final ImageView btn_FavoriteK1=row.findViewById(R.id.btn_FavoriteK1);
 
+        if (objects.get(pos).getFavorite()==1){
+            //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_red_24dp);
+            btn_FavoriteK1.setColorFilter(context.getResources().getColor(R.color.colorAccent));
+        } else {
+            //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
+            btn_FavoriteK1.setColorFilter(context.getResources().getColor(R.color.colorGTCB));
+        }
 
         btn_FavoriteK1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,12 +145,17 @@ public class Kanji1_adapter extends ArrayAdapter{
                 if (objects.get(pos).getFavorite()==1){
                     Log.d("hiendt","getFavorite  "+objects.get(pos).getFavorite());
                     sqLiteDataController.update0FavoriteKanji(pos+1);
-                    btn_FavoriteK1.setColorFilter(R.color.colorAccent,android.graphics.PorterDuff.Mode.MULTIPLY);
+                    objects.get(pos).setFavorite(0);
+                    //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
+                    btn_FavoriteK1.setColorFilter(context.getResources().getColor(R.color.colorGTCB));
                 }else if (objects.get(pos).getFavorite()==0){
                     Log.d("hiendt","getFavorite1  "+objects.get(pos).getFavorite());
                     sqLiteDataController.update1FavoriteKanji(pos+1);
-                    btn_FavoriteK1.setColorFilter(R.color.colorGTCB,android.graphics.PorterDuff.Mode.MULTIPLY);;
+                    objects.get(pos).setFavorite(1);
+                    //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_red_24dp);
+                    btn_FavoriteK1.setColorFilter(context.getResources().getColor(R.color.colorAccent));
                 }
+                sqLiteDataController.getFavourite();
             }
         });
 
@@ -91,6 +165,7 @@ public class Kanji1_adapter extends ArrayAdapter{
                 int resourceId = context.getResources()
                         .getIdentifier(objects.get(pos).getSoundK(),
                                 "raw", context.getPackageName());
+                sound = soundWord.load(context, resourceId, 1);
             }
         });
 

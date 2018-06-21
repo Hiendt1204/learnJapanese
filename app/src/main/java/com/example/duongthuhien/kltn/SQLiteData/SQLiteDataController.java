@@ -476,6 +476,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+        Log.d("hiendt","favourite size " + favouriteArrayList.size());
         // return note list
         return favouriteArrayList;
     }
