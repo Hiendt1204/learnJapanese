@@ -25,6 +25,7 @@ public class Kanji1 implements Serializable {
     String str_ronjomi;
     String str_rkunjomi;
     String str_ViDu;
+    int favorite;
     ArrayList<KanjiExample> mExampleList;
 
 
@@ -52,6 +53,14 @@ public class Kanji1 implements Serializable {
         mExampleList = new ArrayList<KanjiExample>();
         setStr_ViDu(str_ViDu);
 
+    }
+
+    public int getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(int favorite) {
+        this.favorite = favorite;
     }
 
     public String getStr_ViDu() {

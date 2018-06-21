@@ -326,6 +326,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
                 kanji1.setStr_ronjomi(cursor.getString(cursor.getColumnIndex("ronjomi")));
                 kanji1.setStr_rkunjomi(cursor.getString(cursor.getColumnIndex("rkunjomi")));
                 kanji1.setStr_ViDu(cursor.getString(cursor.getColumnIndex("note")));
+                kanji1.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
                 wordListKanji1.add(kanji1);
             } while (cursor.moveToNext());
         }
@@ -484,7 +485,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_KANJI_FAVORITE,"1");
 
-        db.update(COLUMN_KANJI_FAVORITE, values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
+        db.update(TABLE_KANJI, values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
         db.close();
     }
 
@@ -502,7 +503,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_KANJI_FAVORITE,"0");
 
-        db.update(COLUMN_KANJI_FAVORITE, values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
+        db.update(TABLE_KANJI, values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
         db.close();
     }
 

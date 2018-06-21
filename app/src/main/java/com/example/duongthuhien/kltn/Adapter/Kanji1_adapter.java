@@ -3,6 +3,7 @@ package com.example.duongthuhien.kltn.Adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -33,28 +34,13 @@ import java.util.List;
 
 public class Kanji1_adapter extends ArrayAdapter{
     Button btn_Play;
-    Button btn_FavoriteK1;
+    ImageView btn_FavoriteK1;
     Activity context;
     int resource;
     @NonNull List<Kanji1> objects;
 
-    SoundPool soundWord;
-    AudioManager audioManager;
-    int pos1;
-
-
     ArrayList<String> mlistSound=new ArrayList<String>();
 
-    // Số luồng âm thanh phát ra tối đa.
-    private static final int MAX_STREAMS = 5;
-
-    // Chọn loại luồng âm thanh để phát nhạc.
-    private static final int streamType = AudioManager.STREAM_MUSIC;
-
-    private boolean loaded;
-
-    private int sound;
-    private float volume;
     private int lessionPosition;
     public Kanji1_adapter(@NonNull Activity context, int resource, @NonNull List objects, int lessionPosition) {
         super(context, resource, objects);
@@ -63,52 +49,6 @@ public class Kanji1_adapter extends ArrayAdapter{
         this.objects=objects;
         this.lessionPosition = lessionPosition;
 
-        // Đối tượng AudioManager sử dụng để điều chỉnh âm lượng.
-        audioManager = (AudioManager)context. getSystemService(context.AUDIO_SERVICE);
-
-        // Chỉ số âm lượng hiện tại của loại luồng nhạc cụ thể (streamType).
-        float currentVolumeIndex = (float) audioManager.getStreamVolume(streamType);
-
-
-        // Chỉ số âm lượng tối đa của loại luồng nhạc cụ thể (streamType).
-        float maxVolumeIndex = (float) audioManager.getStreamMaxVolume(streamType);
-
-        // Âm lượng  (0 --> 1)
-        this.volume = currentVolumeIndex / maxVolumeIndex;
-
-        // Cho phép thay đổi âm lượng các luồng kiểu 'streamType' bằng các nút
-        // điều khiển của phần cứng.
-        context.setVolumeControlStream(streamType);
-
-        // Với phiên bản Android SDK >= 21
-        if (Build.VERSION.SDK_INT >= 21) {
-
-            AudioAttributes audioAttrib = new AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_GAME)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .build();
-
-            SoundPool.Builder builder = new SoundPool.Builder();
-            builder.setAudioAttributes(audioAttrib).setMaxStreams(MAX_STREAMS);
-
-            this.soundWord = builder.build();
-        }
-        // Với phiên bản Android SDK < 21
-        else {
-            // SoundPool(int maxStreams, int streamType, int srcQuality)
-            this.soundWord = new SoundPool(MAX_STREAMS, AudioManager.STREAM_MUSIC, 0);
-        }
-
-        // Sự kiện SoundPool đã tải lên bộ nhớ thành công.
-        this.soundWord.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
-            @Override
-            public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
-                loaded = true;
-                Log.d("hiendt","onLoadComplete");
-                soundWord.play(sound, 1, 1, 0, 0, 1);
-                Log.d("hiendt","played ");
-            }
-        });
 
     }
     public View getView(final int pos, View convertView, ViewGroup parent){
@@ -132,6 +72,16 @@ public class Kanji1_adapter extends ArrayAdapter{
                 SQLiteDataController sqLiteDataController=new SQLiteDataController(context);
                  sqLiteDataController.open();
                 SQLiteDatabase database=sqLiteDataController.getMyDatabase();
+
+                if (objects.get(pos).getFavorite()==1){
+                    Log.d("hiendt","getFavorite  "+objects.get(pos).getFavorite());
+                    sqLiteDataController.update0FavoriteKanji(pos+1);
+                    btn_FavoriteK1.setColorFilter(R.color.colorAccent,android.graphics.PorterDuff.Mode.MULTIPLY);
+                }else if (objects.get(pos).getFavorite()==0){
+                    Log.d("hiendt","getFavorite1  "+objects.get(pos).getFavorite());
+                    sqLiteDataController.update1FavoriteKanji(pos+1);
+                    btn_FavoriteK1.setColorFilter(R.color.colorGTCB,android.graphics.PorterDuff.Mode.MULTIPLY);;
+                }
             }
         });
 
@@ -141,7 +91,6 @@ public class Kanji1_adapter extends ArrayAdapter{
                 int resourceId = context.getResources()
                         .getIdentifier(objects.get(pos).getSoundK(),
                                 "raw", context.getPackageName());
-                sound = soundWord.load(context, resourceId, 1);
             }
         });
 
