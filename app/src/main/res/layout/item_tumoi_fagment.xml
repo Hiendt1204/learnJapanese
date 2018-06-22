@@ -45,16 +45,24 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"/>
     </LinearLayout>
-    <TextView
-        android:id="@+id/tv_PhienAm_M"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"/>
-    <TextView
-        android:id="@+id/tv_VWord_M"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_VWord_M"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"/>
+        <ImageView
+            android:id="@+id/btn_Favorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            android:gravity="left"/>
+
+    </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,12 +75,6 @@
             android:layout_height="40dp"
            android:backgroundTint="@color/colorAccent"
             android:background="@drawable/ic_play_circle_outline_black_24dp"/>
-        <Button
-            android:id="@+id/btn_Favorite"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/colorAccent"
-            android:background="@drawable/ic_favorite_border_black_24dp"/>
 
     </LinearLayout>
 

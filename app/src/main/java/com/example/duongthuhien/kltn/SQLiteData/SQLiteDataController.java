@@ -475,6 +475,37 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         return favouriteArrayList;
     }
+    public ArrayList<Tumoi_Frag> getFavouriteM() {
+
+        ArrayList<Tumoi_Frag> favouriteArrayList = new ArrayList<Tumoi_Frag>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_KOTOBA + " WHERE " + COLUMN_KOTOBA_FAVORITE + "=1";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                Tumoi_Frag tumoi_frag = new Tumoi_Frag();
+                tumoi_frag.setId(cursor.getInt(cursor.getColumnIndex("id")));
+                tumoi_frag.setSoThuTu_M(cursor.getInt(cursor.getColumnIndex("id")));
+                tumoi_frag.setStrJWord_M(cursor.getString(cursor.getColumnIndex("hiragana")));
+                tumoi_frag.setStrPhienAm_M(cursor.getString(cursor.getColumnIndex("roumaji")));
+                tumoi_frag.setStrVWord_M(cursor.getString(cursor.getColumnIndex("mean")));
+                tumoi_frag.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
+                tumoi_frag.setStrKanji(cursor.getString(cursor.getColumnIndex("kanji")));
+                tumoi_frag.setStrCn_Mean(cursor.getString(cursor.getColumnIndex("cn_mean")));
+                favouriteArrayList.add(tumoi_frag);
+            } while (cursor.moveToNext());
+        }
+        if (cursor != null) {
+            cursor.close();
+        }
+
+        return favouriteArrayList;
+    }
     public ArrayList<ThamKhao_frag> getFavourite() {
 
         ArrayList<ThamKhao_frag> favouriteArrayList = new ArrayList<ThamKhao_frag>();
@@ -533,7 +564,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_KOTOBA_FAVORITE,"1");
 
-        db.update(COLUMN_KOTOBA_FAVORITE, values, COLUMN_KOTOBA_ID+ " = ?", new String[] { String.valueOf(id) });
+        db.update(TABLE_KOTOBA, values, COLUMN_KOTOBA_ID+ " = ?", new String[] { String.valueOf(id) });
         db.close();
     }
 
@@ -551,7 +582,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_KOTOBA_FAVORITE,"0");
 
-        db.update(COLUMN_KOTOBA_FAVORITE, values, COLUMN_KOTOBA_ID+ " = ?", new String[] { String.valueOf(id) });
+        db.update(TABLE_KOTOBA, values, COLUMN_KOTOBA_ID+ " = ?", new String[] { String.valueOf(id) });
         db.close();
     }
 
