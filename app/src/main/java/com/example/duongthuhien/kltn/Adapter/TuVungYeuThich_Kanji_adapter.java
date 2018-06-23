@@ -31,7 +31,7 @@ import java.util.List;
  * Created by 84973 on 6/20/2018.
  */
 
-public class TuVungYeuThich1_adapter extends ArrayAdapter{
+public class TuVungYeuThich_Kanji_adapter extends ArrayAdapter{
     Activity context;
     int resource;
     @NonNull List<Kanji1> objects;
@@ -55,7 +55,7 @@ public class TuVungYeuThich1_adapter extends ArrayAdapter{
     private float volume;
 
     private int lessionPosition;
-    public TuVungYeuThich1_adapter(@NonNull Activity context, int resource, @NonNull List objects) {
+    public TuVungYeuThich_Kanji_adapter(@NonNull Activity context, int resource, @NonNull List objects) {
         super(context, resource, objects);
         this.context=context;
         this.resource=resource;
@@ -174,7 +174,7 @@ public class TuVungYeuThich1_adapter extends ArrayAdapter{
                 Intent intent=new Intent(context, Kanji2Activity.class);
                 intent.putExtra("PosK1",pos);
                 intent.putExtra("ID",objects.get(pos).getStr_Sothutu());
-                intent.putExtra("LessionPosition", TuVungYeuThich1_adapter.this.lessionPosition);
+                intent.putExtra("LessionPosition", TuVungYeuThich_Kanji_adapter.this.lessionPosition);
                 context.startActivity(intent);
 
             }

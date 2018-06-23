@@ -85,6 +85,14 @@ public class TuMoiFrag_Adapter extends BaseAdapter  {
         holder.tv_VWord_M.setText(listTuMoiFrag.get(position).getStrVWord_M());
         holder.tv_Kanji_M.setText(listTuMoiFrag.get(position).getStrKanji());
         holder.tv_cnMean_M.setText(listTuMoiFrag.get(position).getStrCn_Mean());
+
+        if (listTuMoiFrag.get(position).getFavorite()==1){
+            //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_red_24dp);
+            holder.btn_Favorite.setColorFilter(context.getResources().getColor(R.color.colorAccent));
+        } else {
+            //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
+            holder.btn_Favorite.setColorFilter(context.getResources().getColor(R.color.Black));
+        }
         holder.btn_Favorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

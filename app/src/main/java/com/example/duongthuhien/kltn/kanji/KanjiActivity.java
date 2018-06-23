@@ -188,17 +188,23 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_TracNghiem:
                 Intent intent = new Intent(KanjiActivity.this, TracNghiemActivity.class);
                 intent.putExtra("LESSION_ID", lessionID);
-                startActivity(intent);
+                Log.d("hiendt","lesion_Id_Kanji"+lessionID);
+                startActivityForResult(intent,1);
                 break;
             case R.id.btn_GhepTu:
                 Intent intent1 = new Intent(KanjiActivity.this, GhepTuActivity.class);
                 intent1.putExtra("LESSION_ID", lessionID);
-                startActivity(intent1);
+                startActivityForResult(intent1,2);
                 break;
         }
 

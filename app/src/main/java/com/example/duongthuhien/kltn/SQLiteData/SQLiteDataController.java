@@ -11,6 +11,7 @@ import android.util.Log;
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 import com.example.duongthuhien.kltn.Model.NguPhap_Frag;
+import com.example.duongthuhien.kltn.Model.TVYT1;
 import com.example.duongthuhien.kltn.Model.ThamKhao_frag;
 import com.example.duongthuhien.kltn.Model.Tumoi_Frag;
 import com.example.duongthuhien.kltn.kanji.KanjiActivity;
@@ -506,9 +507,9 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         return favouriteArrayList;
     }
-    public ArrayList<ThamKhao_frag> getFavourite() {
+    public ArrayList<TVYT1> getFavourite() {
 
-        ArrayList<ThamKhao_frag> favouriteArrayList = new ArrayList<ThamKhao_frag>();
+        ArrayList<TVYT1> favouriteArrayList = new ArrayList<TVYT1>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_KANJI + " WHERE " + COLUMN_KANJI_FAVORITE + "=1";
 
@@ -519,7 +520,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // Duyệt trên con trỏ, và thêm vào danh sách.
         if (cursor.moveToFirst()) {
             do {
-                ThamKhao_frag thamKhao_frag = new ThamKhao_frag();
+                TVYT1 thamKhao_frag = new TVYT1();
                 thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("word")));
                 thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("cn_mean")));
                 thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("vi_mean")));
@@ -537,7 +538,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // Duyệt trên con trỏ, và thêm vào danh sách.
         if (cursor.moveToFirst()) {
             do {
-                ThamKhao_frag thamKhao_frag = new ThamKhao_frag();
+                TVYT1 thamKhao_frag = new TVYT1();
                 thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("kanji")));
                 thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("roumaji")));
                 thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("mean")));
@@ -555,7 +556,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_KANJI_FAVORITE,"1");
 
-        db.update(TABLE_KANJI, values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
+        db.update(TABLE_KANJI , values, COLUMN_KANJI_ID + " = ?", new String[] { String.valueOf(id) });
         db.close();
     }
 

@@ -3,7 +3,6 @@ package com.example.duongthuhien.kltn;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,14 +14,14 @@ import android.widget.TextView;
 import com.example.duongthuhien.kltn.Model.AnswerList;
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
-import com.example.duongthuhien.kltn.hiragana.KetQuaActivity;
+import com.example.duongthuhien.kltn.hiragana.KetQuaHActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class TracNghiemActivity extends AppCompatActivity implements View.OnClickListener {
-    int lession_Id;
+    int lession_Id=-1;
     List<Kanji1> kanji1List;
     TextView tvWordSelected;
     TextView mtvScore;
@@ -36,7 +35,6 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
     private Handler mHandler = new Handler();
 
     int mposListview = -1;
-    int mAnswerCount = 0;
     int mCorrectId = -1;
     //số điểm cộng vào tổng điểm khi chọn đúng đáp án
     private static final int SCORE_MATCH = 1;
@@ -65,7 +63,6 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
         SQLiteDataController sqLiteDataController=new SQLiteDataController(TracNghiemActivity.this);
         sqLiteDataController.open();
         kanji1List=sqLiteDataController.getbylessionID(lession_Id);
-        Log.d("hiendt1","" + kanji1List.size());
 
         fillData(lession_Id);
     }
@@ -81,14 +78,14 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
         return super.onOptionsItemSelected(item);
     }
     private void fillData(int lession_Id) {
-        if (mAnswerCount >= kanji1List.size()) {
+        if (midAnswerSelected.size() >= kanji1List.size()) {
+            isBlockClicked = true;
             Intent intent = new Intent(TracNghiemActivity.this, KetQuaActivity.class);
             intent.putExtra("answerLists",answerLists );
-            startActivity(intent);
+            startActivityForResult(intent,1);
             return;
         }
-        // ham random Random rd=new Random();
-        // x=rd.nextInt((Max-Min+1)+Min);
+        isBlockClicked = false;
 
         Random rd = new Random();
         rd.setSeed(System.currentTimeMillis());
@@ -96,7 +93,6 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
         int wordId = -1;
         do {
             wordPos = rd.nextInt(kanji1List.size());
-            Log.d("hiendt1","" + wordPos);
             wordId = kanji1List.get(wordPos).getId();
 
         } while (isIdAnswerSelected(wordId));
@@ -104,17 +100,16 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
 
         // midAnswerSelected[mAnswerCount] = wordId;
         midAnswerSelected.add(wordId);
-        Log.d("hiendt1","count" + mAnswerCount);
-        mAnswerCount++;
         tvWordSelected.setText(kanji1List.get(wordPos).getStr_JWord_K());
-        tvWordSelected.setTag(kanji1List.get(wordPos).getId());
+        tvWordSelected.setTag(wordPos);
         mCorrectId = wordPos;
 
         Random rd1 = new Random();
         btnPos = rd1.nextInt((3 - 0 + 1) + 0);
-        btnAnswer[btnPos].setTag(kanji1List.get(wordPos).getId());
-        btnAnswer[btnPos].setText(kanji1List.get(wordPos).getStr_VWord_K());
-        mIdUsed[0] = kanji1List.get(wordPos).getId();
+        btnAnswer[btnPos].setTag(wordPos);
+        String vWordCorrect = kanji1List.get(wordPos).getStr_VWord_K();
+        btnAnswer[btnPos].setText(vWordCorrect.replaceAll(",", ", "));
+        mIdUsed[0] = wordPos;
         int pos = 1;
         for (int i = 0; i <= 3; i++) {
             int wordPos1 = 0;
@@ -122,9 +117,10 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
 
                 wordPos1 = rd.nextInt(9);
                 if (!isUsed(wordPos1)) {
-                    btnAnswer[i].setText(kanji1List.get(wordPos1).getStr_VWord_K());
-                    btnAnswer[i].setTag(kanji1List.get(wordPos1).getId());
-                    mIdUsed[pos] = kanji1List.get(wordPos1).getId();
+                    String vWord = kanji1List.get(wordPos1).getStr_VWord_K();
+                    btnAnswer[i].setText(vWord.replaceAll(",", ", "));
+                    btnAnswer[i].setTag(wordPos1);
+                    mIdUsed[pos] = wordPos1;
 
                     pos++;
                 } else {
@@ -137,6 +133,25 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
 
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // requestCode la de phan biet la ket qua nay duoc tra ve tu thang AC nao
+        //resultCode la ma ket qua tra ve
+        //data la du lieu duoc tra ve
+        if (resultCode==RESULT_OK){
+            if (data.getIntExtra("HocLai",-1)==1){
+                midAnswerSelected.clear();
+                mListWordSelected.clear();
+                mScore=0;
+                mtvScore.setText(String.valueOf(mScore));
+                fillData(lession_Id);
+            }else if (data.getIntExtra("HocLai",-1)==2){
+                finish();
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
     private void addControls() {
 
@@ -172,8 +187,13 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
         return false;
     }
 
+    boolean isBlockClicked = false;
     @Override
     public void onClick(final View view) {
+        if (isBlockClicked) {
+            return;
+        }
+        isBlockClicked = true;
         AnswerList answerList =new AnswerList();
 
         int id = (int) view.getTag();
@@ -184,6 +204,8 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
                 @Override
                 public void run() {
                     view.setBackgroundColor(Color.parseColor("#edb1ab"));
+                    isBlockClicked = false;
+                    fillData(lession_Id);
                 }
             }, 500);
             view.setBackgroundColor(Color.parseColor("#EE2C2C"));
@@ -195,12 +217,15 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
                 @Override
                 public void run() {
                     view.setBackgroundColor(Color.parseColor("#edb1ab"));
-                   // btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#edb1ab"));
-                    Log.d("Hiendt","pos  " );
+                    btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#edb1ab"));
+                    Log.d("hiendt","btnpos  "+btnPos);
+                    fillData(lession_Id);
+                    isBlockClicked = false;
                 }
             }, 500);
             view.setBackgroundColor(Color.parseColor("#87CEFA"));
-            //btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#EE2C2C"));
+            btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#EE2C2C"));
+            Log.d("hiendt","btnpos  "+btnPos);
         }
 
 
@@ -212,17 +237,8 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
         answerLists.add(answerList);
 
 
-        fillData(lession_Id);
-
     }
-    private void hidePopup(){
-        mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
 
-            }
-        }, 1000);
-    }
     private boolean checkAnswer(int id) {
         if (id == (Integer) tvWordSelected.getTag())
 

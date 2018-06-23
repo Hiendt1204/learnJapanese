@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void doClickBtn_Tuvungyeuthich() {
         Intent intent=new Intent(MainActivity.this, TuvungyeuthichActivity.class);
+        intent.putExtra("posF",0);
         startActivity(intent);
     }
 

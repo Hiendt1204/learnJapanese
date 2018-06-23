@@ -1,4 +1,4 @@
-package com.example.duongthuhien.kltn.hiragana;
+package com.example.duongthuhien.kltn;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,12 +8,16 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.duongthuhien.kltn.Adapter.AnswerList_adapter;
+import com.example.duongthuhien.kltn.Minna.MinnaActivity;
+import com.example.duongthuhien.kltn.Minna.TuMoiFragment;
 import com.example.duongthuhien.kltn.Model.AnswerList;
-import com.example.duongthuhien.kltn.R;
+import com.example.duongthuhien.kltn.hiragana.KetQuaHActivity;
 
 import java.util.ArrayList;
 
-public class KetQuaActivity extends AppCompatActivity implements View.OnClickListener {
+public class KetQuaActivity extends AppCompatActivity implements View.OnClickListener{
+    public static final int HOCLAI = 1;
+    public static final int DANHSACHBAIHOC = 2;
     Button btn_LessonList;
     Button btn_StudyAgain;
     ListView lv_AnswerList;
@@ -45,12 +49,16 @@ public class KetQuaActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_LessonList:
-                Intent intent = new Intent(KetQuaActivity.this,HiraganaActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent();
+                intent.putExtra("HocLai",2);
+                setResult(RESULT_OK,intent);
+                finish();
                 break;
             case R.id.btn_StudyAgain:
-                Intent intent1 = new Intent(KetQuaActivity.this,HBCCHiraganaActivity.class);
-                startActivity(intent1);
+                Intent intent1 = new Intent();
+                intent1.putExtra("HocLai",1);
+                setResult(RESULT_OK,intent1);
+                finish();
                 break;
 
 

@@ -30,7 +30,7 @@
             android:name=".hiragana.HiraganaActivity"
             android:label="Bảng chữ cái " />
         <activity
-            android:name=".hiragana.KetQuaActivity"
+            android:name=".hiragana.KetQuaHActivity"
             android:label="Kết quả" />
         <activity
             android:name=".MCCB.MCCBActivity"
@@ -46,7 +46,8 @@
         <activity
             android:name=".kanji.Kanji2Activity"
             android:label="Kanji cơ bản" />
-        <activity android:name=".Favourite.FavoriteActivity"></activity>
+        <activity android:name=".Favourite.FavoriteActivity" />
+        <activity android:name=".KetQuaActivity"></activity>
     </application>
 
 </manifest>

@@ -1,7 +1,7 @@
 package com.example.duongthuhien.kltn.hiragana;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.Model.AnswerList;
@@ -28,11 +27,10 @@ import java.util.Random;
 public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnClickListener {
     TextView mtvScore;
     TextView tvWordSelected;
-    LinearLayout llAnswer;
-    ImageView imvIconAnswer;
-    TextView tvAnser;
     int trangthaibtn;
+    int btnPos;
 
+    private Handler mHandler = new Handler();
     ArrayList<AnswerList> answerLists=new ArrayList<>();
     ArrayList<Word> mlistWord = new ArrayList<Word>();
     int[] mIdUsed = {-1, -1, -1, -1};
@@ -43,9 +41,7 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
     int mAnswerCount = 0;
     int mCorrectId = -1;
     //số điểm cộng vào tổng điểm khi chọn đúng đáp án
-    private static final int SCORE_MATCH = 10;
-    //số điểm trừ khi chọn đáp án sai
-    private static final int SCORE_WRONG = 1;
+    private static final int SCORE_MATCH = 1;
     //time delay để chuyển câu
     private static final long DELAY_TIME = 1000;
 
@@ -67,9 +63,6 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
         mposListview = intent.getIntExtra("positionListview", -1);
         trangthaibtn=intent.getIntExtra("A",-1);
 
-//        Toast.makeText(this,"da an vi tri" +positionListview,
-//                Toast.LENGTH_SHORT).show();
-
         getWordList(trangthaibtn);
         addControl();
         fillData(mposListview);
@@ -89,15 +82,32 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // requestCode la de phan biet la ket qua nay duoc tra ve tu thang AC nao
+        //resultCode la ma ket qua tra ve
+        //data la du lieu duoc tra ve
+        if (resultCode==RESULT_OK){
+            if (data.getIntExtra("HocLai",-1)==1){
+                mAnswerCount=0;
+                mListWordSelected.clear();
+                mScore=0;
+                mtvScore.setText(String.valueOf(mScore));
+                fillData(mposListview);
+            }else if (data.getIntExtra("HocLai",-1)==2){
+                finish();
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
     private void fillData(int posListview) {
-        if (mAnswerCount > 9) {
-            Intent intent = new Intent(HBCCHiraganaActivity.this, KetQuaActivity.class);
+        if (mAnswerCount >= 9) {
+            Intent intent = new Intent(HBCCHiraganaActivity.this, KetQuaHActivity.class);
             intent.putExtra("answerLists", answerLists);
-            startActivity(intent);
+            intent.putExtra("trangthaibtn",trangthaibtn);
+            startActivityForResult(intent,0);
             return;
         }
-        // ham random Random rd=new Random();
-        // x=rd.nextInt((Max-Min+1)+Min);
 
         Random rd = new Random();
         rd.setSeed(System.currentTimeMillis());
@@ -117,7 +127,7 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
         mCorrectId = wordPos;
 
         Random rd1 = new Random();
-        int btnPos = rd1.nextInt((3 - 0 + 1) + 0);
+         btnPos = rd1.nextInt((3 - 0 + 1) + 0);
         btnAnswer[btnPos].setTag(mlistWord.get(wordPos).getId());
         btnAnswer[btnPos].setText(mlistWord.get(wordPos).getVword());
         mIdUsed[0] = mlistWord.get(wordPos).getId();
@@ -162,9 +172,6 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void addControl() {
-        llAnswer = findViewById(R.id.llDapAn);
-        imvIconAnswer = findViewById(R.id.ImvIconAnswer);
-        tvAnser = findViewById(R.id.tvAnser);
         mtvScore = findViewById(R.id.mtvScore);
         tvWordSelected = findViewById(R.id.tvTudechon);
         btnAnswer[0] = findViewById(R.id.btnAnswer1);
@@ -207,22 +214,34 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
     }
 
     @Override
-    public void onClick(View view) {
+    public void onClick(final View view) {
         AnswerList answerList =new AnswerList();
 
         int id = (int) view.getTag();
         if (checkAnswer(id)) {
-            llAnswer.setVisibility(View.VISIBLE);
-            tvAnser.setText("Bạn đã chọn đúng");
-            imvIconAnswer.setImageResource(R.drawable.ic_tag_faces_black_24dp);
             mScore = mScore + SCORE_MATCH;
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    view.setBackgroundColor(Color.parseColor("#edb1ab"));
+                    fillData(mposListview);
+                }
+            }, 500);
+            view.setBackgroundColor(Color.parseColor("#EE2C2C"));
+
 
         } else if (!checkAnswer(id)) {
-            llAnswer.setVisibility(View.VISIBLE);
-            tvAnser.setText("Bạn đã chọn sai");
-            imvIconAnswer.setImageResource(R.drawable.ic_mood_bad_black_24dp);
-            mScore = mScore - SCORE_WRONG;
-            answerList.setWrongAnswer(mlistWord.get(id).getVword());
+            answerList.setWrongAnswer(mlistWord.get(id).getJword());
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    view.setBackgroundColor(Color.parseColor("#edb1ab"));
+                     btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#edb1ab"));
+                    fillData(mposListview);
+                }
+            }, 500);
+            view.setBackgroundColor(Color.parseColor("#87CEFA"));
+            btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#EE2C2C"));
 
         }
         mtvScore.setText(String.valueOf(mScore));
@@ -231,16 +250,12 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
             answerList.setCorrectAnswer(mlistWord.get(mCorrectId).getVword());
 
             answerLists.add(answerList);
-
-        hidePopup();
-        fillData(mposListview);
     }
     private void hidePopup(){
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                llAnswer.setVisibility(View.INVISIBLE);
             }
         }, 1000);
     }

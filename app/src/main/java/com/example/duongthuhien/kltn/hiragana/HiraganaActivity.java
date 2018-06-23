@@ -50,7 +50,6 @@ public class HiraganaActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void addControl() {
-        img_BCCListview=findViewById(R.id.img_BCCListview);
         img_BCC=findViewById(R.id.img_BCC);
         tv_BCCJ=findViewById(R.id.tv_BCCJ);
         tv_BCCV=findViewById(R.id.tv_BCCV);
@@ -93,13 +92,16 @@ public class HiraganaActivity extends AppCompatActivity implements View.OnClickL
                 Intent intent=new Intent(HiraganaActivity.this, HBCCHiraganaActivity.class);
                 intent.putExtra("positionListview",position);
                 intent.putExtra("A",trangthaibtn);
-                startActivity(intent);
+                startActivityForResult(intent,0);
             }
         });
 
         ll_BangChuCai.setOnClickListener(this);
     }
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
     @Override
     public void onClick(View view) {

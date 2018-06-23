@@ -11,10 +11,9 @@
         android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
         android:textSize="25dp"/>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_PhienAm"
             android:layout_width="350dp"
@@ -24,9 +23,9 @@
             android:id="@+id/btn_PlayMCCB"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
             android:background="@drawable/ic_play_circle_outline_black_24dp"/>
-    </LinearLayout>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_Vword"

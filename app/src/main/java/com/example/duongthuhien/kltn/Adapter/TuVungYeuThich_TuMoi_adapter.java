@@ -23,12 +23,12 @@ import java.util.List;
  * Created by 84973 on 6/22/2018.
  */
 
-public class TuVungYeuThich2_adapter extends ArrayAdapter {
+public class TuVungYeuThich_TuMoi_adapter extends ArrayAdapter {
 
     Activity context;
     int resource;
     @NonNull List<Tumoi_Frag> objects;
-    public TuVungYeuThich2_adapter(@NonNull Activity context, int resource, @NonNull List objects) {
+    public TuVungYeuThich_TuMoi_adapter(@NonNull Activity context, int resource, @NonNull List objects) {
         super(context, resource, objects);
         this.context=context;
         this.resource=resource;
@@ -51,7 +51,7 @@ public class TuVungYeuThich2_adapter extends ArrayAdapter {
             btn_Favorite.setColorFilter(context.getResources().getColor(R.color.colorAccent));
         } else {
             //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
-            btn_Favorite.setColorFilter(context.getResources().getColor(R.color.colorGTCB));
+            btn_Favorite.setColorFilter(context.getResources().getColor(R.color.Black));
         }
 
         btn_Favorite.setOnClickListener(new View.OnClickListener() {
