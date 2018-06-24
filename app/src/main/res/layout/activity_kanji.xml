@@ -14,14 +14,17 @@
         android:background="@color/Ghi"
         tools:context="com.example.duongthuhien.kltn.kanji.KanjiActivity">
 
-
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center">
             <Spinner
                 android:id="@+id/spinner_DSBaiHoc"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"></Spinner>
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:prompt="@string/spiner"
+                android:entries="@array/arrBaihoc_Kanji1"></Spinner>
 
         </LinearLayout>
 

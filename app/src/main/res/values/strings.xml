@@ -2,6 +2,7 @@
     <string name="app_name">Tiếng nhật cơ bản</string>
     <string name="HiraganaJ">ひらがな</string>
     <string name="HiraganaV">Hiragana</string>
+    <string name="spiner">Lựa chọn bài học</string>
     <string-array name="arrBaihoc_Hiragana">
         <item>Bài 1: あ ~ こ</item>
         <item>Bài 2: さ ~ と</item>

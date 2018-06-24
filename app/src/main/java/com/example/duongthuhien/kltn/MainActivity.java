@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.duongthuhien.kltn.ChuCai.ChuCaiActivity;
 import com.example.duongthuhien.kltn.MCCB.MCCBActivity;
 import com.example.duongthuhien.kltn.Minna.MinnaActivity;
 import com.example.duongthuhien.kltn.hiragana.HiraganaActivity;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void doClickBtn_Hiragana() {
-        Intent intent=new Intent(MainActivity.this,HiraganaActivity.class);
+        Intent intent=new Intent(MainActivity.this,ChuCaiActivity.class);
         intent.putExtra("A",2);
         startActivity(intent);
     }

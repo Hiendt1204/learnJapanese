@@ -11,18 +11,28 @@ public class TVYT1 {
     String strPhienAm_TK;
     String strVWord_TK;
     int favorite;
+    int trangthai;
 
     public TVYT1() {
 
     }
 
-    public TVYT1(int id, int soThuTu_TK, String strJWord_TK, String strPhienAm_TK, String strVWord_TK,int favorite ) {
+    public TVYT1(int id, int soThuTu_TK, String strJWord_TK, String strPhienAm_TK, String strVWord_TK,int favorite,int trangthai ) {
         this.id = id;
         SoThuTu_TK = soThuTu_TK;
         this.strJWord_TK = strJWord_TK;
         this.strPhienAm_TK = strPhienAm_TK;
         this.strVWord_TK = strVWord_TK;
         this.favorite=favorite;
+        this.trangthai=trangthai;
+    }
+
+    public int getTrangthai() {
+        return trangthai;
+    }
+
+    public void setTrangthai(int trangthai) {
+        this.trangthai = trangthai;
     }
 
     public int getFavorite() {

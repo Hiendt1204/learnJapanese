@@ -27,57 +27,73 @@ import java.util.List;
 public class TuVungYeuThich_adapter extends ArrayAdapter {
     Activity context;
     int resource;
-    @NonNull List<TVYT1> objects;
+    @NonNull
+    List<TVYT1> objects;
 
     public TuVungYeuThich_adapter(@NonNull Activity context, int resource, @NonNull List objects) {
         super(context, resource, objects);
-        this.context=context;
-        this.objects=objects;
-        this.resource=resource;
+        this.context = context;
+        this.objects = objects;
+        this.resource = resource;
     }
-    public View getView(final int pos, View convertView, ViewGroup parent){
-        LayoutInflater inflater=this.context.getLayoutInflater();
-        View row=inflater.inflate(this.resource,null);
+
+    public View getView(final int pos, View convertView, ViewGroup parent) {
+        final LayoutInflater inflater = this.context.getLayoutInflater();
+        View row = inflater.inflate(this.resource, null);
         TextView tv_SoThuTu_TVYT = (TextView) row.findViewById(R.id.tv_SoThuTu_TVYT);
         TextView tv_JWord_TVYT = (TextView) row.findViewById(R.id.tv_Jword_TVYT);
         TextView tv_PhienAm_TVYT = (TextView) row.findViewById(R.id.tv_PhienAm_TVYT);
         TextView tv_VWord_TVYT = (TextView) row.findViewById(R.id.tv_Vword_TVYT);
-        final ImageView btn_Favorite_TVYT=(ImageView) row.findViewById(R.id.btn_Favorite_TVYT);
+        final ImageView btn_Favorite_TVYT = (ImageView) row.findViewById(R.id.btn_Favorite_TVYT);
 
-        tv_SoThuTu_TVYT.setText(String.valueOf(pos +1));
+        tv_SoThuTu_TVYT.setText(String.valueOf(pos + 1));
         tv_JWord_TVYT.setText(objects.get(pos).getStrJWord_TK());
         tv_PhienAm_TVYT.setText(objects.get(pos).getStrPhienAm_TK());
         tv_VWord_TVYT.setText(objects.get(pos).getStrVWord_TK());
 
-        if (objects.get(pos).getFavorite()==1){
-            Log.d("hiendt","TVYT_adapter"+ objects.get(pos).getFavorite());
-            //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_red_24dp);
+        if (objects.get(pos).getFavorite() == 1) {
+            Log.d("hiendt", "TVYT_adapter" + objects.get(pos).getFavorite());
             btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.colorAccent));
         } else {
-            //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
             btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.Black));
         }
 
         btn_Favorite_TVYT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SQLiteDataController sqLiteDataController=new SQLiteDataController(context);
+                SQLiteDataController sqLiteDataController = new SQLiteDataController(context);
                 sqLiteDataController.open();
-                SQLiteDatabase database=sqLiteDataController.getMyDatabase();
+                SQLiteDatabase database = sqLiteDataController.getMyDatabase();
+                if (objects.get(pos).getTrangthai() == 1) {
+                    if (objects.get(pos).getFavorite() == 1) {
+                        Log.d("hiendt","setFavoriteKanji   "+objects.get(pos).getFavorite());
+                        sqLiteDataController.update0FavoriteKanji(objects.get(pos).getId());
+                        objects.get(pos).setFavorite(0);
+                        //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
+                        btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.Black));
+                    } else if (objects.get(pos).getFavorite() == 0) {
+                        Log.d("hiendt","setFavoriteKanji   "+objects.get(pos).getFavorite());
+                        sqLiteDataController.update1FavoriteKanji(objects.get(pos).getId());
+                        objects.get(pos).setFavorite(1);
+                        //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_red_24dp);
+                        btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.colorAccent));
+                    }
 
-                if (objects.get(pos).getFavorite()==1){
-                    sqLiteDataController.update0FavoriteKanji(objects.get(pos).getId());
-                    objects.get(pos).setFavorite(0);
-                    //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
-                    btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.Black));
-                }else if (objects.get(pos).getFavorite()==0){
-                    sqLiteDataController.update1FavoriteKanji(objects.get(pos).getId());
-                    objects.get(pos).setFavorite(1);
-                    //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_red_24dp);
-                    btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.colorAccent));
+
+                } else if (objects.get(pos).getTrangthai() == 2) {
+                    if (objects.get(pos).getFavorite() == 1) {
+                        Log.d("hiendt","setFavoriteMCCB   "+objects.get(pos).getFavorite());
+                        sqLiteDataController.update0FavoriteKotoba(objects.get(pos).getId());
+                        objects.get(pos).setFavorite(0);
+                        btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.Black));
+                    } else if (objects.get(pos).getFavorite() == 0) {
+                        sqLiteDataController.update1FavoriteKotoba(objects.get(pos).getId());
+                        objects.get(pos).setFavorite(1);
+                        Log.d("hiendt","setFavoriteMCCB   "+objects.get(pos).getFavorite());
+                        btn_Favorite_TVYT.setColorFilter(context.getResources().getColor(R.color.colorAccent));
+                    }
                 }
                 sqLiteDataController.getFavourite();
-
             }
         });
 

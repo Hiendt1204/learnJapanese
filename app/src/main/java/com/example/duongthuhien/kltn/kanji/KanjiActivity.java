@@ -66,10 +66,13 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
 
         Spinner spinner1 = findViewById(R.id.spinner_DSBaiHoc);
         String[] stringArray = getResources().getStringArray(R.array.arrBaihoc_Kanji1);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, stringArray);
-
-        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,
+                //android.R.layout.simple_spinner_dropdown_item,
+                R.layout.item_spinner,
+                stringArray);
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spinner1.setAdapter(adapter);
+
 
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -97,7 +100,7 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
             }
 
 
-        });
+        }); spinner1.setSelection(0);
 
 
     }

@@ -32,7 +32,7 @@ public class ThamKhaoFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_tham_khao,container,false);
 
         posDSBaiHoc = getArguments().getInt("Bai");
-        Log.d("hiendt","posDSBaihoc " + posDSBaiHoc);
+
         ArrayList<ThamKhao_frag> listThamKhao=getListThamKhao();
         ListView lv_ThamKhao_fragment=(ListView)view.findViewById(R.id.lv_ThamKhao_Fragment);
         lv_ThamKhao_fragment.setAdapter(new ThamKhao_Frag_adapter(getActivity(),listThamKhao));

@@ -1,15 +1,13 @@
-package com.example.duongthuhien.kltn.hiragana;
+package com.example.duongthuhien.kltn.ChuCai;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -18,24 +16,25 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.Adapter.Gridview_adapter;
-import com.example.duongthuhien.kltn.R;
 import com.example.duongthuhien.kltn.Model.Word;
+import com.example.duongthuhien.kltn.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Duong Thu Hien on 5/14/2018.
- */
+public class ChuCaiActivity extends AppCompatActivity implements View.OnClickListener {
+    Button btn_Hiragana;
+    Button btn_Katakana;
 
-public class BCCHiraganaActivity extends Activity implements View.OnClickListener {
     TextView tv_VwordDetail;
     TextView tv_JwordDetail;
     int trangthaibtn;
     Button btn_Close;
     LinearLayout ll_WordDetail;
     GridView gv_Word;
+    Gridview_adapter mGridview_adapter;
     Button btn_PlayWord;
     ArrayList<Word> mListWord = new ArrayList<>();
+
     SoundPool soundWord;
     AudioManager audioManager;
 
@@ -51,15 +50,16 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
     private int sound;
     private float volume;
 
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bcchiragana);
-        Intent intent=getIntent();
-        trangthaibtn=intent.getIntExtra("A",-1);
-        Log.d("hiendt","HiraganaActivity trangthaibtn " + trangthaibtn);
-        mListWord = getWordList(trangthaibtn);
+        setContentView(R.layout.activity_chu_cai);
+
         addControls();
+        trangthaibtn = 1;
+        mListWord = getWordList(trangthaibtn);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Đối tượng AudioManager sử dụng để điều chỉnh âm lượng.
         audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
@@ -69,7 +69,7 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
 
 
         // Chỉ số âm lượng tối đa của loại luồng nhạc cụ thể (streamType).
-        float maxVolumeIndex = (float) audioManager.getStreamMaxVolume(streamType);
+        final float maxVolumeIndex = (float) audioManager.getStreamMaxVolume(streamType);
 
         // Âm lượng  (0 --> 1)
         this.volume = currentVolumeIndex / maxVolumeIndex;
@@ -107,18 +107,16 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
 
         // Tải file nhạc tiếng vật thể bị phá hủy (destroy.war) vào SoundPool.
         //this.soundIdDestroy = this.soundPool.load(this, R.raw.accommodation1, 1);
-
-
-        getListSound(trangthaibtn);
-        Gridview_adapter gridview_adapter = new Gridview_adapter(BCCHiraganaActivity.this, mListWord);
-        gv_Word.setAdapter(gridview_adapter);
+        getListSound();
+        mGridview_adapter = new Gridview_adapter(ChuCaiActivity.this, mListWord);
+        gv_Word.setAdapter(mGridview_adapter);
 
         gv_Word.setOnItemClickListener((new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ll_WordDetail.setVisibility(View.VISIBLE);
                 // Tải file âm thanh vào SoundPool.
-                sound = soundWord.load(BCCHiraganaActivity.this, getResources().getIdentifier
+                sound = soundWord.load(ChuCaiActivity.this, getResources().getIdentifier
                         (mlistSound.get(i), "raw", getPackageName()), 1);
                 tv_JwordDetail.setText(mListWord.get(i).getJword());
                 tv_VwordDetail.setText(mListWord.get(i).getVword());
@@ -126,9 +124,12 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
         }));
 
 
+
     }
 
     private void addControls() {
+        btn_Hiragana=findViewById(R.id.btn_Hiragana);
+        btn_Katakana=findViewById(R.id.btn_Katakana);
         gv_Word = findViewById(R.id.gv_Word);
         btn_PlayWord = findViewById(R.id.btn_PlayWord);
         ll_WordDetail = findViewById(R.id.ll_WordDetail);
@@ -138,17 +139,48 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
 
         btn_PlayWord.setOnClickListener(this);
         btn_Close.setOnClickListener(this);
+
+        btn_Katakana.setOnClickListener(this);
+        btn_Hiragana.setOnClickListener(this);
     }
-    public ArrayList getListSound(int trangthaibtn){
-            String[] sound=getResources().getStringArray(R.array.kana_raw);
-            for (int i=0;i<sound.length;i++){
-                mlistSound.add(sound[i]);
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_Hiragana:
+                getWordList(2);
+                mGridview_adapter.notifyDataSetChanged();
+                break;
+            case R.id.btn_Katakana:
+                getWordList(1);
+                mGridview_adapter.notifyDataSetChanged();
+                break;
+            case R.id.btn_Close:
+                ll_WordDetail.setVisibility(View.INVISIBLE);
+                break;
+            case R.id.btn_PlayWord:
+                if (loaded) {
+                    float leftVolumn = volume;
+                    float rightVolumn = volume;
+                    // Phát âm thanh
+                    int streamId = this.soundWord.play(this.sound, leftVolumn,
+                            rightVolumn, 1, 0, 1f);
+                }
+                break;
+        }
+
+    }
+    public ArrayList getListSound(){
+        String[] sound=getResources().getStringArray(R.array.kana_raw);
+        for (int i=0;i<sound.length;i++){
+            mlistSound.add(sound[i]);
         }
 
         return mlistSound;
     }
 
     public ArrayList getWordList(int trangthaibtn) {
+        mListWord.clear();
         if (trangthaibtn==2){
             String[] Tiengviet = getResources().getStringArray(R.array.roomaji);
             String[] hiragana = getResources().getStringArray(R.array.hiragana);
@@ -176,23 +208,16 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
     }
 
     @Override
-    public void onClick(View view) {
-        switch(view.getId()){
-            case R.id.btn_Close:
-                ll_WordDetail.setVisibility(View.INVISIBLE);
-                break;
-            case R.id.btn_PlayWord:
-                if (loaded) {
-                    float leftVolumn = volume;
-                    float rightVolumn = volume;
-                    // Phát âm thanh
-                    int streamId = this.soundWord.play(this.sound, leftVolumn, rightVolumn, 1, 0, 1f);
-                }
-                break;
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:break;
         }
-
+        return super.onOptionsItemSelected(item);
     }
-
     private void hidePopup() {
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

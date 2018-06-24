@@ -47,7 +47,10 @@
             android:name=".kanji.Kanji2Activity"
             android:label="Kanji cơ bản" />
         <activity android:name=".Favourite.FavoriteActivity" />
-        <activity android:name=".KetQuaActivity"></activity>
+        <activity android:name=".KetQuaActivity" />
+        <activity android:name=".ChuCai.ChuCaiActivity" />
+        <activity android:name=".ChuCai.HiraganaFrag" />
+        <activity android:name=".ChuCai.KatakanaFrag"></activity>
     </application>
 
 </manifest>

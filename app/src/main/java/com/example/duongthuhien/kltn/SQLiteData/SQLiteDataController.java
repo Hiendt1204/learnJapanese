@@ -521,9 +521,12 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 TVYT1 thamKhao_frag = new TVYT1();
+                thamKhao_frag.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("word")));
                 thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("cn_mean")));
                 thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("vi_mean")));
+                thamKhao_frag.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
+                thamKhao_frag.setTrangthai(1);
                 favouriteArrayList.add(thamKhao_frag);
             } while (cursor.moveToNext());
         }
@@ -539,9 +542,12 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 TVYT1 thamKhao_frag = new TVYT1();
+                thamKhao_frag.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("kanji")));
                 thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("roumaji")));
                 thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("mean")));
+                thamKhao_frag.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
+                thamKhao_frag.setTrangthai(2);
                 favouriteArrayList.add(thamKhao_frag);
             } while (cursor.moveToNext());
         }

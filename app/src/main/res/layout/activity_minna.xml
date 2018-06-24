@@ -14,12 +14,20 @@
             android:gravity="center">
            <Spinner
                android:id="@+id/spinner_DSBaiHoc"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"></Spinner>
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:spinnerMode="dialog"
+               android:prompt="@string/spiner"
+               android:entries="@array/arrBaihoc_Minna"/>
             <Spinner
                 android:id="@+id/spinner_KieuHoc"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"></Spinner>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:spinnerMode="dialog"
+                android:prompt="@string/spiner"
+                android:entries="@array/arrPhanHoc_Minna"/>
         </LinearLayout>
         <FrameLayout
             android:id="@+id/container"
