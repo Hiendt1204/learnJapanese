@@ -1,5 +1,6 @@
 package com.example.duongthuhien.kltn.ChuCai;
 
+import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -18,16 +19,19 @@ import android.widget.TextView;
 import com.example.duongthuhien.kltn.Adapter.Gridview_adapter;
 import com.example.duongthuhien.kltn.Model.Word;
 import com.example.duongthuhien.kltn.R;
+import com.github.clans.fab.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class ChuCaiActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn_Hiragana;
     Button btn_Katakana;
+    FloatingActionButton btn_DSBH;
 
     TextView tv_VwordDetail;
     TextView tv_JwordDetail;
     int trangthaibtn;
+    int mtrangthaibtn;
     Button btn_Close;
     LinearLayout ll_WordDetail;
     GridView gv_Word;
@@ -136,9 +140,11 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
         btn_Close = findViewById(R.id.btn_Close);
         tv_JwordDetail=findViewById(R.id.tv_JwordDetail);
         tv_VwordDetail=findViewById(R.id.tv_VwordDetail);
+        btn_DSBH=findViewById(R.id.btn_DSBH);
 
         btn_PlayWord.setOnClickListener(this);
         btn_Close.setOnClickListener(this);
+        btn_DSBH.setOnClickListener(this);
 
         btn_Katakana.setOnClickListener(this);
         btn_Hiragana.setOnClickListener(this);
@@ -148,10 +154,12 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_Hiragana:
+                mtrangthaibtn=2;
                 getWordList(2);
                 mGridview_adapter.notifyDataSetChanged();
                 break;
             case R.id.btn_Katakana:
+                mtrangthaibtn=1;
                 getWordList(1);
                 mGridview_adapter.notifyDataSetChanged();
                 break;
@@ -167,9 +175,19 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
                             rightVolumn, 1, 0, 1f);
                 }
                 break;
+            case R.id.btn_DSBH:
+                Intent intent=new Intent(ChuCaiActivity.this,DSBHActivity.class);
+                intent.putExtra("trangthaibtn",mtrangthaibtn);
+                startActivityForResult(intent,3);
+                break;
         }
 
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     public ArrayList getListSound(){
         String[] sound=getResources().getStringArray(R.array.kana_raw);
         for (int i=0;i<sound.length;i++){

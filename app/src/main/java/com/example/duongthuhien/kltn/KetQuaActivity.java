@@ -8,10 +8,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.duongthuhien.kltn.Adapter.AnswerList_adapter;
-import com.example.duongthuhien.kltn.Minna.MinnaActivity;
-import com.example.duongthuhien.kltn.Minna.TuMoiFragment;
 import com.example.duongthuhien.kltn.Model.AnswerList;
-import com.example.duongthuhien.kltn.hiragana.KetQuaHActivity;
 
 import java.util.ArrayList;
 

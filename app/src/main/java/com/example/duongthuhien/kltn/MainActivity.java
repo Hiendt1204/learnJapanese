@@ -6,20 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.duongthuhien.kltn.CaiDat.CaiDatActivity;
 import com.example.duongthuhien.kltn.ChuCai.ChuCaiActivity;
 import com.example.duongthuhien.kltn.MCCB.MCCBActivity;
 import com.example.duongthuhien.kltn.Minna.MinnaActivity;
-import com.example.duongthuhien.kltn.hiragana.HiraganaActivity;
 
 import com.example.duongthuhien.kltn.Tuvungyeuthich.TuvungyeuthichActivity;
 import com.example.duongthuhien.kltn.kanji.KanjiActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button Btn_Katakana;
+    Button Btn_BangChuCai;
     Button Btn_Minna;
     Button Btn_Tuvungyeuthich;
     Button Btn_MCCB;
-    Button Btn_Hiragana;
+    Button Btn_CaiDat;
     Button Btn_Kanji;
 
     @Override
@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void addControl() {
         Btn_Minna=findViewById(R.id.Btn_Minna);
         Btn_Tuvungyeuthich=findViewById(R.id.Btn_Tuvungyeuthich);
-        Btn_Hiragana=findViewById(R.id.btn_Hiragana);
+        Btn_CaiDat=findViewById(R.id.btn_CaiDat);
         Btn_Kanji=findViewById(R.id.Btn_Kanji);
-        Btn_Katakana=findViewById(R.id.Btn_Katakana);
+        Btn_BangChuCai=findViewById(R.id.Btn_BangChuCai);
         Btn_MCCB=findViewById(R.id.Btn_MCCB);
         
         Btn_Minna.setOnClickListener(this);
-        Btn_Hiragana.setOnClickListener(this);
+        Btn_CaiDat.setOnClickListener(this);
         Btn_Kanji.setOnClickListener(this);
-        Btn_Katakana.setOnClickListener(this);
+        Btn_BangChuCai.setOnClickListener(this);
         Btn_Tuvungyeuthich.setOnClickListener(this);
         Btn_MCCB.setOnClickListener(this);
     }
@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Btn_MCCB:
                 doClickBtn_MCCB();
                 break;
-            case R.id.btn_Hiragana:
-                doClickBtn_Hiragana();
+            case R.id.btn_CaiDat:
+                doClickBtn_CaiDat();
                 break;
             case R.id.Btn_Kanji:
                 doClickBtn_Kanji();
                 break;
-            case R.id.Btn_Katakana:
-                doClickBtn_Katakana();
+            case R.id.Btn_BangChuCai:
+                doClickBtn_BangChuCai();
                 break;
             case R.id.Btn_Tuvungyeuthich:
                 doClickBtn_Tuvungyeuthich();
@@ -77,15 +77,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    private void doClickBtn_Hiragana() {
-        Intent intent=new Intent(MainActivity.this,ChuCaiActivity.class);
-        intent.putExtra("A",2);
+    private void doClickBtn_CaiDat() {
+        Intent intent=new Intent(MainActivity.this,CaiDatActivity.class);
         startActivity(intent);
     }
 
-    private void doClickBtn_Katakana() {
-        Intent intent=new Intent(MainActivity.this,HiraganaActivity.class);
-        intent.putExtra("A",1);
+    private void doClickBtn_BangChuCai() {
+        Intent intent=new Intent(MainActivity.this,ChuCaiActivity.class);
         startActivity(intent);
     }
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.duongthuhien.kltn.hiragana.HiraganaActivity">
+    tools:context="com.example.duongthuhien.kltn.ChuCai.DSBHActivity">
     <LinearLayout
         android:id="@+id/ll_Listview"
         android:layout_width="match_parent"

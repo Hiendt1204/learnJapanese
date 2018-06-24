@@ -1,4 +1,4 @@
-package com.example.duongthuhien.kltn.hiragana;
+package com.example.duongthuhien.kltn.ChuCai;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,8 +9,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.Model.AnswerList;
@@ -24,7 +22,7 @@ import java.util.Random;
  * Created by Duong Thu Hien on 5/14/2018.
  */
 
-public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnClickListener {
+public class HBCCActivity extends AppCompatActivity implements View.OnClickListener {
     TextView mtvScore;
     TextView tvWordSelected;
     int trangthaibtn;
@@ -56,7 +54,7 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hbcchiragana);
+        setContentView(R.layout.activity_hocbangchucai);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
@@ -102,7 +100,7 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
     }
     private void fillData(int posListview) {
         if (mAnswerCount >= 9) {
-            Intent intent = new Intent(HBCCHiraganaActivity.this, KetQuaHActivity.class);
+            Intent intent = new Intent(HBCCActivity.this, KetQuaHActivity.class);
             intent.putExtra("answerLists", answerLists);
             intent.putExtra("trangthaibtn",trangthaibtn);
             startActivityForResult(intent,0);
@@ -115,11 +113,11 @@ public class HBCCHiraganaActivity extends AppCompatActivity implements View.OnCl
         int wordId = -1;
         do {
             wordPos = rd.nextInt(10) + posListview*10;
-            Log.d("HBCCHiraganaActivity", "mlistWord" +mlistWord );
+            Log.d("HBCCActivity", "mlistWord" +mlistWord );
             wordId = mlistWord.get(wordPos).getId();
 
         } while (isIdAnswerSelected(wordId));
-        Log.d("HBCCHiraganaActivity", "wordPos " + wordPos + " posListView "  + posListview);
+        Log.d("HBCCActivity", "wordPos " + wordPos + " posListView "  + posListview);
         midAnswerSelected[mAnswerCount] = wordId;
         mAnswerCount++;
         tvWordSelected.setText(mlistWord.get(wordPos).getJword());

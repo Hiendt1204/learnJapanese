@@ -1,4 +1,4 @@
-package com.example.duongthuhien.kltn.hiragana;
+package com.example.duongthuhien.kltn.ChuCai;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2">
             <Button
-                android:id="@+id/Btn_Katakana"
+                android:id="@+id/Btn_BangChuCai"
                 android:background="@color/colorKatakana"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -27,17 +27,19 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="10dp"
-                android:text="Katakana"
+                android:text="Bảng chữ cái"
                 android:textColor="@color/colorBackground"/>
 
         </FrameLayout>
         <FrameLayout
-            android:id="@+id/frm_Hiragana"
+            android:id="@+id/frm_Kanji"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <Button
-                android:id="@+id/btn_Hiragana"
+                android:id="@+id/Btn_Kanji"
+
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:scaleType="fitCenter"
@@ -46,7 +48,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="5dp"
                 android:background="@color/colorGTCB"
-                android:text="Hiragana"
+                android:text="Kanji"
+
                 android:textColor="@color/colorBackground"/>
         </FrameLayout>
     </LinearLayout>
@@ -55,12 +58,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <FrameLayout
-            android:id="@+id/frm_Kanji"
+            android:id="@+id/frm_MCCB"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2">
             <Button
-                android:id="@+id/Btn_Kanji"
+                android:id="@+id/Btn_MCCB"
+
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"
@@ -69,17 +74,16 @@
                 android:layout_marginLeft="10dp"
                 android:background="@color/colorHiragana"
                 android:scaleType="fitCenter"
-                android:text="Kanji"
+                android:text="Mẫu câu cơ bản"
                 android:textColor="@color/colorBackground"/>
         </FrameLayout>
         <FrameLayout
-            android:id="@+id/frm_MCCB"
-
+            android:id="@+id/frm_Minna"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <Button
-                android:id="@+id/Btn_MCCB"
+                android:id="@+id/Btn_Minna"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"
@@ -88,7 +92,7 @@
                 android:layout_marginLeft="5dp"
                 android:background="@color/colorKanji"
                 android:scaleType="fitCenter"
-                android:text="         Mẫu câu cơ bản           "
+                android:text="      50 bài giao tiếp cơ bản       "
                 android:textColor="@color/colorBackground"
                 android:layout_weight="1"/>
         </FrameLayout>
@@ -98,12 +102,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <FrameLayout
-            android:id="@+id/frm_Minna"
+            android:id="@+id/frm_Tuvungyeuthich"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2">
             <Button
-                android:id="@+id/Btn_Minna"
+                android:id="@+id/Btn_Tuvungyeuthich"
+
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"
@@ -111,17 +116,17 @@
                 android:layout_marginLeft="10dp"
                 android:scaleType="fitCenter"
                 android:background="@color/colorGTCB2"
-                android:text="      50 bài giao tiếp cơ bản       "
+                android:text="Từ vựng yêu thích"
                 android:textColor="@color/colorBackground"/>
 
         </FrameLayout>
         <FrameLayout
-            android:id="@+id/frm_Tuvungyeuthich"
+            android:id="@+id/frm_Hiragana"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <Button
-                android:id="@+id/Btn_Tuvungyeuthich"
+                android:id="@+id/btn_CaiDat"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"
@@ -130,7 +135,7 @@
                 android:layout_marginLeft="5dp"
                 android:background="@color/colorTV"
                 android:scaleType="fitCenter"
-                android:text="Từ vựng yêu thích"
+                android:text="Cài đặt"
                 android:textColor="@color/colorBackground" />
         </FrameLayout>
     </LinearLayout>

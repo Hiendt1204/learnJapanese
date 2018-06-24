@@ -1,4 +1,4 @@
-package com.example.duongthuhien.kltn.hiragana;
+package com.example.duongthuhien.kltn.ChuCai;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
  * Created by Duong Thu Hien on 5/14/2018.
  */
 
-public class BCCHiraganaActivity extends Activity implements View.OnClickListener {
+public class BCCActivity extends Activity implements View.OnClickListener {
     TextView tv_VwordDetail;
     TextView tv_JwordDetail;
     int trangthaibtn;
@@ -54,10 +54,10 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bcchiragana);
+        setContentView(R.layout.activity_bangchucai);
         Intent intent=getIntent();
         trangthaibtn=intent.getIntExtra("A",-1);
-        Log.d("hiendt","HiraganaActivity trangthaibtn " + trangthaibtn);
+        Log.d("hiendt","DSBHActivity trangthaibtn " + trangthaibtn);
         mListWord = getWordList(trangthaibtn);
         addControls();
 
@@ -110,7 +110,7 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
 
 
         getListSound(trangthaibtn);
-        Gridview_adapter gridview_adapter = new Gridview_adapter(BCCHiraganaActivity.this, mListWord);
+        Gridview_adapter gridview_adapter = new Gridview_adapter(BCCActivity.this, mListWord);
         gv_Word.setAdapter(gridview_adapter);
 
         gv_Word.setOnItemClickListener((new AdapterView.OnItemClickListener() {
@@ -118,7 +118,7 @@ public class BCCHiraganaActivity extends Activity implements View.OnClickListene
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ll_WordDetail.setVisibility(View.VISIBLE);
                 // Tải file âm thanh vào SoundPool.
-                sound = soundWord.load(BCCHiraganaActivity.this, getResources().getIdentifier
+                sound = soundWord.load(BCCActivity.this, getResources().getIdentifier
                         (mlistSound.get(i), "raw", getPackageName()), 1);
                 tv_JwordDetail.setText(mListWord.get(i).getJword());
                 tv_VwordDetail.setText(mListWord.get(i).getVword());

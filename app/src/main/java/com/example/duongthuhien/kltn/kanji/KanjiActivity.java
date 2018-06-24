@@ -39,10 +39,6 @@ import java.util.List;
 public class KanjiActivity extends AppCompatActivity implements View.OnClickListener {
     List<Kanji1> kanji1List;
     ListView lv_Kanji1;
-    ListView lv_BaiHoc_Kanji1;
-    ArrayList<BaiHocH> dsBaiHoc;
-    DanhSachBaiHoc_k1_adapter danhSachBaiHoc_k1_adapter;
-    Kanji1_adapter kanji1_adapter;
     ImageButton btn_GhepTu;
     ImageButton btn_TracNghiem;
     int lessionID;
@@ -165,6 +161,7 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
                 Intent intent=new Intent(KanjiActivity.this, TuvungyeuthichActivity.class);
                 intent.putExtra("posF",1);
                 startActivity(intent);
+                break;
             default:
                 break;
         }

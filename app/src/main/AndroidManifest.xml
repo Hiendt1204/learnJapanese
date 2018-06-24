@@ -23,14 +23,14 @@
             android:name=".Tuvungyeuthich.TuvungyeuthichActivity"
             android:label="Từ vựng yêu thích" />
         <activity
-            android:name=".hiragana.HBCCHiraganaActivity"
+            android:name=".ChuCai.HBCCActivity"
             android:label="Luyện tập" />
-        <activity android:name=".hiragana.BCCHiraganaActivity" />
+        <activity android:name=".ChuCai.BCCActivity" />
         <activity
-            android:name=".hiragana.HiraganaActivity"
+            android:name=".ChuCai.DSBHActivity"
             android:label="Bảng chữ cái " />
         <activity
-            android:name=".hiragana.KetQuaHActivity"
+            android:name=".ChuCai.KetQuaHActivity"
             android:label="Kết quả" />
         <activity
             android:name=".MCCB.MCCBActivity"
@@ -48,9 +48,10 @@
             android:label="Kanji cơ bản" />
         <activity android:name=".Favourite.FavoriteActivity" />
         <activity android:name=".KetQuaActivity" />
-        <activity android:name=".ChuCai.ChuCaiActivity" />
-        <activity android:name=".ChuCai.HiraganaFrag" />
-        <activity android:name=".ChuCai.KatakanaFrag"></activity>
+        <activity android:name=".ChuCai.ChuCaiActivity"
+            android:label="Bảng chữ cái"/>
+        <activity android:name=".CaiDat.CaiDatActivity"
+            android:label="Cài đặt"></activity>
     </application>
 
 </manifest>

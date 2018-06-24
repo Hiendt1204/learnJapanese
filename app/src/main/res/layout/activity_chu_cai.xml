@@ -1,87 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.duongthuhien.kltn.ChuCai.ChuCaiActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_Hiragana"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/HiraganaV"/>
-        <Button
-            android:id="@+id/btn_Katakana"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="KATAKANA"/>
-    </LinearLayout>
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_Hiragana"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:textColor="@color/colorAccent"
+                android:text="@string/HiraganaV"/>
+            <Button
+                android:id="@+id/btn_Katakana"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:textColor="@color/colorAccent"
+                android:text="KATAKANA"/>
+        </LinearLayout>
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
-            <GridView
-                android:id="@+id/gv_Word"
-                android:numColumns="5"
-                android:layout_margin="1dp"
-                android:padding="1dp"
-                android:background="@android:color/black"
-                android:horizontalSpacing="1dp"
-                android:verticalSpacing="1dp"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
+                <GridView
+                    android:id="@+id/gv_Word"
+                    android:numColumns="5"
+                    android:layout_margin="1dp"
+                    android:padding="1dp"
+                    android:background="@android:color/black"
+                    android:horizontalSpacing="1dp"
+                    android:verticalSpacing="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            </GridView>
+                </GridView>
 
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll_WordDetail"
-            android:layout_width="200dp"
-            android:layout_height="300dp"
-            android:orientation="vertical"
-            android:visibility="invisible"
-            android:layout_gravity="center"
-            android:background="@color/colorAccent"
-            android:gravity="center">
-            <Button
-                android:id="@+id/btn_Close"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_close_black_24dp"/>
-            <TextView
-                android:id="@+id/tv_JwordDetail"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="4dp"
-                android:textSize="30sp"
-                android:gravity="center"
-                android:background="@color/colorBackground"/>
-            <TextView
-                android:id="@+id/tv_VwordDetail"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="4dp"
-                android:textSize="30sp"
-                android:gravity="center"
-                android:background="@color/colorBackground"/>
-            <Button
-                android:id="@+id/btn_PlayWord"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/ic_play_circle_outline_black_24dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_WordDetail"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btn_Close"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_close_black_24dp"/>
+                <TextView
+                    android:id="@+id/tv_JwordDetail"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:background="@color/colorBackground"/>
+                <TextView
+                    android:id="@+id/tv_VwordDetail"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:background="@color/colorBackground"/>
+                <Button
+                    android:id="@+id/btn_PlayWord"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_play_circle_outline_black_24dp"/>
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btn_DSBH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            app:fab_size="mini"
+            app:fab_label="Danh sach bai hoc"
+            app:fab_colorNormal="@color/colorAccent"
+            android:src="@drawable/ic_play_circle_outline_black_24dp"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 
-</LinearLayout>
+
+</FrameLayout>

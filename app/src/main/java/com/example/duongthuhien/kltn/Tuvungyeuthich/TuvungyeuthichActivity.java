@@ -29,7 +29,9 @@ public class TuvungyeuthichActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuvungyeuthich);
         addControls();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Intent intent=getIntent();
         posF=intent.getIntExtra("posF",-1);
 

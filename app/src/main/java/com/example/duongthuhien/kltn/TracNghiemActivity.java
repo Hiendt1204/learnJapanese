@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.example.duongthuhien.kltn.Model.AnswerList;
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.SQLiteData.SQLiteDataController;
-import com.example.duongthuhien.kltn.hiragana.KetQuaHActivity;
 
 import java.util.ArrayList;
 import java.util.List;

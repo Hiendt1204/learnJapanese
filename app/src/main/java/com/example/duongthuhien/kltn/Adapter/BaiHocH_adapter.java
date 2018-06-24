@@ -1,11 +1,8 @@
 package com.example.duongthuhien.kltn.Adapter;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +12,6 @@ import android.widget.TextView;
 
 import com.example.duongthuhien.kltn.Model.BaiHocH;
 import com.example.duongthuhien.kltn.R;
-import com.example.duongthuhien.kltn.hiragana.HBCCHiraganaActivity;
-import com.example.duongthuhien.kltn.hiragana.HiraganaActivity;
 
 import java.util.List;
 

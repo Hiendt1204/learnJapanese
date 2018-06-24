@@ -3,6 +3,7 @@ package com.example.duongthuhien.kltn.MCCB;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -25,6 +26,7 @@ public class MCCBActivity extends AppCompatActivity {
 
         addControl();
         getBaiHocList();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mccb_adapter=new MCCB_adapter(MCCBActivity.this,R.layout.item_mccb,dsBaiHoc);
         ll_MCCB.setAdapter(mccb_adapter);
@@ -52,6 +54,18 @@ public class MCCBActivity extends AppCompatActivity {
         return dsBaiHoc;
     }
 
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     private void addControl() {
         ll_MCCB = findViewById(R.id.ll_Maucaucoban);
