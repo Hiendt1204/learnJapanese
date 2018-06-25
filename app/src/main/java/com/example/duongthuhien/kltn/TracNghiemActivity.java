@@ -217,14 +217,13 @@ public class TracNghiemActivity extends AppCompatActivity implements View.OnClic
                 public void run() {
                     view.setBackgroundColor(Color.parseColor("#edb1ab"));
                     btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#edb1ab"));
-                    Log.d("hiendt","btnpos  "+btnPos);
+
                     fillData(lession_Id);
                     isBlockClicked = false;
                 }
             }, 500);
             view.setBackgroundColor(Color.parseColor("#87CEFA"));
             btnAnswer[btnPos].setBackgroundColor(Color.parseColor("#EE2C2C"));
-            Log.d("hiendt","btnpos  "+btnPos);
         }
 
 

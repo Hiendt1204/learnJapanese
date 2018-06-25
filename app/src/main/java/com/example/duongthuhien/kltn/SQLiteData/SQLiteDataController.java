@@ -523,7 +523,7 @@ public class SQLiteDataController extends SQLiteOpenHelper {
                 TVYT1 thamKhao_frag = new TVYT1();
                 thamKhao_frag.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 thamKhao_frag.setStrJWord_TK(cursor.getString(cursor.getColumnIndex("word")));
-                thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("cn_mean")));
+                thamKhao_frag.setStrPhienAm_TK(cursor.getString(cursor.getColumnIndex("ronjomi")));
                 thamKhao_frag.setStrVWord_TK(cursor.getString(cursor.getColumnIndex("vi_mean")));
                 thamKhao_frag.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
                 thamKhao_frag.setTrangthai(1);

@@ -31,7 +31,7 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
     TextView tv_VwordDetail;
     TextView tv_JwordDetail;
     int trangthaibtn;
-    int mtrangthaibtn;
+    int mtrangthaibtn=1;
     Button btn_Close;
     LinearLayout ll_WordDetail;
     GridView gv_Word;
