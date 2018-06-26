@@ -182,13 +182,13 @@ public class GhepTuActivity extends AppCompatActivity implements View.OnClickLis
            Answer[index].setBackgroundColor(getResources().getColor(R.color.Ghi));
         }else {
             Answer[index].setBackgroundColor(getResources().getColor(R.color.Ghi));
-            if (mCurrentIndex==(int)Answer[index].getTag()){ //
+            if (mCurrentIndex==(int)Answer[index].getTag()){
                 Answer[index].setText("");
                 Answer[index].setText("");
             }
             else {
-                Answer[index].setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                Answer[(int) Answer[index].getTag()].setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                Answer[index].setBackgroundColor(getResources().getColor(R.color.colorACCB));
+                Answer[(int) Answer[index].getTag()].setBackgroundColor(getResources().getColor(R.color.colorACCB));
             }
             mCurrentIndex=-1;
         }

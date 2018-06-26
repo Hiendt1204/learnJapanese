@@ -52,6 +52,12 @@
             android:label="Bảng chữ cái"/>
         <activity android:name=".CaiDat.CaiDatActivity"
             android:label="Cài đặt"></activity>
+
+        <receiver android:name=".AlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.example.duongthuhien.kltn.ALARM_RECEIVER"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
