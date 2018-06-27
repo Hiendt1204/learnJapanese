@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.duongthuhien.kltn.Model.Kaiwa_frag;
 import com.example.duongthuhien.kltn.Model.Kanji1;
 import com.example.duongthuhien.kltn.Model.NewWordMCCB;
 import com.example.duongthuhien.kltn.Model.NguPhap_Frag;
@@ -97,6 +98,11 @@ public class SQLiteDataController extends SQLiteOpenHelper {
     private static final String TABLE_THAMKHAO = "reference";
     private static final String COLUMN_THAMKHAO_ID = "id";
     private static final String COLUMN_THAMKHAO_LESSON_ID = "lesson_id";
+
+    //Bang Kaiwa
+    private static final String TABLE_KAIWA = "kaiwa";
+    private static final String COLUMN_KAIWA_ID = "id";
+    private static final String COLUMN_KAIWA_LESSON_ID = "lesson_id";
 
 
     public SQLiteDataController(Context context) {
@@ -213,8 +219,8 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_KANJI, new String[]{COLUMN_KANJI_ID,
                         COLUMN_KANJI_LESSON_ID, COLUMN_KANJI_ON,
                         COLUMN_KANJI_KUN, COLUMN_KANJI_JWORD, COLUMN_KANJI_VWORD, COLUMN_KANJI_SOUND_NEWWORD
-                        , COLUMN_KANJI_IMAGE, COLUMN_KANJI_MOTA_V, COLUMN_KANJI_CNWORD, COLUMN_KANJI_RKUN, COLUMN_KANJI_RON},
-                COLUMN_KANJI_LESSON_ID + "=?",
+                        , COLUMN_KANJI_IMAGE, COLUMN_KANJI_MOTA_V, COLUMN_KANJI_CNWORD, COLUMN_KANJI_RON, COLUMN_KANJI_RKUN, COLUMN_KANJI_NOTE},
+                COLUMN_KANJI_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -352,7 +358,43 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // return count
         return count;
     }
+    public Tumoi_Frag getWordbyID_M(int id) {
 
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_KOTOBA + " WHERE " + COLUMN_KOTOBA_ID
+                + " = ?";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] arg = {String.valueOf(id + 1)};
+        Cursor cursor = db.rawQuery(selectQuery, arg);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                Tumoi_Frag tumoi_frag = new Tumoi_Frag();
+                tumoi_frag.setId(cursor.getInt(cursor.getColumnIndex("id")));
+                tumoi_frag.setSoThuTu_M(cursor.getInt(cursor.getColumnIndex("id")));
+                tumoi_frag.setStrJWord_M(cursor.getString(cursor.getColumnIndex("hiragana")));
+                tumoi_frag.setStrPhienAm_M(cursor.getString(cursor.getColumnIndex("roumaji")));
+                tumoi_frag.setStrVWord_M(cursor.getString(cursor.getColumnIndex("mean")));
+                tumoi_frag.setFavorite(cursor.getInt(cursor.getColumnIndex("favorite")));
+                tumoi_frag.setStrKanji(cursor.getString(cursor.getColumnIndex("kanji")));
+                tumoi_frag.setStrCn_Mean(cursor.getString(cursor.getColumnIndex("cn_mean")));
+                return tumoi_frag;
+            }
+            try {
+                cursor.close();
+                cursor = null;
+            } catch (Exception e) {
+
+            }
+        }
+
+
+        // return note list
+        return null;
+    }
     public ArrayList<Tumoi_Frag> getWordbylessionID_M(int id) {
 
         ArrayList<Tumoi_Frag> wordListTuMoi_frag = new ArrayList<Tumoi_Frag>();
@@ -384,7 +426,6 @@ public class SQLiteDataController extends SQLiteOpenHelper {
         // return note list
         return wordListTuMoi_frag;
     }
-
     public ArrayList<NguPhap_Frag> getNguPhapbylessionID_M(int id) {
 
         ArrayList<NguPhap_Frag> nguPhapFragArrayList = new ArrayList<NguPhap_Frag>();
@@ -437,6 +478,36 @@ public class SQLiteDataController extends SQLiteOpenHelper {
 
         // return note list
         return thamkhaoFragArrayList;
+    }
+
+    public ArrayList<Kaiwa_frag> getKaiwabylessionID_KW(int id) {
+
+        ArrayList<Kaiwa_frag> kaiwaFragArrayList = new ArrayList<Kaiwa_frag>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_KAIWA + " WHERE " + COLUMN_KAIWA_LESSON_ID
+                + " = ?";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] arg = {String.valueOf(id + 1)};
+        Cursor cursor = db.rawQuery(selectQuery, arg);
+
+
+        // Duyệt trên con trỏ, và thêm vào danh sách.
+        if (cursor.moveToFirst()) {
+            do {
+                Kaiwa_frag kaiwa_frag = new Kaiwa_frag();
+                kaiwa_frag.setId(cursor.getInt(cursor.getColumnIndex("id")));
+                kaiwa_frag.setStrNameK(cursor.getString(cursor.getColumnIndex("character")));
+                kaiwa_frag.setStrNamJ(cursor.getString(cursor.getColumnIndex("c_roumaji")));
+                kaiwa_frag.setStrJWord(cursor.getString(cursor.getColumnIndex("kaiwa")));
+                kaiwa_frag.setStrPhienAm(cursor.getString(cursor.getColumnIndex("j_roumaji")));
+                kaiwa_frag.setStrVword(cursor.getString(cursor.getColumnIndex("vi_mean")));
+                kaiwaFragArrayList.add(kaiwa_frag);
+            } while (cursor.moveToNext());
+        }
+
+        // return note list
+        return kaiwaFragArrayList;
     }
 
     public ArrayList<Kanji1> getFavouriteK() {

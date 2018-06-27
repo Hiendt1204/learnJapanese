@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,10 +45,12 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
     int lessionID;
 
     MediaPlayer mediaPlayer;
+    boolean isPlaying = false;
 
 
     ArrayList<Integer> mlistSound = new ArrayList<>();
     ArrayList<Kanji1> kanjiList = new ArrayList<>();
+    Handler handler = new Handler();
 
     private int currentTrack = 0;
 
@@ -120,20 +123,28 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
                     if (currentTrack==(mlistSound.size()-1)){
                         return;
                     }
-                    currentTrack = (currentTrack + 1) % mlistSound.size();
-                    Uri nextTrack = Uri.parse("android.resource://com.example.duongthuhien.kltn/"
-                            + mlistSound.get(currentTrack));
-                    Log.d("hiendt","PlayComplete  "+nextTrack);
-                    try {
-                        mediaPlayer.reset();
-                        mediaPlayer.setDataSource(KanjiActivity.this,nextTrack);
-                        mediaPlayer.prepare();
-                        mediaPlayer.start();
-                        Log.d("hiendt","start done  ");
-                    } catch (Exception e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
+                    if (!isPlaying)
+                        return;
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            currentTrack = (currentTrack + 1) % mlistSound.size();
+                            Uri nextTrack = Uri.parse("android.resource://com.example.duongthuhien.kltn/"
+                                    + mlistSound.get(currentTrack));
+                            Log.d("hiendt","PlayComplete  "+nextTrack);
+                            try {
+                                mediaPlayer.reset();
+                                mediaPlayer.setDataSource(KanjiActivity.this,nextTrack);
+                                mediaPlayer.prepare();
+                                mediaPlayer.start();
+                                Log.d("hiendt","start done  ");
+                            } catch (Exception e) {
+                                // TODO Auto-generated catch block
+                                e.printStackTrace();
+                            }
+                        }
+                    }, 1000);
+
 
                 }
 
@@ -155,7 +166,14 @@ public class KanjiActivity extends AppCompatActivity implements View.OnClickList
                 onBackPressed();
                 break;
             case R.id.playall:
-                playAll();
+                if (!isPlaying) {
+                    isPlaying = true;
+                    item.setIcon(R.drawable.pause);
+                    playAll();
+                } else {
+                    isPlaying = false;
+                    item.setIcon(R.drawable.ic_play_circle_outline_black_24dp);
+                }
                 break;
             case R.id.favorite:
                 Intent intent=new Intent(KanjiActivity.this, TuvungyeuthichActivity.class);

@@ -49,7 +49,7 @@ public class NguPhap_Frag {
                 last = "</font></p>";
                 break;
             case 'T':
-                first = "<p><font color=\"cyan\">";
+                first = "<p><font color=\"red\">";
                 last = "</font></p>";
                 break;
             case 'R':

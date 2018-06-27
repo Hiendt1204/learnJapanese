@@ -5,88 +5,113 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="5dp">
-    <LinearLayout
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_SoThuTu_M"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" . "
-            android:textSize="25sp"/>
-        <TextView
-            android:id="@+id/tv_JWord_M"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"/>
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="10dp"
+        >
         <LinearLayout
-            android:layout_alignParentLeft="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv_Kanji_M"
-                android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"/>
-            <TextView
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_SoThuTu_M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorAccent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" . "
+                    android:textSize="25sp"
+                    android:textColor="@color/colorAccent"/>
+                <TextView
+                    android:id="@+id/tv_JWord_M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorAccent"/>
+            </LinearLayout>
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" - "
-                android:textSize="25sp"/>
-            <TextView
-                android:id="@+id/tv_cnMean_M"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_Kanji_M"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - "
+                        android:textSize="25sp"/>
+                    <TextView
+                        android:id="@+id/tv_cnMean_M"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/btn_Favorite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_favorite_border_black_24dp"
+                    android:gravity="left"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"/>
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_PhienAm_M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:layout_alignParentLeft="true"/>
+                <Button
+                    android:id="@+id/btn_PlayM1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_play_circle_outline_black_24dp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_VWord_M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
         </LinearLayout>
-        <ImageView
-            android:id="@+id/btn_Favorite"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_favorite_border_black_24dp"
-            android:gravity="left"/>
+    </android.support.v7.widget.CardView>
 
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_PhienAm_M"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:layout_alignParentLeft="true"/>
-        <Button
-            android:id="@+id/btn_PlayM1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:backgroundTint="@color/colorAccent"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_play_circle_outline_black_24dp"/>
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tv_VWord_M"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:layout_alignParentLeft="true"/>
-
-    </RelativeLayout>
 
 </LinearLayout>

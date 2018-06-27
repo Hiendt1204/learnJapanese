@@ -30,8 +30,7 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
 
     TextView tv_VwordDetail;
     TextView tv_JwordDetail;
-    int trangthaibtn;
-    int mtrangthaibtn=1;
+    int mtrangthaibtn=2;
     Button btn_Close;
     LinearLayout ll_WordDetail;
     GridView gv_Word;
@@ -61,8 +60,8 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_chu_cai);
 
         addControls();
-        trangthaibtn = 1;
-        mListWord = getWordList(trangthaibtn);
+        mtrangthaibtn = 1;
+        mListWord = getWordList(mtrangthaibtn);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Đối tượng AudioManager sử dụng để điều chỉnh âm lượng.
@@ -118,12 +117,15 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
         gv_Word.setOnItemClickListener((new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                ll_WordDetail.setVisibility(View.VISIBLE);
-                // Tải file âm thanh vào SoundPool.
-                sound = soundWord.load(ChuCaiActivity.this, getResources().getIdentifier
-                        (mlistSound.get(i), "raw", getPackageName()), 1);
-                tv_JwordDetail.setText(mListWord.get(i).getJword());
-                tv_VwordDetail.setText(mListWord.get(i).getVword());
+                int resId = getResources().getIdentifier
+                        (mlistSound.get(i), "raw", getPackageName());
+                if (resId > 0){
+                    ll_WordDetail.setVisibility(View.VISIBLE);
+                    // Tải file âm thanh vào SoundPool.
+                    sound = soundWord.load(ChuCaiActivity.this, resId, 1);
+                    tv_JwordDetail.setText(mListWord.get(i).getJword());
+                    tv_VwordDetail.setText(mListWord.get(i).getVword());
+                }
             }
         }));
 
@@ -148,18 +150,34 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
 
         btn_Katakana.setOnClickListener(this);
         btn_Hiragana.setOnClickListener(this);
+        updateTrangThai();
+    }
+    private void updateTrangThai() {
+        if (mtrangthaibtn == 2) {
+            btn_Katakana.setBackgroundColor(getResources().getColor(R.color.colorAccent_50));
+            btn_Katakana.setTextColor(getResources().getColor(android.R.color.white));
+            btn_Hiragana.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+            btn_Hiragana.setTextColor(getResources().getColor(R.color.colorAccent));
+        } else if (mtrangthaibtn == 1) {
+            btn_Hiragana.setBackgroundColor(getResources().getColor(R.color.colorAccent_50));
+            btn_Hiragana.setTextColor(getResources().getColor(android.R.color.white));
+            btn_Katakana.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+            btn_Katakana.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_Hiragana:
-                mtrangthaibtn=2;
+                mtrangthaibtn=1;
+                updateTrangThai();
                 getWordList(2);
                 mGridview_adapter.notifyDataSetChanged();
                 break;
             case R.id.btn_Katakana:
-                mtrangthaibtn=1;
+                mtrangthaibtn=2;
+                updateTrangThai();
                 getWordList(1);
                 mGridview_adapter.notifyDataSetChanged();
                 break;
@@ -209,6 +227,12 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
                 word.setVword(Tiengviet[i]);
                 mListWord.add(word);
             }
+            if ((mListWord.size() % 5) != 0) {
+                int bosung = 5 - (mListWord.size() % 5);
+                for(int i = 0; i < bosung; i++) {
+                    mListWord.add(new Word());
+                }
+            }
         }
         else if (trangthaibtn==1){
             String[] Tiengviet = getResources().getStringArray(R.array.roomaji_k);
@@ -221,6 +245,12 @@ public class ChuCaiActivity extends AppCompatActivity implements View.OnClickLis
                 mListWord.add(word);
             }
 
+            if ((mListWord.size() % 5) != 0) {
+                int bosung = 5 - (mListWord.size() % 5);
+                for(int i = 0; i < bosung; i++) {
+                    mListWord.add(new Word());
+                }
+            }
         }
         return mListWord;
     }

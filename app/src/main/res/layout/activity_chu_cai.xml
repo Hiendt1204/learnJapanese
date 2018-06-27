@@ -14,14 +14,6 @@
             android:layout_height="50dp"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/btn_Hiragana"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/colorBackground"
-                android:textColor="@color/colorAccent"
-                android:text="@string/HiraganaV"/>
-            <Button
                 android:id="@+id/btn_Katakana"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
@@ -29,6 +21,14 @@
                 android:background="@color/colorBackground"
                 android:textColor="@color/colorAccent"
                 android:text="KATAKANA"/>
+            <Button
+                android:id="@+id/btn_Hiragana"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:textColor="@color/colorAccent"
+                android:text="@string/HiraganaV"/>
         </LinearLayout>
         <FrameLayout
             android:layout_width="wrap_content"
@@ -90,28 +90,16 @@
 
         </FrameLayout>
     </LinearLayout>
-    <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/menu"
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/btn_DSBH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp">
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btn_DSBH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginRight="8dp"
-            app:fab_size="mini"
-            app:fab_label="Danh sach bai hoc"
-            app:fab_colorNormal="@color/colorAccent"
-            android:src="@drawable/ic_play_circle_outline_black_24dp"/>
-
-    </com.github.clans.fab.FloatingActionMenu>
+        android:layout_margin="10dp"
+        app:fab_size="mini"
+        app:fab_label="Danh sach bai hoc"
+        app:fab_colorNormal="@color/colorAccent"
+        android:src="@drawable/ic_play_circle_outline_black_24dp"/>
 
 
 

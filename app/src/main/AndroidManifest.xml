@@ -46,18 +46,22 @@
         <activity
             android:name=".kanji.Kanji2Activity"
             android:label="Kanji cơ bản" />
-        <activity android:name=".Favourite.FavoriteActivity" />
         <activity android:name=".KetQuaActivity" />
-        <activity android:name=".ChuCai.ChuCaiActivity"
-            android:label="Bảng chữ cái"/>
-        <activity android:name=".CaiDat.CaiDatActivity"
-            android:label="Cài đặt"></activity>
+        <activity
+            android:name=".ChuCai.ChuCaiActivity"
+            android:label="Bảng chữ cái" />
+        <activity
+            android:name=".CaiDat.CaiDatActivity"
+            android:label="Cài đặt" />
 
-        <receiver android:name=".AlarmReceiver" >
+        <receiver android:name=".AlarmReceiver">
             <intent-filter>
-                <action android:name="com.example.duongthuhien.kltn.ALARM_RECEIVER"/>
+                <action android:name="com.example.duongthuhien.kltn.ALARM_RECEIVER" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+
+        <activity android:name=".KetQuaGhepTuActivity"></activity>
     </application>
 
 </manifest>

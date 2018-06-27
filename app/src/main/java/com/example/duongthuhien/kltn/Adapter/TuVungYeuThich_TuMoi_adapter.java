@@ -63,13 +63,13 @@ public class TuVungYeuThich_TuMoi_adapter extends ArrayAdapter {
 
                 if (objects.get(pos).getFavorite()==1){
 
-                    sqLiteDataController.update0FavoriteKanji(objects.get(pos).getId());
+                    sqLiteDataController.update0FavoriteKotoba(objects.get(pos).getId());
                     objects.get(pos).setFavorite(0);
                     //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_black_24dp);
                     btn_Favorite.setColorFilter(context.getResources().getColor(R.color.Black));
                 }else if (objects.get(pos).getFavorite()==0){
                     Log.d("hiendt","getFavorite1  "+objects.get(pos).getFavorite());
-                    sqLiteDataController.update1FavoriteKanji(objects.get(pos).getId());
+                    sqLiteDataController.update1FavoriteKotoba(objects.get(pos).getId());
                     objects.get(pos).setFavorite(1);
                     //btn_FavoriteK1.setImageResource(R.drawable.ic_favorite_border_red_24dp);
                     btn_Favorite.setColorFilter(context.getResources().getColor(R.color.colorAccent));
