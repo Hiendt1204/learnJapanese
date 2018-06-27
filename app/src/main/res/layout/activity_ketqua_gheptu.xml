@@ -1,44 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.example.duongthuhien.kltn.KetQuaGhepTuActivity">
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center_vertical">
-        <Button
-            android:id="@+id/btn_LessonList"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Danh sách bài học"/>
-        <Button
-            android:id="@+id/btn_StudyAgain"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/star_not_fill"
+                />
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="8dp"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/star_not_fill"
+                />
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="8dp"
+                android:tint="@color/colorAccent"
+                android:src="@drawable/star_not_fill"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_mScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Học lại"/>
+            android:textColor="@color/colorGTCB"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="1"
+            android:textSize="80dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/btn_LessonList"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:tint="#78d9ff"
+                android:background="@drawable/circle"
+                android:scaleType="center"
+                android:src="@drawable/ic_home"/>
+            <ImageView
+                android:id="@+id/btn_StudyAgain"
+                android:layout_width="60dp"
+                android:layout_height= "60dp"
+                android:background="@drawable/circle"
+                android:layout_marginLeft="40dp"
+                android:scaleType="center"
+                android:tint="#78d9ff"
+                android:src="@drawable/ic_refresh"/>
+        </LinearLayout>
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kết quả của bạn là:"
-        android:textSize="40sp"
-        android:textColor="@color/colorAccent"
-        android:layout_marginTop="60dp"
-        android:layout_gravity="center"/>
-    <TextView
-        android:id="@+id/tv_mScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="40sp"
-        android:layout_marginTop="60dp"
-        android:textColor="@color/colorAccent"/>
 
-
-</LinearLayout>
+</RelativeLayout>

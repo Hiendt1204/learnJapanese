@@ -59,7 +59,7 @@ public class DSBHActivity extends AppCompatActivity  {
         tv_BCCV=findViewById(R.id.tv_BCCV);
         lv_BaihocHiragana = findViewById(R.id.lv_BaihocHiragana);
         dsBaiHoc = new ArrayList<>();
-        if (trangthaibtn==2){
+        if (trangthaibtn==1){
             img_BCC.setImageResource(R.drawable.iconhiragana);
             tv_BCCV.setText("Hiragana");
             tv_BCCJ.setText("ひらがな");
@@ -72,7 +72,7 @@ public class DSBHActivity extends AppCompatActivity  {
             }
 
         }
-        else if (trangthaibtn==1){
+        else if (trangthaibtn==2){
             img_BCC.setImageResource(R.drawable.katakana);
             tv_BCCV.setText("Katakana");
             tv_BCCJ.setText("カタカナ");
